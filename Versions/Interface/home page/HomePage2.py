@@ -10,18 +10,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 lst = []
-<<<<<<< HEAD:Versions/Interface/home page/HomePage2.py
 lst.append("headphone.png")
 lst.append("phone.png")
 lst.append("lap top.png")
 lst.append("hard.png")
 lst.append("tv.png")
-=======
-lst.append("Versions/Interface/clothes.png")
-lst.append("Versions/Interface/delivery.png")
-lst.append("Versions/Interface/phone.png")
-lst.append("Versions/Interface/kitchen.png")
->>>>>>> e07c6bd1eef2934381069f45af301a1de0d17008:Versions/Interface/HomePage.py
 i = 0
 
 
@@ -50,13 +43,13 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(200, 0, 381, 121))
         palette = QtGui.QPalette()
-        brush = QtGui.QBrush(QtGui.QColor(0, 255, 255))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 255, 255))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(120, 120, 120))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
         self.label_2.setPalette(palette)
