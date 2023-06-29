@@ -10,10 +10,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 lst = []
-lst.append("clothes.png")
-lst.append("delivery.png")
-lst.append("phone.png")
-lst.append("kitchen.png")
+lst.append("Versions/Interface/clothes.png")
+lst.append("Versions/Interface/delivery.png")
+lst.append("Versions/Interface/phone.png")
+lst.append("Versions/Interface/kitchen.png")
 i = 0
 
 
