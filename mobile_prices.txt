@@ -1,3 +1,20 @@
+Xiaomi Redmi Note 11S: 8,900,000
+Xiaomi Redmi Note 11: 8,150,000
+Samsung Galaxy Tab S8+: 38,400,000
+Samsung Galaxy Tab S8: 37,500,000
+Xiaomi Redmi Note 10 Pro: 11,150,000
+Samsung Galaxy Tab A7 Lite: 5,900,000
+Samsung Galaxy Tab S6 Lite: 16,600,000
+Samsung Galaxy A04s: 4,800,000
+Samsung Galaxy A04: 4,300,000
+Samsung Galaxy S23 Ultra: 51,000,000
+Samsung Galaxy A73 5G: 16,700,000
+Samsung Galaxy A23: 7,100,000
+Samsung Galaxy A13: 7,400,000
+Samsung Galaxy A53 5G: 16,000,000
+Samsung Galaxy S22 Ultra: 43,300,000
+Samsung Galaxy S21 FE 5G: 19,750,000
+Samsung Galaxy S21 Ultra 5G: 43,000,000
 Apple iPad Pro 11 2022: 41,000,000
 Apple iPad Pro 12.9 2022: 57,500,000
 Apple iPad Air 2022: 29,000,000
@@ -13,40 +30,23 @@ Apple iPhone 13 Pro: 71,000,000
 Apple iPhone 13 Pro Max: 77,000,000
 Apple iPad Pro 12.9 2021: 53,500,000
 Apple iPhone SE 2020: 19,500,000
-Xiaomi Redmi Note 10S: 7,000,000
-Xiaomi Redmi Note 11S: 10,600,000
-Xiaomi Redmi Note 10S: 6,800,000
-Xiaomi Redmi Note 11: 8,400,000
-Xiaomi Redmi 9A: 3,500,000
-Xiaomi Redmi Note 11: 7,900,000
-Xiaomi Redmi Note 11: 10,550,000
-Xiaomi Redmi Note 11S: 8,650,000
-Xiaomi Redmi Note 11 Pro+: 13,350,000
-Xiaomi Redmi Note 11 Pro 4G: 13,800,000
-Xiaomi Redmi Note 11 Pro 5G: 13,990,000
-Xiaomi Poco F4: 18,200,000
-Samsung Galaxy Z Flip4: 43,400,000
-Samsung Galaxy Z Flip4: 39,300,000
-Samsung Galaxy Z Fold4: 72,700,000
-Samsung Galaxy Z Fold4: 70,200,000
-Xiaomi Poco X4 Pro 5G: 13,900,000
-Xiaomi Poco F4 GT: 22,300,000
-Xiaomi 11T: 18,800,000
-Xiaomi 11T Pro: 18,950,000
-Samsung Galaxy Z Fold3 5G: 56,990,000
-Samsung Galaxy Z Fold3 5G: 62,000,000
-Samsung Galaxy S23+: 43,800,000
-Samsung Galaxy S23 Ultra: 49,700,000
-Samsung Galaxy S23 Ultra: 59,200,000
-Samsung Galaxy Tab S6 Lite 2022: 17,400,000
-Samsung Galaxy Tab S8 Ultra: 43,900,000
-Samsung Galaxy Tab A8 10.5 2021: 10,500,000
-Samsung Galaxy Tab S8: 36,800,000
-Samsung Galaxy Tab S8+: 37,300,000
-Samsung Galaxy Tab A7 Lite: 6,000,000
-Samsung Galaxy A04s: 4,800,000
-Samsung Galaxy A04: 4,300,000
-Samsung Galaxy S23 Ultra: 51,000,000
+Xiaomi Redmi Note 12: 8,190,000
+Xiaomi Redmi Note 12: 7,490,000
+Xiaomi Redmi Note 12 Pro: 13,150,000
+Xiaomi Redmi Note 11SE: 7,950,000
+Xiaomi Redmi Note 11S: 8,690,000
+Xiaomi Redmi Note 12 Pro: 11,090,000
+Xiaomi Redmi 12C: 4,790,000
+Xiaomi Redmi A2+: 3,480,000
+Xiaomi Redmi Note 11 Pro+: 13,150,000
+Xiaomi Redmi A1+: 3,350,000
+Xiaomi Redmi Note 10 Pro: 6,999,000
+Xiaomi Redmi Note 11: 7,850,000
+Xiaomi Redmi Note 11 Pro 5G: 13,999,000
+Xiaomi Redmi Note 11 Pro 4G: 12,190,000
+Xiaomi Poco F5: 19,500,000
+Xiaomi Redmi 10A: 4,640,000
+Xiaomi Poco F5 Pro: 26,900,000
 Xiaomi Mix Fold 2: 109,900,000
 Xiaomi Mix Fold 2: 99,900,000
 Xiaomi Poco X5 Pro: 13,950,000
@@ -70,24 +70,24 @@ Xiaomi 12 Lite: 14,790,000
 Xiaomi Black Shark 5: 25,900,000
 Samsung Galaxy S22 Ultra: 44,900,000
 Samsung Galaxy A73 5G: 16,340,000
-Samsung Galaxy A54: 15,090,000
+Samsung Galaxy A54: 14,090,000
 Samsung Galaxy S23 Ultra: 50,900,000
 Vivo X90 Pro+: 74,900,000
 Samsung Galaxy S21 FE 5G: 18,700,000
 Samsung Galaxy S21 FE 5G: 19,600,000
 Samsung Galaxy A73 5G: 18,700,000
+Samsung Galaxy A54: 15,090,000
+Samsung Galaxy A34: 11,600,000
+Samsung Galaxy A53 5G: 14,700,000
+Samsung Galaxy A53 5G: 15,190,000
 Samsung Galaxy A33 5G: 12,990,000
 Samsung Galaxy A24 4G: 8,890,000
 Samsung Galaxy A24 4G: 8,490,000
 Samsung Galaxy A14: 7,790,000
-Samsung Galaxy A13: 7,390,000
-Samsung Galaxy A34: 11,600,000
 Samsung Galaxy A14: 6,440,000
 Samsung Galaxy A14: 5,590,000
-Samsung Galaxy A54: 14,090,000
-Samsung Galaxy A53 5G: 14,700,000
 Samsung Galaxy A23: 6,890,000
-Samsung Galaxy A53 5G: 15,190,000
+Samsung Galaxy A13: 7,390,000
 Samsung Galaxy A13: 6,990,000
 Samsung Galaxy A04s: 4,990,000
 Samsung Galaxy A04: 4,390,000
@@ -129,42 +129,6 @@ Google Pixel 7: 39,310,000
 Google Pixel 7 Pro: 49,810,000
 Google Pixel 6a: 23,910,000
 Google Pixel 6: 26,260,000
-Asus ROG Phone 6: 54,900,000
-Asus ROG Phone 7: 63,500,000
-Asus ROG Phone 7: 70,700,000
-Asus Zenfone 9: 53,490,000
-Asus ROG Phone 6: 64,900,000
-Asus ROG Phone 5s: 56,000,000
-Apple iPhone 13: 48,500,000
-Apple iPhone 13: 40,990,000
-Apple iPhone 14 Pro Max: 62,500,000
-Apple iPhone 13 Pro Max: 84,900,000
-Apple iPhone 13 Pro Max: 80,500,000
-Apple iPhone 14: 46,500,000
-Apple iPhone 14: 40,950,000
-Apple iPhone XS: 18,500,000
-Apple iPhone XS Max: 24,950,000
-Apple iPhone 13 Pro Max: 70,950,000
-Motorola Edge 30 Pro: 29,600,000
-Meizu 20: 55,000,000
-Meizu 20: 45,000,000
-OnePlus 11: 55,000,000
-OnePlus 10T: 41,000,000
-Google Pixel 7 Pro: 56,910,000
-Google Pixel 6 Pro: 32,410,000
-Google Pixel 6 Pro: 42,498,000
-Google Pixel 7 Pro: 65,910,000
-Google Pixel 7: 33,999,999
-Google Pixel 6: 29,999,000
-Google Pixel 7a: 32,799,000
-Huawei Mate 50 Pro: 53,900,000
-Google Pixel 6 Pro: 39,310,000
-Honor Magic5 Ultimate: 84,900,000
-Honor Magic5 Pro: 79,900,000
-Google Pixel 7: 39,310,000
-Google Pixel 7 Pro: 49,810,000
-Google Pixel 6a: 23,910,000
-Google Pixel 6: 26,260,000
 Apple iPhone 13: 48,500,000
 Apple iPhone 13: 40,990,000
 Asus ROG Phone 6: 54,900,000
@@ -173,126 +137,214 @@ Asus ROG Phone 7: 70,700,000
 Asus Zenfone 9: 53,490,000
 Asus ROG Phone 6: 64,900,000
 Asus ROG Phone 5s: 56,000,000
-Apple iPad 10.2 2021: 15,849,000
-Huawei nova 10 Pro: 27,200,000
-Huawei nova 10: 23,200,000
-Honor X7: 6,132,000
-Honor X7a: 6,059,000
-Apple iPhone 11: 30,500,000
-Apple iPhone 13: 41,810,000
-Nokia 2660 Flip: 2,870,000
-Nothing Phone (1): 20,900,000
-Nokia 3310 2017: 2,250,000
-Nokia 130 2017: 1,200,000
-Nokia 5310 2020: 1,850,000
-Nokia 210: 1,510,000
-Nokia 150 2020: 1,448,000
-Nokia 220: 1,180,000
-Nokia 105: 680,000
-Lenovo Tab M7: 3,600,000
-Nokia 106 2018: 770,000
-Nokia 125: 1,204,000
-Samsung Galaxy A23: 9,300,000
-Samsung Galaxy A24 4G: 8,400,000
-Samsung Galaxy Tab A7 Lite: 6,000,000
+Apple iPhone 14 Pro Max: 90,450,000
+Apple iPhone 14 Pro Max: 61,145,000
+Apple iPhone 13 Pro Max: 77,835,000
+Apple iPhone 13 Pro: 67,185,000
+Samsung Galaxy A34: 10,999,000
+Samsung Galaxy A24 4G: 7,999,000
+Samsung Galaxy A14: 7,449,000
+Samsung Galaxy A14: 6,399,000
+Samsung Galaxy A23: 8,999,000
+Samsung Galaxy A04: 3,899,000
+Samsung Galaxy A04: 4,289,000
+Samsung Galaxy A04s: 6,999,000
+Samsung Galaxy A04s: 5,149,000
+Nokia 106 2018: 879,000
+Nokia 125: 1,309,000
+Samsung Galaxy A03 Core: 3,549,000
+Nokia 105 2019: 819,000
+Xiaomi Poco F4: 18,200,000
+Samsung Galaxy Z Flip4: 43,400,000
+Samsung Galaxy Z Flip4: 39,300,000
+Samsung Galaxy Z Fold4: 72,700,000
+Samsung Galaxy Z Fold4: 70,200,000
+Xiaomi Redmi 9A: 3,500,000
+Xiaomi Poco X4 Pro 5G: 13,900,000
+Xiaomi Poco F4 GT: 22,300,000
+Xiaomi 11T: 18,800,000
+Xiaomi 11T Pro: 18,950,000
+Samsung Galaxy Z Fold3 5G: 56,990,000
+Samsung Galaxy Z Fold3 5G: 62,000,000
+Xiaomi Redmi Note 10S: 7,000,000
+Xiaomi Redmi Note 11S: 10,600,000
+Xiaomi Redmi Note 10S: 6,800,000
+Xiaomi Redmi Note 11: 8,400,000
+Xiaomi Redmi Note 11: 7,900,000
+Xiaomi Redmi Note 11: 10,550,000
+Xiaomi Redmi Note 11S: 8,650,000
+Xiaomi Redmi Note 11 Pro+: 13,350,000
+Xiaomi Redmi Note 11 Pro 4G: 13,800,000
+Xiaomi Redmi Note 11 Pro 5G: 13,990,000
+Samsung Galaxy S23+: 43,800,000
+Samsung Galaxy S23 Ultra: 49,700,000
+Samsung Galaxy S23 Ultra: 59,200,000
+Samsung Galaxy Tab S6 Lite 2022: 17,400,000
+Samsung Galaxy Tab S8 Ultra: 43,900,000
 Samsung Galaxy Tab A8 10.5 2021: 10,500,000
-Samsung Galaxy A03s: 5,680,000
-Nokia 8000 4G: 5,800,000
-Nokia 6300 4G: 5,100,000
-Apple iPhone 12 mini: 30,000,000
-Lenovo Tab M10 HD Gen 2: 7,240,000
-Lenovo Tab M8 HD: 6,360,000
-Nokia 5710 XpressAudio: 2,890,000
-Nokia 2660 Flip: 2,890,000
-Samsung Galaxy A04: 4,770,000
-Samsung Galaxy A04: 4,180,000
-Samsung Galaxy A04s: 4,820,000
-Nothing Phone (1): 24,500,000
-Nothing Phone (1): 18,580,000
-Samsung Galaxy A04e: 4,480,000
-Samsung Galaxy A04e: 3,880,000
-Samsung Galaxy S23: 41,600,000
+Samsung Galaxy Tab S8: 36,800,000
+Samsung Galaxy Tab S8+: 37,300,000
+Samsung Galaxy Tab A7 Lite: 6,000,000
 Samsung Galaxy A54: 15,200,000
+Samsung Galaxy S23: 41,600,000
+Samsung Galaxy S21 FE 5G: 17,990,000
 Samsung Galaxy A73 5G: 18,900,000
-Samsung Galaxy S22 Ultra: 48,400,000
-Samsung Galaxy S22 Ultra: 42,200,000
+Samsung Galaxy S20 FE 5G: 16,500,000
+Samsung Galaxy Note20 Ultra 5G: 43,100,000
+Samsung Galaxy S21 FE 5G: 19,100,000
+Samsung Galaxy S21 Ultra 5G: 41,100,000
 Samsung Galaxy S22 5G: 35,800,000
-Samsung Galaxy S22+ 5G: 36,500,000
+Samsung Galaxy S22 5G: 35,800,000
+Samsung Galaxy S21 FE 5G: 19,100,000
+Samsung Galaxy S21 FE 5G: 17,990,000
+Samsung Galaxy S21 Ultra 5G: 41,100,000
 Samsung Galaxy Note20 Ultra 5G: 43,100,000
 Samsung Galaxy S20 FE 5G: 16,500,000
-Samsung Galaxy S21 Ultra 5G: 41,100,000
-Samsung Galaxy S21 FE 5G: 17,990,000
-Samsung Galaxy S21 FE 5G: 19,100,000
-Samsung Galaxy A03s: 5,700,000
-Samsung Galaxy A32: 11,500,000
-Samsung Galaxy A13: 7,990,000
-Samsung Galaxy A23: 7,000,000
-Samsung Galaxy A23: 9,990,000
-Samsung Galaxy A13: 6,950,000
-Samsung Galaxy A13: 7,650,000
-Samsung Galaxy A53 5G: 14,700,000
-Samsung Galaxy A53 5G: 13,900,000
-Samsung Galaxy A33 5G: 12,650,000
-Samsung Galaxy A33 5G: 13,280,000
-Samsung Galaxy A54: 13,900,000
-Samsung Galaxy A34: 11,400,000
-Samsung Galaxy A14: 5,600,000
-Samsung Galaxy A14: 6,600,000
-Samsung Galaxy A03: 4,500,000
 Samsung Galaxy A03 Core: 3,950,000
+Samsung Galaxy A03: 4,500,000
 Apple iPhone 13 Pro Max: 79,500,000
 Apple iPhone 13 Pro Max: 80,500,000
+Samsung Galaxy A03s: 5,700,000
+Samsung Galaxy A32: 11,500,000
+Samsung Galaxy A23: 7,000,000
+Samsung Galaxy A23: 9,990,000
+Samsung Galaxy A13: 7,650,000
+Samsung Galaxy A13: 6,950,000
+Samsung Galaxy A13: 7,990,000
+Samsung Galaxy A53 5G: 13,900,000
+Samsung Galaxy A53 5G: 14,700,000
+Samsung Galaxy A33 5G: 13,280,000
+Samsung Galaxy A33 5G: 12,650,000
+Samsung Galaxy A54: 13,900,000
+Samsung Galaxy A14: 5,600,000
+Samsung Galaxy A14: 6,600,000
+Samsung Galaxy A34: 11,400,000
 Apple iPhone 13 Pro: 70,500,000
+Apple iPhone 13 Pro: 69,000,000
 Apple iPhone 13 Pro: 84,000,000
 Apple iPhone 13 Pro: 72,500,000
 Apple iPhone 13: 41,000,000
 Apple iPhone 13: 51,000,000
-Apple iPad 10.2 2021: 15,849,000
-Apple iPhone 13: 41,810,000
-Apple iPhone 11: 30,500,000
-Honor X7: 6,132,000
-Huawei nova 10 Pro: 27,200,000
-Huawei nova 10: 23,200,000
-Honor X7a: 6,059,000
-Nothing Phone (1): 20,900,000
-Nokia 2660 Flip: 2,870,000
-Nokia 5310 2020: 1,850,000
-Nokia 220: 1,180,000
-Nokia 3310 2017: 2,250,000
-Nokia 130 2017: 1,200,000
-Nokia 210: 1,510,000
-Nokia 150 2020: 1,448,000
-Nokia 125: 1,204,000
-Nokia 106 2018: 770,000
-Nokia 105: 680,000
-Lenovo Tab M7: 3,600,000
-Samsung Galaxy A23: 7,538,000
-Samsung Galaxy A23: 9,300,000
-Samsung Galaxy A13: 7,400,000
-Samsung Galaxy A04e: 4,150,000
-Samsung Galaxy A04: 4,500,000
-Samsung Galaxy A04s: 4,610,000
-Samsung Galaxy A04s: 5,100,000
-Samsung Galaxy A14: 6,470,000
-Samsung Galaxy A14: 7,590,000
-Samsung Galaxy A14: 5,670,000
-Samsung Galaxy A24 4G: 8,400,000
-Samsung Galaxy A54: 15,990,000
-Samsung Galaxy A54: 14,400,000
-Samsung Galaxy S22 Ultra: 42,850,000
-Samsung Galaxy M13: 7,650,000
-Samsung Galaxy M13: 5,960,000
-Samsung Galaxy A73 5G: 17,024,000
-Samsung Galaxy A53 5G: 15,350,000
-Samsung Galaxy A33 5G: 12,953,000
-Samsung Galaxy A32: 12,330,000
-Samsung Galaxy S21 FE 5G: 19,125,000
-Samsung Galaxy S21 FE 5G: 20,100,000
-Xiaomi 12X: 22,100,000
-Samsung Galaxy Tab A8 10.5 2021: 10,400,000
-Samsung Galaxy Tab A8 10.5 2021: 9,400,000
-Xiaomi 11 Lite 5G NE: 12,650,000
-Apple iPad 10.2 2021: 15,550,000
+Xiaomi Redmi 10A: 3,410,000
+Xiaomi Redmi 10A: 4,920,000
+Xiaomi Redmi 10C: 5,500,000
+Xiaomi Redmi 10A: 4,190,000
+Xiaomi 12X: 20,850,000
+Xiaomi 13 Lite: 16,390,000
+Xiaomi Poco X5 Pro: 14,230,000
+Xiaomi Poco M5s: 8,480,000
+Xiaomi Poco M5s: 7,170,000
+Samsung Galaxy A04s: 5,280,000
+Apple iPhone 14 Pro Max: 64,000,000
+Samsung Galaxy A04: 4,190,000
+Samsung Galaxy A04: 4,540,000
+Apple iPhone SE 2020: 20,500,000
+Apple iPhone SE 2022: 28,500,000
+Samsung Galaxy S23: 42,720,000
+Samsung Galaxy S23+: 45,450,000
+Samsung Galaxy S23 Ultra: 50,050,000
+Samsung Galaxy A54: 13,400,000
+Samsung Galaxy A54: 15,400,000
+Samsung Galaxy A54: 13,830,000
+Samsung Galaxy A34: 11,110,000
+Samsung Galaxy A34: 11,430,000
+Samsung Galaxy S22 Ultra: 42,520,000
+Samsung Galaxy S22 Ultra: 47,770,000
+Samsung Galaxy S22+ 5G: 37,470,000
+Samsung Galaxy A53 5G: 14,930,000
+Samsung Galaxy A53 5G: 14,420,000
+Samsung Galaxy A73 5G: 19,490,000
+Samsung Galaxy A73 5G: 16,460,000
+Samsung Galaxy S21 FE 5G: 17,930,000
+Samsung Galaxy S21 FE 5G: 18,890,000
+Xiaomi Redmi Note 11SE: 8,030,000
+Xiaomi Redmi Note 11S: 8,700,000
+Xiaomi Redmi Note 12 Pro+: 21,000,000
+Xiaomi Redmi Note 12 Pro+: 17,980,000
+Xiaomi Redmi Note 12 4G: 8,380,000
+Xiaomi Redmi Note 12 4G: 7,370,000
+Xiaomi Redmi Note 12 Pro 4G: 11,360,000
+Xiaomi Redmi Note 12 Pro 4G: 11,310,000
+Xiaomi Redmi Note 12S: 9,210,000
+Xiaomi Redmi A2+: 3,400,000
+Xiaomi Redmi A1+: 3,330,000
+Xiaomi Redmi 12C: 4,970,000
+Xiaomi Redmi 12C: 4,790,000
+Xiaomi Redmi 12C: 5,680,000
+Xiaomi Redmi Note 11: 7,320,000
+Xiaomi Redmi Note 11: 8,160,000
+Xiaomi Redmi Note 11 Pro 4G: 10,700,000
+Xiaomi Redmi 9A: 3,260,000
+Xiaomi Redmi Note 10 Pro: 10,900,000
+Apple iPhone 13 Pro Max: 123,000,000
+Apple iPhone 13 Pro Max: 110,000,000
+Apple iPhone 13 Pro Max: 83,000,000
+Apple iPhone 13 Pro Max: 82,500,000
+Apple iPhone 13 Pro Max: 84,500,000
+Apple iPhone 13 Pro Max: 75,000,000
+Apple iPhone 14 Pro: 67,000,000
+Apple iPhone 14 Pro: 82,000,000
+Apple iPhone 14 Pro Max: 73,500,000
+Apple iPhone 14 Pro Max: 85,000,000
+Apple iPhone 14 Pro Max: 95,000,000
+Apple iPad Pro 12.9 2022: 62,500,000
+Apple iPad Pro 12.9 2022: 72,000,000
+Apple iPad Pro 12.9 2022: 88,000,000
+Apple iPad Pro 12.9 2022: 55,500,000
+Apple iPad Pro 12.9 2022: 61,500,000
+Apple iPad Pro 12.9 2022: 94,000,000
+Apple iPhone 13 Pro: 75,000,000
+Apple iPhone 13 Pro: 72,000,000
+Apple iPhone 13: 49,000,000
+Apple iPhone 13: 41,300,000
+Apple iPhone 11: 31,500,000
+Apple iPad Pro 11 2021: 54,000,000
+Apple iPad Pro 12.9 2021: 63,000,000
+Apple iPad Pro 12.9 2021: 55,000,000
+Apple iPad Pro 12.9 2021: 69,000,000
+Apple iPad 10.2 2021: 23,500,000
+Apple iPad mini 2021: 24,000,000
+Apple iPad Air 2022: 31,500,000
+Apple iPad Air 2022: 39,500,000
+Apple iPad Pro 11 2022: 42,500,000
+Apple iPad Pro 11 2022: 48,500,000
+Apple iPad 2022: 34,000,000
+Apple iPhone 14 Pro Max: 79,950,000
+Apple iPhone 14 Pro Max: 66,250,000
+Apple iPhone 14 Pro Max: 61,500,000
+Apple iPhone 14 Pro: 60,700,000
+Apple iPhone 14 Pro: 55,900,000
+Apple iPhone 14 Pro Max: 62,500,000
+Apple iPhone 14: 40,950,000
+Apple iPhone 14: 46,500,000
+Apple iPhone 13 Pro Max: 85,500,000
+Apple iPhone 13 Pro Max: 70,950,000
+Apple iPhone 13 Pro Max: 80,500,000
+Apple iPhone 13 Pro Max: 84,900,000
+Apple iPhone XS Max: 24,950,000
+Apple iPhone XS: 18,500,000
+Apple iPhone 11 Pro Max: 31,500,000
+Apple iPhone 12 Pro Max: 51,500,000
+Apple iPhone 12 Pro Max: 51,950,000
+Apple iPhone 12 Pro Max: 62,500,000
+Apple iPhone 12 Pro Max: 60,500,000
+Apple iPhone 12 Pro Max: 54,500,000
+Apple iPhone 12 Pro: 36,350,000
+Apple iPhone 12 Pro: 39,400,000
+Apple iPhone 12 Pro: 32,950,000
+Apple iPhone 12: 28,950,000
+Apple iPhone 13 Pro: 57,500,000
+Apple iPhone 13 Pro: 60,600,000
+Apple iPhone 13: 50,450,000
+Apple iPhone 13: 46,500,000
+Apple iPhone 13: 48,950,000
+Apple iPad mini 2021: 31,850,000
+Apple iPad mini 2021: 22,250,000
+Apple iPad 10.2 2021: 22,950,000
+Apple iPhone 11 Pro: 34,450,000
+Apple iPhone 11 Pro: 26,950,000
+Apple iPhone 11: 29,950,000
+Apple iPhone 11: 23,500,000
 Apple iPad Air 2022: 36,950,000
 Apple iPad Air 2022: 28,550,000
 Apple iPad 2022: 31,950,000
@@ -300,6 +352,213 @@ Apple iPad 2022: 23,550,000
 Apple iPad Pro 12.9 2022: 58,500,000
 Apple iPad Pro 11 2022: 46,650,000
 Apple iPad Pro 11 2022: 40,950,000
+Samsung Galaxy S23 Ultra: 59,780,000
+Samsung Galaxy S23 Ultra: 59,480,000
+Samsung Galaxy S23+: 45,580,000
+Samsung Galaxy S23: 43,980,000
+Samsung Galaxy S22 Ultra: 41,490,000
+Samsung Galaxy Tab S8: 36,580,000
+Samsung Galaxy S22 Ultra: 48,890,000
+Samsung Galaxy Tab S6 Lite 2022: 15,840,000
+Samsung Galaxy S20 FE 5G: 18,360,000
+Samsung Galaxy Tab S7 FE: 26,390,000
+Samsung Galaxy Tab A7 Lite: 5,670,000
+Samsung Galaxy S21 FE 5G: 18,580,000
+Samsung Galaxy S21 FE 5G: 18,780,000
+Samsung Galaxy Tab A8 10.5 2021: 9,180,000
+Samsung Galaxy Tab A8 10.5 2021: 10,280,000
+Xiaomi 12 Pro: 34,480,000
+Xiaomi 12: 21,980,000
+Xiaomi 12: 25,980,000
+Xiaomi 11T Pro: 23,190,000
+Xiaomi 11T: 16,980,000
+Xiaomi 11T Pro: 18,780,000
+Samsung Galaxy Tab S8+: 36,980,000
+Xiaomi 12T Pro: 32,900,000
+Xiaomi 12 Lite: 15,540,000
+Xiaomi Mix Fold 2: 91,000,000
+Xiaomi Poco M5s: 7,140,000
+Xiaomi Poco M5s: 8,560,000
+Xiaomi 13 Lite: 15,870,000
+Xiaomi Poco F5 Pro: 25,600,000
+Xiaomi Poco F5: 18,680,000
+Xiaomi 13 Ultra: 67,000,000
+Xiaomi Poco F4 GT: 18,980,000
+Xiaomi Poco F4 GT: 24,590,000
+Xiaomi Black Shark 5 Pro: 34,500,000
+Xiaomi Poco F4: 16,580,000
+Xiaomi Poco C40: 4,680,000
+Xiaomi 12X: 20,390,000
+Xiaomi Mi 11 Ultra: 37,980,000
+Xiaomi Redmi K40: 17,990,000
+Xiaomi Redmi Note 10 Pro: 10,740,000
+Xiaomi Redmi 9C: 5,180,000
+Xiaomi Redmi 9A: 4,340,000
+Xiaomi Redmi 10C: 5,880,000
+Xiaomi Redmi 10C: 5,490,000
+Xiaomi Redmi 10A: 5,320,000
+Xiaomi Redmi 10A: 4,930,000
+Xiaomi Poco X4 Pro 5G: 13,180,000
+Xiaomi Redmi A2+: 3,380,000
+Xiaomi Poco X5: 10,280,000
+Xiaomi Poco X5 Pro: 14,080,000
+Xiaomi Redmi 12C: 4,490,000
+Xiaomi Redmi 12C: 5,280,000
+Xiaomi Redmi Pad: 13,380,000
+Xiaomi Redmi Note 12 Pro: 13,380,000
+Xiaomi Redmi Note 12 Pro+: 21,400,000
+Xiaomi Redmi Note 12 Pro 4G: 11,180,000
+Xiaomi Redmi Note 12 4G: 12,940,000
+Xiaomi Redmi Note 12 4G: 7,420,000
+Xiaomi Redmi Note 12 4G: 8,280,000
+Xiaomi Redmi Note 12S: 9,080,000
+Xiaomi Redmi Note 11 Pro 4G: 11,980,000
+Xiaomi Redmi Note 11: 8,580,000
+Xiaomi Redmi Note 11: 7,780,000
+Xiaomi Redmi Note 11SE: 8,700,000
+Xiaomi Redmi Note 11S: 8,580,000
+Xiaomi Redmi Note 11 Pro 5G: 12,580,000
+Xiaomi Redmi Note 11 Pro+: 12,780,000
+Xiaomi 12T Pro: 34,640,000
+Samsung Galaxy A54: 14,080,000
+Samsung Galaxy A54: 15,580,000
+Samsung Galaxy M52 5G: 14,860,000
+Samsung Galaxy M12: 8,590,000
+Samsung Galaxy M32: 10,690,000
+Samsung Galaxy M32: 9,800,000
+Samsung Galaxy M13: 6,290,000
+Samsung Galaxy M13: 7,590,000
+Samsung Galaxy M53: 15,460,000
+Samsung Galaxy F13: 6,240,000
+Samsung Galaxy A73 5G: 16,340,000
+Samsung Galaxy A73 5G: 18,840,000
+Samsung Galaxy A53 5G: 15,280,000
+Samsung Galaxy A53 5G: 14,180,000
+Samsung Galaxy M33: 10,490,000
+Samsung Galaxy A23: 8,280,000
+Samsung Galaxy A23: 9,290,000
+Samsung Galaxy A13: 8,880,000
+Samsung Galaxy A13: 6,740,000
+Samsung Galaxy M32: 9,800,000
+Samsung Galaxy M13: 6,290,000
+Samsung Galaxy M13: 7,590,000
+Samsung Galaxy M53: 15,460,000
+Samsung Galaxy F13: 6,240,000
+Samsung Galaxy A73 5G: 16,340,000
+Samsung Galaxy A73 5G: 18,840,000
+Samsung Galaxy A53 5G: 15,280,000
+Samsung Galaxy A53 5G: 14,180,000
+Samsung Galaxy M33: 10,490,000
+Samsung Galaxy A23: 8,280,000
+Samsung Galaxy A23: 9,290,000
+Samsung Galaxy A13: 8,880,000
+Samsung Galaxy A13: 6,740,000
+Samsung Galaxy A13: 7,280,000
+Samsung Galaxy A33 5G: 12,280,000
+Samsung Galaxy A33 5G: 13,280,000
+Samsung Galaxy A22: 8,690,000
+Samsung Galaxy A32: 11,740,000
+Samsung Galaxy A32: 12,590,000
+Samsung Galaxy A14: 6,440,000
+Samsung Galaxy A14: 5,580,000
+Samsung Galaxy A24 4G: 8,880,000
+Samsung Galaxy A24 4G: 8,650,000
+Samsung Galaxy A34: 11,440,000
+Nothing Phone (1): 24,500,000
+Nothing Phone (1): 18,580,000
+Samsung Galaxy A04e: 4,480,000
+Samsung Galaxy A04e: 3,880,000
+Samsung Galaxy A04s: 4,820,000
+Samsung Galaxy A04: 4,180,000
+Samsung Galaxy A04: 4,770,000
+Nokia 2660 Flip: 2,890,000
+Nokia 5710 XpressAudio: 2,890,000
+Apple iPhone 12 mini: 30,000,000
+Nokia 8000 4G: 5,800,000
+Nokia 6300 4G: 5,100,000
+Lenovo Tab M10 HD Gen 2: 7,240,000
+Lenovo Tab M8 HD: 6,360,000
+Samsung Galaxy A03s: 5,680,000
+Apple iPad 10.2 2021: 15,849,000
+Apple iPhone 13: 41,810,000
+Apple iPhone 11: 30,500,000
+Honor X7: 6,132,000
+Huawei nova 10 Pro: 27,200,000
+Huawei nova 10: 23,200,000
+Honor X7a: 6,059,000
+Nothing Phone (1): 20,900,000
+Nokia 2660 Flip: 2,870,000
+Nokia 5710 XpressAudio: 2,890,000
+Huawei nova 10 Pro: 27,200,000
+Huawei nova 10: 23,200,000
+Honor X7: 6,132,000
+Apple iPad 10.2 2021: 15,849,000
+Apple iPhone 13: 41,810,000
+Apple iPhone 11: 30,500,000
+Honor X7a: 6,059,000
+Nothing Phone (1): 20,900,000
+Nokia 2660 Flip: 2,870,000
+Nokia 5310 2020: 1,850,000
+Nokia 210: 1,510,000
+Nokia 130 2017: 1,200,000
+Nokia 220: 1,180,000
+Nokia 3310 2017: 2,250,000
+Nokia 150 2020: 1,448,000
+Nokia 125: 1,204,000
+Nokia 105: 680,000
+Nokia 106 2018: 770,000
+Lenovo Tab M7: 3,600,000
+Samsung Galaxy A13: 7,400,000
+Samsung Galaxy A23: 7,538,000
+Samsung Galaxy A23: 9,300,000
+Samsung Galaxy A04: 4,500,000
+Samsung Galaxy A04s: 4,610,000
+Samsung Galaxy A04s: 5,100,000
+Samsung Galaxy A04e: 4,150,000
+Samsung Galaxy A14: 6,470,000
+Samsung Galaxy A14: 7,590,000
+Samsung Galaxy A14: 5,670,000
+Samsung Galaxy A24 4G: 8,400,000
+Samsung Galaxy A54: 15,990,000
+Samsung Galaxy A54: 14,400,000
+Samsung Galaxy S22 Ultra: 42,850,000
+Samsung Galaxy A33 5G: 12,953,000
+Samsung Galaxy A53 5G: 15,350,000
+Samsung Galaxy A73 5G: 17,024,000
+Samsung Galaxy M13: 7,650,000
+Samsung Galaxy M13: 5,960,000
+Samsung Galaxy A32: 12,330,000
+Samsung Galaxy S21 FE 5G: 20,100,000
+Samsung Galaxy S21 FE 5G: 19,125,000
+Xiaomi 12X: 22,100,000
+Samsung Galaxy Tab A8 10.5 2021: 10,400,000
+Samsung Galaxy Tab A8 10.5 2021: 9,400,000
+Xiaomi 11 Lite 5G NE: 12,650,000
+Samsung Galaxy Tab A7 Lite: 5,850,000
+Samsung Galaxy Tab S6 Lite 2022: 16,900,000
+Samsung Galaxy S23+: 45,700,000
+Samsung Galaxy Z Flip4: 43,449,000
+Xiaomi Poco M5s: 7,430,000
+Xiaomi Poco M5s: 8,830,000
+Xiaomi Redmi 12C: 4,950,000
+Xiaomi Poco X5: 10,499,000
+Xiaomi 13 Lite: 16,250,000
+Xiaomi Poco F5: 18,700,000
+Xiaomi Redmi 10 Power: 6,400,000
+Xiaomi Poco C40: 4,350,000
+Xiaomi Redmi 10A: 6,750,000
+Xiaomi Poco X4 Pro 5G: 14,400,000
+Xiaomi Redmi Note 11S: 8,650,000
+Xiaomi Redmi Note 11: 7,590,000
+Xiaomi Redmi Note 10S: 8,490,000
+Xiaomi Redmi 9A: 4,250,000
+Xiaomi Redmi 9A: 3,210,000
+Xiaomi Redmi A2+: 3,300,000
+Xiaomi Redmi Note 12S: 9,190,000
+Xiaomi Redmi Note 12: 7,300,000
+Xiaomi Redmi Note 12: 8,290,000
+Xiaomi Redmi Note 12 Pro: 11,450,000
+Xiaomi Redmi Note 12 Pro: 13,300,000
 Apple iPhone 13: 41,891,500
 Apple iPhone 13: 48,499,000
 Apple iPhone 11: 29,859,000
@@ -311,11 +570,11 @@ Xiaomi Redmi Note 11 Pro 4G: 13,300,000
 Xiaomi Redmi Note 11 Pro 4G: 10,100,000
 Xiaomi Redmi Note 11 Pro 5G: 14,301,000
 Xiaomi Redmi Note 10 Pro: 7,160,000
-Xiaomi Redmi Note 10 5G: 7,750,000
 Xiaomi Redmi Note 10: 7,750,000
+Xiaomi Redmi Note 10 5G: 7,750,000
 Xiaomi Redmi A1+: 3,000,000
-Xiaomi Redmi 9C: 5,101,000
 Xiaomi Redmi 9A: 2,954,000
+Xiaomi Redmi 9C: 5,101,000
 Xiaomi Redmi 10: 5,950,000
 Xiaomi Redmi 10 2022: 6,000,000
 Xiaomi Redmi 10 2022: 6,601,000
@@ -327,7 +586,6 @@ Xiaomi Redmi 10A: 3,201,000
 Xiaomi Redmi 10A: 4,996,000
 Xiaomi Poco M5s: 6,990,000
 Xiaomi Poco M5: 6,661,000
-Xiaomi Poco C40: 4,266,000
 Xiaomi Mi 11 Ultra: 37,600,000
 Xiaomi 11T Pro: 24,700,000
 Xiaomi 12X: 21,200,000
@@ -341,11 +599,12 @@ Samsung Galaxy Tab A8 10.5 2021: 10,378,000
 Samsung Galaxy Tab A8 10.5 2021: 10,280,000
 Samsung Galaxy Tab A7 Lite: 5,850,000
 Samsung Galaxy S21 FE 5G: 19,700,000
-Samsung Galaxy S22 Ultra: 51,880,000
 Samsung Galaxy S22+ 5G: 39,800,000
-Samsung Galaxy S23: 41,600,000
+Samsung Galaxy S22 Ultra: 43,700,000
+Samsung Galaxy S22 Ultra: 51,880,000
 Samsung Galaxy S23 Ultra: 54,690,000
 Samsung Galaxy S23 Ultra: 61,690,000
+Samsung Galaxy S23: 41,600,000
 Samsung Galaxy S21 FE 5G: 19,980,000
 Samsung Galaxy S20 FE 5G: 16,901,000
 Samsung Galaxy S20 FE: 16,901,000
@@ -375,9 +634,9 @@ Samsung Galaxy A04: 4,099,000
 Samsung Galaxy A04: 4,320,000
 Samsung Galaxy A04e: 4,247,000
 Samsung Galaxy A04e: 4,130,000
-Samsung Galaxy A03 Core: 3,592,000
-Samsung Galaxy A03: 4,200,000
 Samsung Galaxy A03: 4,276,000
+Samsung Galaxy A03: 4,200,000
+Samsung Galaxy A03 Core: 3,592,000
 Samsung Galaxy A03s: 5,200,000
 Samsung Galaxy A03s: 4,991,000
 OnePlus Nord N10 5G: 8,000,000
@@ -390,43 +649,13 @@ Motorola Edge 20 Pro: 17,300,000
 Motorola Moto G22: 5,740,000
 Motorola Moto G52: 8,520,000
 Huawei Y9a: 8,090,000
+Huawei nova Y70: 5,500,000
 Huawei nova 10: 21,700,000
 Honor X7: 6,091,000
 Honor X8: 8,280,000
 Honor X5: 2,960,000
 Honor 70: 15,950,000
 Honor 70: 18,701,000
-Xiaomi Redmi Note 11 Pro 4G: 13,800,000
-Xiaomi Redmi Note 11S: 8,650,000
-Xiaomi Redmi Note 11S: 10,600,000
-Xiaomi Redmi Note 11: 10,550,000
-Xiaomi Redmi Note 11: 7,900,000
-Xiaomi Redmi Note 11: 8,400,000
-Xiaomi Redmi 9A: 3,500,000
-Xiaomi Redmi Note 10S: 7,000,000
-Xiaomi Redmi Note 10S: 6,800,000
-Xiaomi Redmi Note 11 Pro+: 13,350,000
-Xiaomi Redmi Note 11 Pro 5G: 13,990,000
-Xiaomi 11T Pro: 18,950,000
-Xiaomi 11T: 18,800,000
-Samsung Galaxy Z Fold3 5G: 62,000,000
-Samsung Galaxy Z Fold3 5G: 56,990,000
-Xiaomi Poco X4 Pro 5G: 13,900,000
-Xiaomi Poco F4: 18,200,000
-Xiaomi Poco F4 GT: 22,300,000
-Samsung Galaxy Z Fold4: 70,200,000
-Samsung Galaxy Z Fold4: 72,700,000
-Samsung Galaxy Z Flip4: 43,400,000
-Samsung Galaxy Z Flip4: 39,300,000
-Samsung Galaxy S23 Ultra: 49,700,000
-Samsung Galaxy S23 Ultra: 59,200,000
-Samsung Galaxy S23+: 43,800,000
-Samsung Galaxy Tab S6 Lite 2022: 17,400,000
-Samsung Galaxy Tab S8: 36,800,000
-Samsung Galaxy Tab S8+: 37,300,000
-Samsung Galaxy Tab S8 Ultra: 43,900,000
-Samsung Galaxy Tab A7 Lite: 6,000,000
-Samsung Galaxy Tab A8 10.5 2021: 10,500,000
 Honor X5: 3,099,000
 Samsung Galaxy A23: 7,099,000
 Samsung Galaxy A04s: 4,269,000
@@ -435,37 +664,40 @@ Samsung Galaxy A03 Core: 3,549,000
 Samsung Galaxy S21 FE 5G: 17,849,000
 Lenovo Tab M8 HD: 5,075,000
 Huawei Y9a: 7,749,000
-Xiaomi Redmi Note 12 Pro+: 16,800,000
-Xiaomi Redmi Note 12 Pro+: 21,000,000
 Xiaomi Redmi Note 12 Pro: 11,250,000
+Xiaomi Redmi Note 12 Pro+: 21,000,000
+Xiaomi Redmi Note 12 Pro+: 16,800,000
 Xiaomi Redmi Note 12: 8,300,000
+Xiaomi Redmi Note 12S: 9,100,000
 Xiaomi Redmi A2+: 3,400,000
 Xiaomi Redmi A1+: 3,300,000
 Xiaomi Redmi 9C: 5,400,000
-Xiaomi Redmi Note 10S: 9,100,000
 Xiaomi Redmi Note 10 Pro: 9,850,000
 Xiaomi Redmi Note 10 Pro: 7,100,000
+Xiaomi Redmi Note 10S: 9,100,000
+Xiaomi Redmi Note 11 Pro 5G: 13,250,000
 Xiaomi Redmi Note 11 Pro+: 13,050,000
 Xiaomi Redmi Note 11 Pro 4G: 12,800,000
+Xiaomi Redmi Note 11S: 8,600,000
 Xiaomi Redmi Note 11: 8,150,000
 Xiaomi Redmi Note 11: 8,000,000
-Xiaomi Redmi Note 11 Pro 5G: 13,250,000
-Xiaomi Redmi Note 11S: 8,600,000
 Xiaomi Redmi Note 11SE: 7,700,000
 Xiaomi Redmi 10C: 5,300,000
 Xiaomi Redmi 10 Power: 6,500,000
 Xiaomi Poco C40: 4,300,000
+Xiaomi Redmi 10 Power: 6,500,000
+Xiaomi Redmi 10C: 5,300,000
 Xiaomi Redmi 10A: 4,800,000
-Xiaomi Poco X4 Pro 5G: 12,000,000
 Xiaomi Poco X4 Pro 5G: 13,300,000
+Xiaomi Poco X4 Pro 5G: 12,000,000
 Xiaomi Redmi 9A: 4,150,000
 Xiaomi Redmi 9A: 3,250,000
-Xiaomi Poco M5: 6,700,000
 Xiaomi Poco M5s: 7,100,000
+Xiaomi Poco M5: 6,700,000
 Xiaomi Redmi 12C: 5,250,000
 Xiaomi Redmi 12C: 5,750,000
-Xiaomi Poco X5 Pro: 14,100,000
 Xiaomi Poco X5: 10,400,000
+Xiaomi Poco X5 Pro: 14,100,000
 Xiaomi Poco F5: 18,700,000
 Xiaomi 13 Lite: 16,100,000
 Xiaomi 12 Lite: 15,000,000
@@ -477,36 +709,36 @@ Xiaomi 11 Lite 5G NE: 12,600,000
 Samsung Galaxy Tab S8+: 38,500,000
 Samsung Galaxy Tab S8: 37,000,000
 Samsung Galaxy Tab S8 Ultra: 59,500,000
-Xiaomi Black Shark 5 Pro: 34,200,000
 Samsung Galaxy Tab S6 Lite 2022: 16,100,000
+Xiaomi Black Shark 5 Pro: 34,200,000
 Samsung Galaxy S22 Ultra: 42,800,000
 Samsung Galaxy S22 5G: 38,200,000
 Samsung Galaxy M33: 9,600,000
-Samsung Galaxy S21 FE 5G: 18,900,000
 Samsung Galaxy S21 FE 5G: 18,250,000
+Samsung Galaxy S21 FE 5G: 18,900,000
 Samsung Galaxy Tab A8 10.5 2021: 10,750,000
 Samsung Galaxy Tab A7 Lite: 6,100,000
-Samsung Galaxy M32: 7,400,000
 Samsung Galaxy M32: 8,250,000
+Samsung Galaxy M32: 7,400,000
+Samsung Galaxy Note20 Ultra 5G: 44,300,000
 Samsung Galaxy S20 FE 5G: 17,000,000
 Samsung Galaxy M13 5G: 7,900,000
 Samsung Galaxy S23 Ultra: 50,700,000
 Samsung Galaxy S23 Ultra: 59,500,000
 Samsung Galaxy S23+: 44,300,000
-Samsung Galaxy A34: 11,300,000
-Samsung Galaxy A34: 13,200,000
 Samsung Galaxy A54: 13,800,000
 Samsung Galaxy A54: 15,100,000
-Samsung Galaxy A32: 11,500,000
+Samsung Galaxy A34: 11,300,000
+Samsung Galaxy A34: 13,200,000
 Samsung Galaxy A52s 5G: 18,500,000
-Samsung Galaxy M13: 6,050,000
+Samsung Galaxy A32: 11,500,000
 Samsung Galaxy M13: 7,200,000
 Samsung Galaxy F13: 5,900,000
 Samsung Galaxy A33 5G: 13,650,000
 Samsung Galaxy A33 5G: 12,750,000
+Samsung Galaxy A53 5G: 15,050,000
 Samsung Galaxy A73 5G: 16,800,000
 Samsung Galaxy A73 5G: 18,750,000
-Samsung Galaxy A53 5G: 15,050,000
 Samsung Galaxy A53 5G: 14,600,000
 Samsung Galaxy A23: 8,300,000
 Samsung Galaxy A23: 7,000,000
@@ -514,29 +746,30 @@ Samsung Galaxy A23: 9,400,000
 Samsung Galaxy A13: 8,100,000
 Samsung Galaxy A13: 7,400,000
 Samsung Galaxy A13: 7,000,000
+Samsung Galaxy A24 4G: 8,250,000
+Samsung Galaxy A24 4G: 8,800,000
 Samsung Galaxy A14: 5,700,000
 Samsung Galaxy A14: 7,600,000
 Samsung Galaxy A14: 6,500,000
 Samsung Galaxy A14 5G: 8,600,000
-Samsung Galaxy A04s: 5,250,000
 Samsung Galaxy A04e: 4,200,000
-Samsung Galaxy A24 4G: 8,800,000
-Samsung Galaxy A24 4G: 8,250,000
-Nothing Phone (1): 19,000,000
-Honor X6: 5,400,000
+Samsung Galaxy A04s: 5,250,000
 Samsung Galaxy A04: 4,550,000
+Honor X6: 5,400,000
+Nothing Phone (1): 19,000,000
 Honor X9a: 14,300,000
 Honor X7a: 6,200,000
 Honor X8a: 9,000,000
 Honor X8: 9,000,000
 Honor X7: 6,500,000
-Samsung Galaxy A03s: 4,650,000
-Samsung Galaxy A03: 4,850,000
 Huawei Y9a: 8,600,000
+Samsung Galaxy A03: 4,850,000
+Samsung Galaxy A03s: 4,650,000
 Apple iPhone 13 Pro Max: 82,500,000
 Apple iPhone 13: 41,300,000
 Honor X5: 3,300,000
 Xiaomi 12T Pro: 37,000,000
+Xiaomi 12 Pro: 32,300,000
 Samsung Galaxy S21 FE 5G: 19,490,000
 Xiaomi Redmi K50: 20,000,000
 Xiaomi 11T Pro: 19,600,000
@@ -546,11 +779,9 @@ Xiaomi Poco X4 Pro 5G: 11,700,000
 Xiaomi Poco F5 Pro: 27,000,000
 Xiaomi Poco F4 GT: 17,600,000
 Xiaomi Redmi Note 10 Pro: 7,000,000
-Samsung Galaxy S22 Ultra: 41,500,000
 Xiaomi Poco X5: 10,150,000
 Samsung Galaxy A33 5G: 12,300,000
 Xiaomi Redmi Note 12: 7,960,000
-Xiaomi Redmi Note 12 Pro+: 17,000,000
 Xiaomi Redmi A1+: 2,999,000
 Xiaomi Redmi Note 12S: 8,880,000
 Xiaomi Poco X5 Pro: 14,100,000
@@ -561,15 +792,15 @@ Xiaomi Redmi Note 12 Pro: 15,400,000
 Xiaomi Redmi Note 12S: 9,200,000
 Xiaomi Redmi Note 11SE: 7,750,000
 Xiaomi Redmi Note 11 Pro 4G: 12,900,000
-Xiaomi Redmi Note 11S: 8,650,000
 Xiaomi Redmi Note 11: 8,000,000
 Xiaomi Redmi Note 11: 8,200,000
+Xiaomi Redmi Note 11S: 8,650,000
 Xiaomi Redmi Note 10S: 9,100,000
 Xiaomi Redmi Note 11 Pro 5G: 13,250,000
 Xiaomi Redmi Note 11 Pro+: 13,000,000
 Xiaomi Redmi 10: 8,000,000
-Xiaomi Redmi Note 10 Pro: 10,850,000
 Xiaomi Redmi Note 10 5G: 8,300,000
+Xiaomi Redmi Note 10 Pro: 10,850,000
 Xiaomi Redmi 9C: 5,400,000
 Xiaomi Redmi 10 2022: 8,300,000
 Xiaomi Redmi 10C: 5,300,000
@@ -577,15 +808,16 @@ Xiaomi Redmi 10 Power: 6,500,000
 Xiaomi Redmi 10A: 4,800,000
 Xiaomi Redmi A2+: 3,400,000
 Xiaomi Redmi A1+: 3,300,000
-Xiaomi Redmi 12C: 5,750,000
 Xiaomi Poco X5: 10,400,000
+Xiaomi Redmi 12C: 5,750,000
 Xiaomi Poco C55: 7,200,000
 Xiaomi Poco M5s: 7,100,000
 Xiaomi Poco M5: 6,700,000
 Xiaomi Poco F5: 18,700,000
 Xiaomi Poco X4 GT: 17,400,000
-Xiaomi Poco C40: 4,300,000
 Xiaomi Poco F4: 14,500,000
+Xiaomi Poco F4: 17,500,000
+Xiaomi Poco C40: 4,300,000
 Xiaomi Mi 11 Ultra: 37,200,000
 Xiaomi Poco C31: 7,000,000
 Xiaomi 12X: 21,000,000
@@ -595,19 +827,18 @@ Xiaomi 11 Lite 5G NE: 12,700,000
 Xiaomi Black Shark 5 Pro: 34,200,000
 Samsung Galaxy Tab S8+: 38,400,000
 Samsung Galaxy Tab S8: 34,000,000
-Xiaomi 12 Lite: 15,000,000
 Samsung Galaxy Z Flip4: 38,100,000
+Xiaomi 12 Lite: 15,000,000
 Xiaomi 13 Lite: 16,150,000
 Samsung Galaxy S23: 42,800,000
-Samsung Galaxy S23+: 44,300,000
-Samsung Galaxy S23 Ultra: 59,500,000
 Samsung Galaxy S23 Ultra: 50,700,000
+Samsung Galaxy S23 Ultra: 59,500,000
 Samsung Galaxy S22 Ultra: 42,800,000
 Samsung Galaxy S22 5G: 38,200,000
 Samsung Galaxy Tab S6 Lite 2022: 16,700,000
-Samsung Galaxy S21 FE 5G: 18,250,000
-Samsung Galaxy S21 FE 5G: 18,800,000
 Samsung Galaxy Tab A8 10.5 2021: 10,750,000
+Samsung Galaxy S21 FE 5G: 18,800,000
+Samsung Galaxy S21 FE 5G: 18,250,000
 Samsung Galaxy Tab A7 Lite: 5,950,000
 Samsung Galaxy S21 Ultra 5G: 48,800,000
 Samsung Galaxy Note20 Ultra 5G: 44,300,000
@@ -615,12 +846,12 @@ Samsung Galaxy S20 FE 5G: 16,400,000
 Samsung Galaxy Tab S6 Lite: 16,100,000
 Samsung Galaxy M32: 8,250,000
 Samsung Galaxy M32: 7,400,000
-Samsung Galaxy F13: 5,900,000
+Samsung Galaxy M53: 15,300,000
 Samsung Galaxy M13: 7,200,000
 Samsung Galaxy M13: 6,050,000
-Samsung Galaxy M53: 15,300,000
-Samsung Galaxy A73 5G: 18,750,000
+Samsung Galaxy F13: 5,900,000
 Samsung Galaxy A73 5G: 16,800,000
+Samsung Galaxy A73 5G: 18,750,000
 Samsung Galaxy A53 5G: 15,000,000
 Samsung Galaxy F23: 9,700,000
 Samsung Galaxy M33: 9,600,000
@@ -635,6 +866,7 @@ Samsung Galaxy A14: 7,500,000
 Samsung Galaxy A14: 6,700,000
 Samsung Galaxy A14 5G: 8,600,000
 Samsung Galaxy A24 4G: 8,700,000
+Samsung Galaxy A24 4G: 8,250,000
 Samsung Galaxy A24 4G: 10,200,000
 Samsung Galaxy A23: 7,000,000
 Samsung Galaxy A23: 8,250,000
@@ -647,133 +879,35 @@ Samsung Galaxy A13: 7,400,000
 Samsung Galaxy A13: 6,250,000
 Samsung Galaxy A13: 8,100,000
 Honor X7a: 6,250,000
-Samsung Galaxy A04: 4,550,000
+Nothing Phone (1): 19,000,000
 Samsung Galaxy A04s: 5,200,000
 Motorola Moto G72: 10,250,000
 Samsung Galaxy A04e: 4,200,000
-Nothing Phone (1): 19,000,000
 Apple iPhone SE 2022: 26,000,000
 Apple iPhone SE 2020: 20,000,000
 Apple iPhone 13: 41,300,000
-Xiaomi Redmi Note 11 Pro+: 12,780,000
-Xiaomi Redmi Note 11S: 8,580,000
-Xiaomi Redmi Note 11 Pro 5G: 12,580,000
-Xiaomi Redmi Note 11: 8,580,000
-Xiaomi Redmi Note 11: 7,780,000
-Xiaomi Redmi Note 11 Pro 4G: 11,980,000
-Xiaomi Redmi Note 11SE: 8,700,000
-Xiaomi Redmi Note 12 Pro+: 21,400,000
-Xiaomi Redmi Note 12 Pro: 13,380,000
-Xiaomi Redmi Pad: 13,380,000
-Xiaomi Redmi Note 12 4G: 7,420,000
-Xiaomi Redmi Note 12 4G: 12,940,000
-Xiaomi Redmi Note 12 4G: 8,280,000
-Xiaomi Redmi Note 12S: 9,080,000
-Xiaomi Redmi Note 12 Pro 4G: 11,180,000
 Samsung Galaxy S23 Ultra: 49,300,000
-Xiaomi Redmi 12C: 4,490,000
-Xiaomi Redmi 12C: 5,280,000
-Xiaomi Poco X5: 10,280,000
-Xiaomi Poco X5 Pro: 14,080,000
-Xiaomi Redmi A2+: 3,380,000
-Xiaomi Redmi 10C: 5,490,000
-Xiaomi Redmi 10C: 5,880,000
-Xiaomi Redmi 10A: 5,320,000
-Xiaomi Redmi 10A: 4,930,000
-Xiaomi Poco X4 Pro 5G: 13,180,000
-Xiaomi Redmi 9A: 4,340,000
-Xiaomi Redmi 9C: 5,180,000
-Xiaomi Redmi K40: 17,990,000
-Samsung Galaxy S23 Ultra: 49,300,000
-Xiaomi Redmi 12C: 4,490,000
-Xiaomi Redmi 12C: 5,280,000
-Xiaomi Poco X5 Pro: 14,080,000
-Xiaomi Poco X5: 10,280,000
-Xiaomi Redmi A2+: 3,380,000
-Xiaomi Redmi 10C: 5,490,000
-Xiaomi Redmi 10C: 5,880,000
-Xiaomi Redmi 10A: 4,930,000
-Xiaomi Redmi 10A: 5,320,000
-Xiaomi Poco X4 Pro 5G: 13,180,000
-Xiaomi Redmi 9A: 4,340,000
-Xiaomi Redmi 9C: 5,180,000
-Xiaomi Redmi K40: 17,990,000
-Xiaomi Redmi 9T: 8,390,000
-Xiaomi Redmi Note 10 Pro: 10,740,000
-Xiaomi Poco F4 GT: 18,980,000
-Xiaomi Poco F4 GT: 24,590,000
-Xiaomi Poco F5 Pro: 25,600,000
-Xiaomi Poco F5: 18,680,000
-Xiaomi Poco M5s: 7,140,000
-Xiaomi Poco M5s: 8,560,000
-Xiaomi Mix Fold 2: 91,000,000
-Xiaomi 12T Pro: 32,900,000
-Xiaomi 13 Lite: 15,870,000
-Xiaomi 13 Ultra: 67,000,000
-Xiaomi Poco C40: 4,680,000
-Xiaomi Poco F4: 16,580,000
-Xiaomi Black Shark 5 Pro: 34,500,000
-Xiaomi Mi 11 Ultra: 37,980,000
-Xiaomi 12X: 20,390,000
-Xiaomi 12: 25,980,000
-Xiaomi 12 Pro: 34,480,000
-Xiaomi 12: 21,980,000
-Xiaomi 11T Pro: 18,780,000
-Xiaomi 11T: 16,980,000
-Xiaomi 11T Pro: 23,190,000
-Xiaomi 12 Lite: 15,540,000
-Samsung Galaxy Tab S8+: 36,980,000
-Xiaomi 12T Pro: 34,640,000
-Samsung Galaxy S23: 43,980,000
-Samsung Galaxy S23+: 45,580,000
-Samsung Galaxy S23 Ultra: 59,780,000
-Samsung Galaxy S23 Ultra: 59,480,000
-Samsung Galaxy Tab S8: 36,580,000
-Samsung Galaxy S22 Ultra: 48,890,000
-Samsung Galaxy S22 Ultra: 41,490,000
-Samsung Galaxy Tab S6 Lite 2022: 15,840,000
-Samsung Galaxy Tab A8 10.5 2021: 9,180,000
-Samsung Galaxy S21 FE 5G: 18,780,000
-Samsung Galaxy S21 FE 5G: 18,580,000
-Samsung Galaxy Tab A7 Lite: 5,670,000
-Samsung Galaxy Tab S7 FE: 26,390,000
-Samsung Galaxy S20 FE 5G: 18,360,000
-Samsung Galaxy M32: 9,800,000
-Samsung Galaxy M32: 10,690,000
-Samsung Galaxy M12: 8,590,000
-Samsung Galaxy M52 5G: 14,860,000
-Samsung Galaxy M13: 6,290,000
-Samsung Galaxy M13: 7,590,000
-Samsung Galaxy F13: 6,240,000
-Samsung Galaxy M53: 15,460,000
-Samsung Galaxy A73 5G: 16,340,000
-Samsung Galaxy A73 5G: 18,840,000
-Samsung Galaxy A53 5G: 15,280,000
-Samsung Galaxy A53 5G: 14,180,000
-Samsung Galaxy M33: 10,490,000
-Samsung Galaxy A54: 15,580,000
-Samsung Galaxy A54: 14,080,000
 Samsung Galaxy A54: 15,090,000
-Apple iPhone 13: 40,900,000
 Apple iPhone 13: 50,500,000
+Apple iPhone 13: 40,900,000
 Apple iPhone 13 Pro Max: 79,000,000
 Apple iPhone 13 Pro: 72,500,000
 Apple iPhone 13 Pro: 73,000,000
-Apple iPhone 12: 38,900,000
 Apple iPhone 11: 33,900,000
+Apple iPhone 12: 38,900,000
 Samsung Galaxy S23 Ultra: 58,499,000
 Samsung Galaxy Z Fold3 5G: 56,800,000
 Xiaomi 11T Pro: 19,200,000
 Samsung Galaxy S21 FE 5G: 18,200,000
-Samsung Galaxy Tab S6 Lite: 15,900,000
 Samsung Galaxy S21 Ultra 5G: 42,200,000
+Samsung Galaxy Tab S6 Lite: 15,900,000
 Samsung Galaxy S22 Ultra: 42,200,000
 Samsung Galaxy S23 Ultra: 50,200,000
 Samsung Galaxy S23+: 43,600,000
 Samsung Galaxy S23: 42,500,000
 Samsung Galaxy Note20 Ultra 5G: 43,100,000
-Samsung Galaxy A73 5G: 16,450,000
 Samsung Galaxy A53 5G: 15,400,000
+Samsung Galaxy A73 5G: 16,450,000
 Samsung Galaxy A54: 14,400,000
 Samsung Galaxy A04s: 4,650,000
 Nokia 5310 2020: 1,730,000
@@ -781,62 +915,33 @@ Nokia 105 2019: 710,000
 Nokia 110: 1,020,000
 Nokia 106: 680,000
 Motorola Moto G52: 9,300,000
+Motorola Moto G22: 6,300,000
 Motorola Edge 30 Pro: 29,600,000
 Apple iPhone 11: 31,100,000
 Apple iPhone 12 Pro Max: 66,300,000
 Apple iPhone 13: 40,300,000
 Apple iPhone 13 mini: 38,200,000
-Apple iPhone 13 Pro Max: 82,500,000
 Apple iPhone 13 Pro: 69,900,000
-Xiaomi Redmi Note 11E Pro: 10,450,000
-Xiaomi Redmi Note 11S: 8,500,000
-Xiaomi Redmi Note 12S: 9,000,000
-Samsung Galaxy A24 4G: 8,800,000
-Nothing Phone (1): 18,500,000
-Samsung Galaxy A34: 10,750,000
-Xiaomi 13 Lite: 16,300,000
-Samsung Galaxy A14: 5,400,000
-Xiaomi Poco X5: 10,550,000
-Xiaomi Redmi 12C: 5,680,000
-Samsung Galaxy A14 5G: 7,550,000
-Samsung Galaxy F13: 6,900,000
-Xiaomi Redmi 10C: 5,370,000
-Xiaomi Redmi Note 10 5G: 7,900,000
-Motorola Edge 20 Pro: 17,300,000
-Nokia 105 2019: 770,000
-Motorola Moto G52: 8,800,000
-Honor 70: 16,258,000
-Motorola Moto E32s: 4,750,000
-Honor X7: 6,750,000
-Nokia G21: 6,400,000
-Motorola Moto G22: 5,950,000
-Honor X5: 3,200,000
-Honor X9a: 13,950,000
-Honor X7a: 5,890,000
-Motorola Moto E13: 3,875,000
-Honor X8a: 8,880,000
-Honor X6: 5,130,000
-Motorola Moto G72: 9,760,000
-Nothing Phone (1): 17,599,000
-Samsung Galaxy S22 5G: 38,990,000
-Samsung Galaxy M11: 5,999,000
+Apple iPhone 13 Pro Max: 82,500,000
 Samsung Galaxy A12 Nacho: 9,400,000
 Samsung Galaxy S21 FE 5G: 20,085,000
-Motorola Edge 20 Pro: 17,245,000
-Motorola Moto G22: 5,860,000
-Motorola Moto G52: 8,519,000
-Motorola Moto G52: 8,519,000
-Motorola Moto E32s: 4,675,000
-Huawei nova Y90: 9,499,000
-Huawei nova Y90: 9,399,000
-Nokia 5710 XpressAudio: 2,680,000
-Huawei nova Y70: 5,716,000
-Motorola Edge 30: 16,834,000
+Samsung Galaxy M11: 5,999,000
+Samsung Galaxy S22 5G: 38,990,000
+Nothing Phone (1): 17,599,000
 Nothing Phone (1): 18,550,000
 Motorola Moto G72: 9,690,000
 Motorola Edge 30 Fusion: 23,670,000
 Motorola Edge 30 Fusion: 23,670,000
-Apple iPhone SE 2022: 28,970,000
+Motorola Moto G22: 5,860,000
+Motorola Moto G52: 8,519,000
+Motorola Moto G52: 8,519,000
+Motorola Edge 30: 16,834,000
+Huawei nova Y70: 5,716,000
+Huawei nova Y70: 5,664,000
+Motorola Moto E32s: 4,675,000
+Huawei nova Y90: 9,499,000
+Huawei nova Y90: 9,399,000
+Motorola Edge 20 Pro: 17,245,000
 Apple iPhone 11: 31,189,000
 Apple iPhone 11: 30,549,000
 Apple iPhone 11: 31,499,000
@@ -846,7 +951,7 @@ Apple iPhone 13: 49,130,000
 Apple iPhone 13: 69,449,000
 Apple iPhone 13: 59,449,000
 Apple iPhone 13: 61,449,000
-Apple iPhone 13 Pro Max: 110,000,000
+Apple iPhone SE 2022: 28,970,000
 Lenovo Tab M7: 4,400,000
 Samsung Galaxy Tab A8 10.5 2021: 9,070,000
 Samsung Galaxy Tab A8 10.5 2021: 10,750,000
@@ -858,8 +963,8 @@ Samsung Galaxy Tab A7 Lite: 5,600,000
 Xiaomi Redmi Note 12 Pro: 13,290,000
 Xiaomi Redmi Note 12S: 8,870,000
 Xiaomi Redmi Note 12 Pro 4G: 11,040,000
-Xiaomi Redmi Note 12 4G: 7,970,000
 Xiaomi Redmi A2+: 3,390,000
+Xiaomi Redmi Note 12 4G: 7,970,000
 Xiaomi Redmi A1+: 3,190,000
 Xiaomi Redmi Note 10 Pro: 6,990,000
 Xiaomi Redmi Note 10 Pro: 10,540,000
@@ -873,14 +978,14 @@ Xiaomi Redmi Note 11S: 8,290,000
 Xiaomi Redmi Note 11: 7,800,000
 Xiaomi Redmi Note 11: 8,590,000
 Xiaomi Redmi 10 2022: 6,740,000
-Xiaomi Redmi 10 2022: 7,290,000
 Xiaomi Poco X4 Pro 5G: 12,400,000
 Xiaomi Poco X4 Pro 5G: 13,190,000
 Xiaomi Poco C40: 4,090,000
 Xiaomi Poco C40: 3,890,000
-Xiaomi Redmi 10A: 3,090,000
 Xiaomi Redmi 10A: 3,990,000
+Xiaomi Redmi 10A: 3,090,000
 Xiaomi Redmi 12C: 4,499,000
+Xiaomi Poco X5 Pro: 13,970,000
 Xiaomi Poco F5: 18,490,000
 Xiaomi 13 Lite: 15,850,000
 Samsung Galaxy Z Fold4: 70,200,000
@@ -897,56 +1002,56 @@ Samsung Galaxy Tab A8 10.5 2021: 9,190,000
 Samsung Galaxy Tab S6 Lite: 15,950,000
 Samsung Galaxy Tab A7 Lite: 5,680,000
 Samsung Galaxy S22 Ultra: 48,900,000
-Samsung Galaxy A73 5G: 16,350,000
 Samsung Galaxy M13: 6,190,000
+Samsung Galaxy A73 5G: 16,350,000
 Samsung Galaxy A54: 13,790,000
-Samsung Galaxy S23 Ultra: 49,390,000
-Samsung Galaxy S23 Ultra: 59,390,000
 Samsung Galaxy S23: 41,890,000
 Samsung Galaxy S23+: 43,990,000
+Samsung Galaxy S23 Ultra: 49,390,000
+Samsung Galaxy S23 Ultra: 59,390,000
 Samsung Galaxy A13 (SM-A137): 7,290,000
 Samsung Galaxy A13 (SM-A137): 6,750,000
 Samsung Galaxy A54: 15,450,000
-Samsung Galaxy A34: 11,350,000
-Samsung Galaxy A14: 7,590,000
 Samsung Galaxy A14: 6,540,000
 Samsung Galaxy A14: 5,250,000
+Samsung Galaxy A14: 7,590,000
 Samsung Galaxy A24 4G: 9,540,000
-Samsung Galaxy A33 5G: 12,390,000
+Samsung Galaxy A34: 11,350,000
 Samsung Galaxy A53 5G: 15,090,000
 Samsung Galaxy A53 5G: 13,800,000
-Samsung Galaxy A23: 8,390,000
+Samsung Galaxy A33 5G: 12,390,000
 Samsung Galaxy A23: 9,300,000
 Samsung Galaxy A23: 6,890,000
+Samsung Galaxy A23: 8,390,000
 Samsung Galaxy A32: 11,750,000
 Motorola Edge 20 Pro: 17,590,000
 Samsung Galaxy A03: 4,750,000
 Samsung Galaxy A03s: 4,990,000
-Samsung Galaxy A03s: 5,490,000
 Motorola Moto G22: 6,090,000
 Samsung Galaxy A13: 7,290,000
 Motorola Edge 30: 17,290,000
 Motorola Moto G52: 8,990,000
-Samsung Galaxy A04: 4,390,000
-Samsung Galaxy A04s: 5,050,000
 Nothing Phone (1): 17,999,000
 Samsung Galaxy A04e: 4,190,000
+Samsung Galaxy A04e: 3,649,000
+Samsung Galaxy A04: 4,390,000
+Samsung Galaxy A04s: 5,050,000
 Apple iPad Pro 11 2022: 45,990,000
 Apple iPad Pro 11 2022: 40,590,000
 Apple iPad Air 2022: 35,890,000
 Apple iPad Air 2022: 28,190,000
+Apple iPhone 13: 40,490,000
 Apple iPad 10.2 2021: 21,990,000
 Apple iPad 10.2 2021: 14,990,000
-Apple iPhone 13: 40,490,000
 Samsung Galaxy S21+ 5G: 35,200,000
 Xiaomi Redmi Note 10 Pro: 10,599,000
 Xiaomi Redmi Note 11 Pro+: 12,899,000
 Xiaomi Redmi Note 11: 7,849,000
 Xiaomi Redmi Note 11S: 8,589,000
-Xiaomi Redmi Note 12 Pro+: 17,499,000
-Xiaomi Redmi Note 12: 7,749,000
-Xiaomi Redmi Note 12 Pro: 13,159,000
 Xiaomi Redmi Note 12 Pro: 11,049,000
+Xiaomi Redmi Note 12 Pro: 13,159,000
+Xiaomi Redmi Note 12: 7,749,000
+Xiaomi Redmi Note 12 Pro+: 17,499,000
 Xiaomi Redmi Note 12S: 8,899,000
 Xiaomi Redmi A2+: 3,099,000
 Xiaomi 12 Lite: 15,289,000
@@ -961,44 +1066,16 @@ Samsung Galaxy S22 Ultra: 41,999,000
 Samsung Galaxy M13: 5,899,000
 Samsung Galaxy A53 5G: 14,599,000
 Samsung Galaxy A53 5G: 14,999,000
-Samsung Galaxy A73 5G: 16,399,000
 Samsung Galaxy A73 5G: 19,699,000
+Samsung Galaxy A73 5G: 16,399,000
 Samsung Galaxy A34: 11,369,000
 Samsung Galaxy A54: 15,029,000
 Samsung Galaxy A54: 13,999,000
-Samsung Galaxy A34: 10,899,000
-Samsung Galaxy A14: 6,399,000
-Samsung Galaxy A14: 7,379,000
-Samsung Galaxy A24 4G: 7,999,000
-Samsung Galaxy A24 4G: 10,099,000
-Samsung Galaxy A33 5G: 13,499,000
-Samsung Galaxy A33 5G: 13,599,000
-Samsung Galaxy A23: 6,939,000
-Samsung Galaxy A23: 8,999,000
-Samsung Galaxy A03 Core: 3,549,000
-Nokia 125: 1,309,000
-Nokia 105 2019: 819,000
-Samsung Galaxy A04: 3,949,000
-Samsung Galaxy A04s: 6,999,000
 Samsung Galaxy A04s: 4,519,000
 Xiaomi Redmi 10 2022: 6,650,000
-Apple iPhone 14 Pro Max: 64,000,000
-Apple iPhone 14 Pro Max: 85,000,000
-Apple iPhone 14 Pro Max: 95,000,000
-Apple iPhone 14 Pro: 67,000,000
-Apple iPhone 14 Pro Max: 73,500,000
-Apple iPhone 14 Pro: 82,000,000
 Samsung Galaxy A33 5G: 11,720,000
 Samsung Galaxy A24 4G: 9,050,000
 Samsung Galaxy A23: 7,220,000
-Samsung Galaxy A14: 6,900,000
-Samsung Galaxy A04: 4,190,000
-Samsung Galaxy S23 Ultra: 59,490,000
-Samsung Galaxy S22 Ultra: 42,520,000
-Samsung Galaxy S22+ 5G: 37,470,000
-Samsung Galaxy S23+: 45,450,000
-Samsung Galaxy S21 FE 5G: 17,930,000
-Samsung Galaxy A73 5G: 16,460,000
 Xiaomi Redmi Note 12 4G: 7,420,000
 Xiaomi Poco X5: 10,290,000
 Xiaomi Redmi 12C: 5,590,000
@@ -1006,8 +1083,8 @@ Samsung Galaxy F13: 5,820,000
 Xiaomi Redmi Note 11 Pro 4G: 10,750,000
 Xiaomi Redmi Note 10 Pro: 10,900,000
 Xiaomi Redmi Note 10 Pro: 7,159,000
-Xiaomi Poco X4 Pro 5G: 11,900,000
 Xiaomi Poco X4 Pro 5G: 13,200,000
+Xiaomi Poco X4 Pro 5G: 11,900,000
 Xiaomi Poco X5: 11,000,000
 Xiaomi Poco M5: 6,100,000
 Xiaomi 12 Lite: 15,400,000
@@ -1027,9 +1104,11 @@ Samsung Galaxy A53 5G: 14,500,000
 Samsung Galaxy A54: 14,800,000
 Samsung Galaxy A54: 13,400,000
 Samsung Galaxy A33 5G: 12,900,000
+Samsung Galaxy A33 5G: 11,850,000
+Samsung Galaxy A23: 9,000,000
 Samsung Galaxy A23: 8,350,000
-Samsung Galaxy A34: 11,200,000
 Samsung Galaxy A24 4G: 7,900,000
+Samsung Galaxy A34: 11,200,000
 Samsung Galaxy A14: 5,350,000
 Samsung Galaxy A04e: 3,980,000
 Samsung Galaxy A04: 4,280,000
@@ -1037,46 +1116,46 @@ Samsung Galaxy A04: 3,830,000
 Samsung Galaxy A04s: 4,350,000
 Samsung Galaxy A04s: 4,900,000
 Samsung Galaxy A13: 6,750,000
-Samsung Galaxy A03 Core: 3,600,000
 Samsung Galaxy A03: 4,350,000
 Samsung Galaxy A03: 4,580,000
+Samsung Galaxy A03 Core: 3,600,000
 Samsung Galaxy A03s: 4,520,000
 Samsung Galaxy A03s: 5,350,000
 Nokia 106: 739,000
 Honor X7: 5,803,000
 Huawei nova 10: 19,999,000
 Honor X8a: 8,703,000
-Honor X9a: 13,750,000
 Honor X6: 5,089,000
-Xiaomi Redmi Note 12 Pro: 11,450,000
 Xiaomi Redmi Note 12: 8,390,000
+Xiaomi Redmi Note 12 Pro: 11,450,000
 Xiaomi Redmi Note 12S: 9,250,000
 Xiaomi Redmi Note 11SE: 7,390,000
-Xiaomi Redmi 10C: 5,350,000
-Xiaomi 12 Lite: 14,990,000
 Xiaomi Poco C40: 4,280,000
+Xiaomi Redmi 10C: 5,350,000
 Xiaomi Poco X4 Pro 5G: 12,390,000
+Xiaomi Redmi Note 11 Pro 4G: 13,150,000
 Xiaomi Redmi Note 11S: 8,690,000
 Xiaomi Redmi Note 11: 8,190,000
-Xiaomi Redmi Note 11 Pro 4G: 13,150,000
 Xiaomi Redmi Note 10 Pro: 10,790,000
 Xiaomi Redmi Note 11 Pro+: 13,150,000
 Xiaomi Poco M5s: 8,490,000
+Xiaomi 12 Lite: 14,990,000
 Xiaomi Redmi 12C: 5,690,000
 Xiaomi Poco X5: 10,350,000
 Xiaomi Poco X5 Pro: 13,340,000
-Samsung Galaxy S23: 42,590,000
-Samsung Galaxy S23+: 44,490,000
 Samsung Galaxy S23 Ultra: 50,790,000
+Samsung Galaxy S23+: 44,490,000
+Samsung Galaxy S23: 42,590,000
 Samsung Galaxy Z Flip4: 44,800,000
-Samsung Galaxy Tab A8 10.5 2021: 10,290,000
 Samsung Galaxy Tab A8 10.5 2021: 9,290,000
+Samsung Galaxy Tab A8 10.5 2021: 10,290,000
 Samsung Galaxy S21 FE 5G: 18,690,000
 Samsung Galaxy Tab A7 Lite: 5,750,000
-Samsung Galaxy S20 FE 5G: 16,490,000
 Samsung Galaxy Tab S6 Lite: 15,990,000
-Samsung Galaxy Tab S8 Ultra: 49,890,000
+Samsung Galaxy S20 FE 5G: 16,490,000
 Samsung Galaxy Tab S8+: 39,400,000
+Samsung Galaxy Tab S8 Ultra: 49,890,000
+Samsung Galaxy Tab S8: 37,990,000
 Samsung Galaxy Tab S6 Lite 2022: 16,190,000
 Samsung Galaxy M13: 6,070,000
 Samsung Galaxy A53 5G: 15,050,000
@@ -1085,17 +1164,16 @@ Samsung Galaxy A13: 5,199,000
 Apple iPhone 13 Pro: 106,900,000
 Samsung Galaxy A04s: 4,400,000
 Samsung Galaxy A04e: 4,170,000
+Samsung Galaxy A54: 13,990,000
+Samsung Galaxy A54: 15,190,000
 Samsung Galaxy A14: 6,890,000
 Samsung Galaxy A14: 7,520,000
 Samsung Galaxy A34: 11,350,000
-Samsung Galaxy A54: 13,990,000
-Samsung Galaxy A54: 15,190,000
 Samsung Galaxy A24 4G: 8,290,000
 Samsung Galaxy A24 4G: 8,850,000
-Xiaomi Redmi Note 11S: 8,499,000
 Xiaomi Redmi Note 10 Pro: 11,299,000
 Xiaomi Redmi Note 10 Pro: 7,699,000
-Xiaomi Redmi 10C: 5,449,000
+Xiaomi Redmi Note 11S: 8,499,000
 Xiaomi Redmi 12C: 4,789,000
 Xiaomi Poco X5 Pro: 13,819,000
 Xiaomi Poco M5s: 7,459,000
@@ -1116,92 +1194,22 @@ Samsung Galaxy A13: 7,399,000
 Samsung Galaxy A04e: 3,799,000
 Samsung Galaxy A04: 4,489,000
 Honor X5: 3,049,000
-Xiaomi Redmi Note 12 Pro+: 21,000,000
-Xiaomi Redmi Note 12 4G: 8,380,000
-Xiaomi Redmi Note 12S: 9,210,000
-Xiaomi Redmi Note 12 Pro 4G: 11,360,000
-Xiaomi Redmi Note 12 Pro 4G: 11,310,000
-Xiaomi Redmi Note 11S: 8,700,000
-Xiaomi Redmi Note 10 Pro: 10,900,000
-Xiaomi Redmi 9A: 3,260,000
-Xiaomi Redmi Note 11: 8,160,000
-Xiaomi Redmi 10A: 3,410,000
-Xiaomi Redmi A2+: 3,400,000
-Xiaomi Redmi 12C: 4,790,000
 Samsung Galaxy A52s 5G: 13,899,000
-Xiaomi Poco X5 Pro: 14,230,000
-Xiaomi 13 Lite: 16,390,000
-Xiaomi Poco M5s: 7,170,000
-Xiaomi 12X: 20,850,000
 Samsung Galaxy A13 (SM-A137): 7,380,000
-Samsung Galaxy A73 5G: 18,999,000
 Samsung Galaxy A73 5G: 16,179,000
-Xiaomi Redmi 10A: 4,920,000
-Xiaomi Redmi 10A: 4,190,000
-Xiaomi Redmi 10C: 5,500,000
+Samsung Galaxy A73 5G: 18,999,000
 Xiaomi Poco X5: 10,480,000
-Xiaomi Poco M5s: 8,480,000
-Xiaomi Redmi Note 12 Pro+: 17,980,000
 Xiaomi Redmi Note 12 Pro: 13,480,000
 Xiaomi Redmi Note 12 4G: 7,830,000
-Xiaomi Redmi Note 12 4G: 7,370,000
-Xiaomi Redmi Note 11SE: 8,030,000
-Xiaomi Redmi Note 11 Pro 4G: 10,700,000
 Xiaomi Redmi 12C: 4,640,000
-Xiaomi Redmi 12C: 5,680,000
-Xiaomi Redmi 12C: 4,970,000
-Xiaomi Redmi A1+: 3,330,000
-Samsung Galaxy S23 Ultra: 50,050,000
-Samsung Galaxy S23: 42,720,000
-Samsung Galaxy A34: 11,110,000
-Samsung Galaxy A34: 11,430,000
-Samsung Galaxy A54: 15,400,000
-Samsung Galaxy A54: 13,830,000
-Samsung Galaxy A54: 13,400,000
-Samsung Galaxy S22 Ultra: 47,770,000
-Samsung Galaxy A73 5G: 19,490,000
-Samsung Galaxy A53 5G: 14,930,000
-Samsung Galaxy A53 5G: 14,420,000
-Samsung Galaxy S21 FE 5G: 18,890,000
 Samsung Galaxy A54: 14,089,000
-Samsung Galaxy A14: 5,770,000
 Samsung Galaxy A14: 7,520,000
+Samsung Galaxy A14: 5,770,000
 Samsung Galaxy A04s: 4,680,000
 Samsung Galaxy A24 4G: 10,100,000
 Samsung Galaxy A24 4G: 8,180,000
 Samsung Galaxy A13: 7,190,000
 Samsung Galaxy A23: 9,170,000
-Apple iPhone SE 2022: 28,500,000
-Apple iPhone SE 2020: 20,500,000
-Samsung Galaxy A04s: 5,280,000
-Apple iPhone 13 Pro Max: 82,500,000
-Apple iPhone 13 Pro Max: 123,000,000
-Apple iPhone 13 Pro Max: 84,500,000
-Apple iPhone 13 Pro Max: 75,000,000
-Apple iPhone 13 Pro Max: 83,000,000
-Apple iPhone 13 Pro: 72,000,000
-Apple iPhone 13 Pro: 75,000,000
-Apple iPhone 13: 49,000,000
-Apple iPhone 13: 41,300,000
-Apple iPhone 11: 31,500,000
-Apple iPad Pro 12.9 2022: 94,000,000
-Apple iPad Pro 12.9 2022: 62,500,000
-Apple iPad Pro 12.9 2022: 72,000,000
-Apple iPad Pro 12.9 2022: 88,000,000
-Apple iPad Pro 12.9 2022: 55,500,000
-Apple iPad Pro 12.9 2022: 61,500,000
-Apple iPad Pro 12.9 2022: 66,000,000
-Apple iPad 2022: 34,000,000
-Apple iPad Pro 11 2022: 48,500,000
-Apple iPad Pro 11 2022: 42,500,000
-Apple iPad Pro 11 2021: 54,000,000
-Apple iPad Pro 12.9 2021: 63,000,000
-Apple iPad Pro 12.9 2021: 55,000,000
-Apple iPad Pro 12.9 2021: 69,000,000
-Apple iPad mini 2021: 24,000,000
-Apple iPad 10.2 2021: 23,500,000
-Apple iPad Air 2022: 31,500,000
-Apple iPad Air 2022: 39,500,000
 Samsung Galaxy A53 5G: 14,399,000
 Samsung Galaxy A53 5G: 14,469,000
 Samsung Galaxy A52s 5G: 14,789,000
@@ -1211,10 +1219,9 @@ Samsung Galaxy A33 5G: 12,009,000
 Samsung Galaxy A32: 11,289,000
 Samsung Galaxy A24 4G: 8,059,000
 Samsung Galaxy A24 4G: 8,559,000
-Samsung Galaxy A23: 8,599,000
 Samsung Galaxy A23: 9,959,000
+Samsung Galaxy A23: 8,599,000
 Samsung Galaxy A14: 5,509,000
-Samsung Galaxy A04e: 3,649,000
 Samsung Galaxy A04e: 3,979,000
 Samsung Galaxy A03s: 5,189,000
 Samsung Galaxy S21 FE 5G: 19,299,000
@@ -1223,26 +1230,27 @@ Samsung Galaxy S23+: 46,999,000
 Xiaomi Redmi Note 12 Pro: 13,180,000
 Xiaomi Redmi Note 12 Pro: 11,000,000
 Xiaomi Redmi Note 11 Pro 5G: 12,620,000
+Xiaomi Redmi Note 11S: 8,390,000
 Xiaomi Redmi Note 11 Pro+: 13,130,000
 Xiaomi Redmi Note 11SE: 7,750,000
 Xiaomi Redmi Note 11: 7,050,000
+Xiaomi Redmi Note 10 Pro: 10,580,000
 Xiaomi Redmi Note 10 Pro: 7,300,000
 Xiaomi Redmi Note 10 Pro: 10,800,000
-Xiaomi Redmi Note 10 Pro: 10,580,000
 Xiaomi Redmi A2+: 3,200,000
 Xiaomi Redmi 12C: 4,770,000
 Xiaomi Redmi 12C: 4,550,000
+Xiaomi Redmi 10 Power: 6,200,000
 Xiaomi Redmi 10A: 3,190,000
 Xiaomi Redmi 10A: 5,250,000
-Xiaomi Redmi 10 Power: 6,200,000
 Xiaomi Redmi 10: 6,800,000
+Xiaomi Poco X5 Pro: 12,730,000
 Xiaomi Poco M5s: 8,200,000
 Xiaomi Poco M5s: 6,900,000
 Xiaomi Poco M5: 6,200,000
-Xiaomi Poco X5 Pro: 12,730,000
 Xiaomi Poco F5: 18,430,000
-Xiaomi Poco F4: 13,480,000
 Xiaomi Poco C40: 4,160,000
+Xiaomi Poco F4: 13,480,000
 Xiaomi Black Shark 5 Pro: 33,400,000
 Xiaomi 12X: 21,600,000
 Xiaomi 13 Lite: 16,110,000
@@ -1250,11 +1258,11 @@ Xiaomi 11 Lite 5G NE: 11,660,000
 Xiaomi 11T Pro: 18,380,000
 Samsung Guru Music 2: 870,000
 Samsung Galaxy Z Fold4: 68,500,000
-Samsung Galaxy S23: 37,800,000
 Samsung Galaxy S23+: 45,500,000
+Samsung Galaxy S23: 37,800,000
+Samsung Galaxy S22 Ultra: 48,290,000
 Samsung Galaxy S22+ 5G: 38,200,000
 Samsung Galaxy S22 5G: 34,900,000
-Samsung Galaxy S22 Ultra: 48,290,000
 Samsung Galaxy S21 FE 5G: 17,770,000
 Samsung Galaxy S21 FE 5G: 18,580,000
 Samsung Galaxy M33: 9,890,000
@@ -1264,33 +1272,33 @@ Samsung Galaxy M53: 13,020,000
 Samsung Galaxy M13: 5,880,000
 Samsung Galaxy M32: 7,390,000
 Samsung Galaxy F13: 5,880,000
-Samsung Galaxy A53 5G: 15,850,000
 Samsung Galaxy A53 5G: 14,740,000
 Samsung Galaxy A53 5G: 14,630,000
 Samsung Galaxy A53 5G: 14,120,000
 Samsung Galaxy A73 5G: 19,190,000
 Samsung Galaxy A73 5G: 15,950,000
+Samsung Galaxy A54: 13,530,000
 Samsung Galaxy A54: 13,730,000
 Samsung Galaxy A54: 15,750,000
 Samsung Galaxy A34: 12,860,000
 Samsung Galaxy A34: 11,510,000
 Samsung Galaxy A33 5G: 11,510,000
-Samsung Galaxy A24 4G: 9,800,000
-Samsung Galaxy A24 4G: 7,930,000
 Samsung Galaxy A24 4G: 8,750,000
+Samsung Galaxy A24 4G: 7,930,000
+Samsung Galaxy A24 4G: 9,800,000
 Samsung Galaxy A24 4G: 7,900,000
 Samsung Galaxy A23: 6,920,000
-Samsung Galaxy A23: 7,990,000
 Samsung Galaxy A23: 9,370,000
+Samsung Galaxy A23: 7,990,000
 Samsung Galaxy A13: 8,400,000
-Samsung Galaxy A14: 5,520,000
 Samsung Galaxy A14: 6,600,000
+Samsung Galaxy A14: 5,520,000
 Samsung Galaxy A14: 7,500,000
 Samsung Galaxy A13 (SM-A137): 6,750,000
 Samsung Galaxy A04: 3,970,000
+Samsung Galaxy A04s: 4,490,000
 Samsung Galaxy A04s: 5,030,000
 Samsung Galaxy A04s: 6,990,000
-Samsung Galaxy A04s: 4,490,000
 Samsung Galaxy A04s: 5,050,000
 Samsung Galaxy A04e: 4,070,000
 Samsung Galaxy A04e: 3,780,000
@@ -1301,26 +1309,26 @@ Samsung Galaxy A03 Core: 3,560,000
 Samsung Galaxy A34: 13,170,000
 Samsung Galaxy A33 5G: 13,130,000
 Xiaomi 12X: 19,300,000
+Samsung Galaxy S23 Ultra: 50,000,000
 Samsung Galaxy A54: 16,600,000
 Samsung Galaxy A54: 15,600,000
-Samsung Galaxy S23 Ultra: 50,000,000
 Samsung Galaxy A14: 6,900,000
 Samsung Galaxy A14: 5,450,000
 Samsung Galaxy A04s: 4,600,000
 Samsung Galaxy A24 4G: 9,100,000
+Samsung Galaxy A13: 7,550,000
+Samsung Galaxy A13: 7,550,000
 Samsung Galaxy A23: 8,100,000
-Samsung Galaxy A13: 7,550,000
-Samsung Galaxy A13: 7,550,000
 Motorola Moto G52: 9,200,000
 Apple iPhone 13: 40,400,000
-Motorola Edge 20 Pro: 17,400,000
 Samsung Galaxy A04: 4,100,000
 Samsung Galaxy A04e: 4,200,000
 Motorola Moto G72: 10,100,000
-Xiaomi Redmi Note 10S: 8,850,000
-Xiaomi Redmi Note 10 5G: 7,950,000
 Xiaomi Redmi Note 10 Pro Max: 10,800,000
 Xiaomi Poco X3 Pro: 11,650,000
+Xiaomi Redmi Note 10 5G: 7,950,000
+Xiaomi Redmi Note 10S: 8,850,000
+Xiaomi Redmi Note 8 Pro: 9,900,000
 Xiaomi Redmi Note 9S: 9,700,000
 Xiaomi Mi 10T Lite 5G: 10,500,000
 Xiaomi Poco X3 NFC: 9,200,000
@@ -1339,30 +1347,29 @@ Samsung Galaxy A13: 6,900,000
 Realme 9 5G: 9,600,000
 Realme C35: 4,650,000
 Realme C35: 6,300,000
-Realme Narzo 50A Prime: 6,774,000
 Realme C30: 3,405,000
+Realme Narzo 50A Prime: 6,774,000
 Realme C30s: 3,084,000
 Motorola Moto G72: 9,730,000
 Motorola Edge 30 Fusion: 27,059,000
 Motorola Moto E13: 3,860,000
 Motorola Moto E32s: 4,679,000
-Motorola Edge 30: 17,369,000
 Motorola Moto G52: 8,710,000
+Motorola Edge 30: 17,369,000
 Motorola Moto G22: 5,869,000
 Motorola Edge 20 Pro: 17,400,000
-Honor X7: 6,350,000
-Honor 70: 17,869,000
 Honor 70: 15,949,000
+Honor 70: 17,869,000
+Honor X7: 6,350,000
+Honor X7a: 5,949,000
 Honor X5: 3,109,000
 Honor X9a: 13,779,000
-Honor X7a: 5,949,000
 Honor X8a: 8,799,000
 Honor X6: 5,160,000
 Nokia 5710 XpressAudio: 2,730,000
-Nokia G21: 6,350,000
 Nokia C21: 3,319,000
+Nokia G21: 6,350,000
 Nokia 6310 (2021): 2,270,000
-Nokia X20: 9,760,000
 Nokia 150 2020: 1,510,000
 Nokia 210: 1,464,000
 Nokia 3310: 2,230,000
@@ -1370,6 +1377,7 @@ Nokia 106: 855,000
 Nokia 110 2022: 1,045,000
 Apple iPhone 14 Pro Max: 71,500,000
 Apple iPhone SE 2022: 20,900,000
+Samsung Galaxy S22 Ultra: 43,300,000
 Xiaomi Redmi Note 11S: 9,000,000
 Xiaomi Redmi Note 11 Pro 4G: 13,200,000
 Xiaomi Redmi Note 11 Pro 5G: 13,200,000
@@ -1379,22 +1387,22 @@ Xiaomi Redmi A1+: 3,380,000
 Xiaomi Redmi 9A: 4,500,000
 Xiaomi Poco X4 Pro 5G: 12,150,000
 Xiaomi Poco X4 Pro 5G: 13,850,000
-Xiaomi Redmi 10C: 5,900,000
 Xiaomi Redmi 10A: 4,700,000
+Xiaomi Redmi 10C: 5,900,000
 Xiaomi Poco X5 Pro: 15,300,000
 Xiaomi Poco C40: 4,800,000
-Xiaomi 12 Lite: 16,700,000
-Xiaomi 12: 25,000,000
 Xiaomi 12 Pro: 32,900,000
+Xiaomi 12: 25,000,000
 Xiaomi 11 Lite 5G NE: 12,880,000
-Samsung Galaxy S22 Ultra: 47,600,000
-Samsung Galaxy S22 Ultra: 43,000,000
+Xiaomi 12 Lite: 16,700,000
 Samsung Galaxy S23 Ultra: 52,700,000
 Samsung Galaxy S23 Ultra: 60,600,000
+Samsung Galaxy S22 Ultra: 47,600,000
+Samsung Galaxy S22 Ultra: 43,000,000
 Samsung Galaxy A33 5G: 12,850,000
 Samsung Galaxy A33 5G: 12,798,000
-Samsung Galaxy A23: 8,969,000
 Samsung Galaxy A23: 7,090,000
+Samsung Galaxy A23: 8,969,000
 OnePlus 10 Pro: 42,199,000
 OnePlus 10 Pro: 40,290,000
 OnePlus 11: 49,199,000
@@ -1411,14 +1419,14 @@ Nokia 106: 758,000
 Nokia 105 2019: 674,000
 Google Pixel 6 Pro: 24,399,000
 Honor 70: 16,299,000
-Honor X7: 6,599,000
-Google Pixel 7: 35,049,000
 Google Pixel 7 Pro: 56,149,000
 Google Pixel 7 Pro: 50,249,000
+Google Pixel 7: 35,049,000
 Apple iPhone 13: 47,900,000
-Apple iPhone 13 Pro: 74,000,000
-Apple iPhone 13 Pro Max: 83,200,000
 Apple iPhone 13 Pro Max: 111,500,000
+Apple iPhone 13 Pro Max: 83,200,000
+Apple iPhone 13 Pro: 74,000,000
+Apple iPad 10.2 2021: 23,100,000
 Apple iPad 10.2: 15,600,000
 Apple iPad Air 2022: 29,400,000
 Apple iPad Air 2022: 36,800,000
@@ -1441,16 +1449,12 @@ Apple iPad Pro 12.9 2022: 63,950,000
 Xiaomi Redmi A2+: 3,335,000
 Samsung Galaxy A14: 5,430,000
 Xiaomi Redmi Note 11S: 8,590,000
-Apple iPhone 13 Pro: 67,500,000
-Apple iPhone 14 Pro Max: 90,100,000
 Xiaomi Redmi Note 12 4G: 7,560,000
 Xiaomi Poco C40: 4,590,000
 Xiaomi Redmi Note 12: 8,099,000
 Xiaomi 12T Pro: 35,999,000
 Xiaomi Poco X5 Pro: 13,999,000
 Samsung Galaxy A14: 5,499,000
-Samsung Galaxy A24 4G: 8,799,000
-Samsung Galaxy A04: 4,529,000
 Xiaomi Poco X5 Pro: 14,220,000
 Xiaomi Redmi Pad: 13,390,000
 Xiaomi Redmi Note 12 4G: 8,120,000
@@ -1458,17 +1462,17 @@ Samsung Galaxy A23: 7,100,000
 Apple iPhone 13 Pro Max: 71,000,000
 Apple iPhone 13 Pro Max: 83,500,000
 Xiaomi Redmi Note 12S: 8,899,000
-Xiaomi Redmi Note 12: 7,999,000
 Xiaomi Redmi Note 12 Pro: 11,049,000
+Xiaomi Redmi Note 12: 7,999,000
 Xiaomi Redmi Note 11 Pro+: 14,399,000
 Xiaomi Redmi Note 11 Pro 4G: 11,899,000
 Xiaomi Redmi 12C: 4,519,000
 Xiaomi Redmi 12C: 4,419,000
-Xiaomi Poco X5: 10,299,000
 Samsung Galaxy S22 Ultra: 46,789,000
 Samsung Galaxy A13: 8,080,000
-Honor X9a: 13,739,000
 Honor X8a: 8,999,000
+Honor X9a: 13,739,000
+Honor X5: 3,150,000
 Honor X6: 5,559,000
 Apple iPhone 13 Pro: 76,199,000
 Samsung Galaxy A73 5G: 19,790,000
@@ -1487,16 +1491,15 @@ Xiaomi Redmi Note 12 Pro: 11,650,000
 Xiaomi Redmi Note 11S: 8,600,000
 Xiaomi Redmi Note 10 Pro: 10,700,000
 Samsung Galaxy Tab S8+: 36,500,000
-Samsung Galaxy A04s: 5,219,000
 Samsung Galaxy S21 FE 5G: 20,300,000
 Samsung Galaxy Tab A7 Lite: 6,250,000
 Samsung Galaxy Tab S6 Lite: 16,600,000
-Samsung Galaxy A13: 8,600,000
 Samsung Galaxy A23: 9,400,000
+Samsung Galaxy A13: 8,600,000
 Samsung Galaxy A53 5G: 16,800,000
 Samsung Galaxy A14: 5,650,000
-Samsung Galaxy A34: 12,500,000
 Samsung Galaxy A54: 14,600,000
+Samsung Galaxy A34: 12,500,000
 Apple iPad Air 2022: 34,500,000
 Apple iPad 10.2 2021: 16,000,000
 Apple iPhone 13: 42,000,000
@@ -1514,9 +1517,9 @@ Xiaomi Redmi Note 12S: 9,169,000
 Samsung Galaxy A73 5G: 17,200,000
 Samsung Galaxy A73 5G: 19,700,000
 Samsung Galaxy Tab A8 10.5 2021: 9,500,000
-Samsung Galaxy Tab S8: 35,500,000
 Samsung Galaxy Tab S6 Lite: 17,500,000
 Samsung Galaxy S22 Ultra: 51,200,000
+Samsung Galaxy S23 Ultra: 61,200,000
 Samsung Galaxy A23: 7,150,000
 Samsung Galaxy A13: 6,800,000
 Samsung Galaxy A13: 6,800,000
@@ -1545,8 +1548,8 @@ Xiaomi Redmi Note 12 Pro 4G: 11,360,000
 Xiaomi Redmi 12C: 4,770,000
 Xiaomi Redmi Note 12S: 9,199,000
 Apple iPhone 13 Pro Max: 79,000,000
-Apple iPhone 13 Pro: 102,000,000
 Apple iPhone 13 Pro: 70,500,000
+Apple iPhone 13 Pro: 102,000,000
 Xiaomi Redmi Note 12S: 8,990,000
 ZTE nubia Red Magic 7S Pro: 55,000,000
 Xiaomi 13 Lite: 16,169,000
@@ -1557,16 +1560,16 @@ Xiaomi Poco M5s: 7,133,000
 Xiaomi Redmi A1+: 3,385,000
 Xiaomi Poco X5 Pro: 14,285,000
 Xiaomi Poco X5: 10,333,000
-Xiaomi Redmi 12C: 6,910,000
 Xiaomi Redmi 12C: 5,088,000
+Xiaomi Redmi 12C: 6,910,000
 Xiaomi Redmi Note 11: 7,410,000
 Xiaomi Poco X4 Pro 5G: 13,269,000
 Xiaomi Redmi 10C: 4,969,000
 Xiaomi Redmi 10C: 5,388,000
-Xiaomi Redmi Note 12 Pro: 13,410,000
 ZTE nubia Red Magic 8 Pro: 51,910,000
 Xiaomi Redmi Note 12 Pro: 11,333,000
 Xiaomi Redmi Note 12: 8,369,000
+Xiaomi Redmi Note 12: 7,785,000
 Xiaomi Redmi Note 11S: 8,633,000
 Motorola Moto G52: 8,685,000
 Motorola Moto G72: 9,988,000
@@ -1575,11 +1578,11 @@ Honor X9a: 14,069,000
 Honor X7a: 5,988,000
 Motorola Moto E13: 3,885,000
 Honor X8a: 8,833,000
-Honor X7: 6,433,000
 Motorola Edge 30: 17,133,000
 Motorola Moto E32s: 4,710,000
-Motorola Edge 30 Pro: 29,888,000
+Honor X7: 6,433,000
 Motorola Moto G22: 6,069,000
+Motorola Edge 30 Pro: 29,888,000
 Motorola Moto E40: 5,110,000
 Motorola Edge 20 Pro: 17,469,000
 Samsung Galaxy S22 Ultra: 41,500,000
@@ -1609,19 +1612,19 @@ Honor X7: 8,149,000
 Xiaomi 13 Lite: 16,399,000
 Xiaomi Redmi Note 12 Pro+: 18,990,000
 Xiaomi Mi 11 Ultra: 38,500,000
+Samsung Galaxy S23 Ultra: 58,900,000
 Samsung Galaxy S23: 43,500,000
 Samsung Galaxy S23+: 44,800,000
-Samsung Galaxy S23 Ultra: 58,900,000
-Samsung Galaxy A32: 11,520,000
 Samsung Galaxy A23: 8,400,000
 Samsung Galaxy A23: 9,700,000
+Samsung Galaxy A13: 8,990,000
 Samsung Galaxy A04e: 4,090,000
 Samsung Galaxy A04s: 4,690,000
 Samsung Galaxy A32: 12,000,000
 Samsung Galaxy A04e: 3,999,000
 Nokia 110 2019: 969,000
-Motorola Moto G52: 9,149,000
 Motorola Moto E32s: 4,779,000
+Motorola Moto G52: 9,149,000
 Motorola Moto G72: 10,149,000
 Motorola Edge 30 Fusion: 26,399,000
 Motorola Edge 30: 17,199,000
@@ -1661,6 +1664,149 @@ Apple iPad mini 2021: 29,590,000
 Xiaomi Mi 11: 20,300,000
 Xiaomi Redmi Note 10 Pro: 10,800,000
 Xiaomi Redmi Note 11 Pro 5G: 12,600,000
-Xiaomi Redmi Note 11 Pro 4G: 12,200,000
 Xiaomi Redmi 10A: 4,100,000
 Samsung Galaxy A13: 6,750,000
+Apple iPhone SE 2022: 27,600,000
+Motorola Edge 20 Pro: 17,600,000
+Apple iPhone SE 2020: 19,100,000
+Apple iPhone SE 2022: 26,400,000
+Samsung Galaxy M33: 10,859,000
+Xiaomi Redmi Note 11 Pro 5G: 13,530,000
+Xiaomi Redmi Note 10 Pro: 7,570,000
+Xiaomi Redmi 10C: 5,280,000
+Samsung Galaxy A13: 7,620,000
+Apple iPad Pro 12.9 2022: 72,000,000
+Samsung Galaxy A32: 11,390,000
+Samsung Galaxy A13: 9,000,000
+Apple iPhone 13: 40,569,000
+Motorola Edge 30: 17,139,000
+Samsung Galaxy A23: 8,599,000
+Apple iPhone SE 2022: 26,450,000
+Samsung Galaxy Tab A8 10.5 2021: 10,100,000
+Xiaomi Redmi 12C: 5,499,000
+Samsung Galaxy A23: 7,090,000
+Samsung Galaxy Tab A8 10.5 2021: 10,579,000
+Samsung Galaxy Tab S8+: 38,900,000
+Samsung Galaxy A23: 10,279,000
+Xiaomi Poco X4 Pro 5G: 13,090,000
+Xiaomi Poco X5: 10,860,000
+Xiaomi Redmi 10A: 4,299,000
+Apple iPad Pro 11 2022: 42,550,000
+Apple iPad mini 2021: 29,970,000
+Samsung Galaxy Tab S6 Lite 2022: 15,650,000
+Samsung Galaxy A32 5G: 11,300,000
+ZTE nubia Z50 Ultra: 59,000,000
+Samsung Galaxy A23: 8,480,000
+Samsung Galaxy S23 Ultra: 49,750,000
+Samsung Galaxy S23 Ultra: 51,190,000
+Apple iPhone 13: 40,600,000
+Honor X7: 7,289,000
+Honor X8 5G: 8,289,000
+Huawei Y9a: 8,219,000
+Xiaomi Poco M5: 6,829,000
+Xiaomi Poco C40: 4,399,000
+Samsung Galaxy A13: 6,699,000
+Samsung Galaxy A13: 7,230,000
+Samsung Galaxy A33 5G: 13,850,000
+Xiaomi Redmi K50: 20,400,000
+Xiaomi Redmi Note 10 Pro: 9,850,000
+Xiaomi Redmi A2+: 3,499,000
+Huawei Y9a: 8,350,000
+Xiaomi Poco M5s: 7,520,000
+Nokia 150 2020: 1,550,000
+Nokia 125: 1,290,000
+Nokia 210: 1,720,000
+Xiaomi Redmi A1+: 3,380,000
+Samsung Galaxy S21 FE 5G: 20,650,000
+Samsung Galaxy M13: 6,350,000
+Samsung Galaxy A73 5G: 17,250,000
+Samsung Galaxy A54: 14,950,000
+Samsung Galaxy A54: 16,980,000
+Samsung Galaxy A34: 11,690,000
+Samsung Galaxy A34: 12,100,000
+Samsung Galaxy A24 4G: 8,790,000
+Samsung Galaxy A53 5G: 16,250,000
+Samsung Galaxy A32: 11,800,000
+Samsung Galaxy A52s 5G: 17,150,000
+Samsung Galaxy A03: 4,980,000
+Samsung Galaxy A23: 8,250,000
+Samsung Galaxy A23: 9,980,000
+Samsung Galaxy A04s: 5,290,000
+Samsung Galaxy A04: 4,580,000
+Xiaomi Redmi Note 11: 7,379,000
+Samsung Galaxy A13: 7,100,000
+Samsung Galaxy A03 Core: 3,850,000
+Samsung Galaxy A14: 5,620,000
+Samsung Galaxy A14: 6,690,000
+Samsung Galaxy S22 Ultra: 45,599,000
+Motorola Moto G72: 10,390,000
+Samsung Galaxy S23 Ultra: 50,650,000
+Xiaomi Redmi Note 11 Pro+: 14,599,000
+Honor 70: 17,850,000
+Xiaomi 12: 21,190,000
+Samsung Galaxy S21 FE 5G: 18,049,000
+Samsung Galaxy A32: 11,305,000
+Samsung Galaxy Tab A8 10.5 2021: 8,699,000
+Xiaomi Redmi Note 11S: 8,499,000
+Apple iPad Pro 12.9 2022: 59,690,000
+Nokia 210: 1,269,000
+Xiaomi Redmi A1+: 3,300,000
+Xiaomi Redmi 9A: 3,200,000
+Xiaomi Poco X5 Pro: 14,600,000
+Xiaomi Redmi Note 11 Pro 4G: 12,750,000
+Xiaomi Redmi Note 11 Pro+: 13,180,000
+Xiaomi Poco X4 Pro 5G: 12,020,000
+Xiaomi Redmi 10C: 5,890,000
+Huawei nova 10 Pro: 26,429,000
+Samsung Galaxy A04s: 4,379,000
+Xiaomi Poco C55: 6,450,000
+Xiaomi 11 Lite 5G NE: 12,999,000
+Realme 7 5G: 7,829,000
+Xiaomi Redmi Note 11 Pro 4G: 10,299,000
+Xiaomi Redmi Note 11: 7,299,000
+Xiaomi 12T Pro: 32,999,000
+Nokia G10: 4,355,000
+Xiaomi Redmi Note 10 5G: 9,999,000
+Xiaomi Poco X4 Pro 5G: 13,900,000
+Apple iPad mini 2021: 23,990,000
+Xiaomi Poco F5 Pro: 23,900,000
+Samsung Galaxy A73 5G: 18,850,000
+Motorola Edge 30 Pro: 24,999,000
+Apple iPad Air 2022: 40,000,000
+Nokia 8210 4G: 2,490,000
+Nokia 5710 XpressAudio: 2,830,000
+Apple iPhone 13 Pro Max: 104,999,000
+Nokia G10: 4,599,000
+Nokia 150 2020: 1,450,000
+Nokia 106 2018: 850,000
+Nokia 210: 1,499,000
+Apple iPhone 11 Pro Max: 33,500,000
+Apple iPhone 11 Pro: 29,000,000
+Apple iPhone 11: 24,000,000
+Nokia 3310 2017: 2,499,000
+Nokia 5310 2020: 1,930,000
+Apple iPad Pro 12.9 2022: 61,000,000
+Nokia C31: 4,990,000
+Samsung Galaxy A04s: 6,499,000
+Xiaomi Poco X5 Pro: 15,600,000
+Samsung Galaxy S23 Ultra: 54,390,000
+Xiaomi Redmi 9A: 4,950,000
+Nokia G20: 5,990,000
+Nokia X20: 10,150,000
+Samsung Galaxy Tab A7 Lite: 6,500,000
+Xiaomi Redmi Note 11 Pro+: 13,500,000
+Xiaomi Redmi Note 11S: 11,700,000
+Samsung Galaxy S21 FE 5G: 22,490,000
+Nokia G11 Plus: 5,750,000
+Samsung Galaxy A73 5G: 19,690,000
+Samsung Galaxy A53 5G: 17,590,000
+Samsung Galaxy A23: 9,700,000
+Nokia G21: 6,590,000
+Xiaomi 12T Pro: 34,099,000
+Xiaomi Redmi Note 11 Pro 4G: 12,790,000
+Samsung Galaxy Tab S8 Ultra: 43,900,000
+Samsung Galaxy Tab S6 Lite: 16,050,000
+Samsung Galaxy S23: 43,430,000
+Xiaomi Redmi Note 11S: 8,299,000
+Nokia 105 2017: 720,000
+Xiaomi Redmi 9C: 5,050,000

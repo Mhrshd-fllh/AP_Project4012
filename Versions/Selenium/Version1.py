@@ -29,7 +29,7 @@ while This_Page:
             page += 1
             driver.get(f'https://www.mobile.ir/phones/prices.aspx?page={page}')
             i = 1
-            time.sleep(5)
+            time.sleep(3)
         
     except:
         break
