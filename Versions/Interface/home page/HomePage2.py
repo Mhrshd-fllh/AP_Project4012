@@ -10,11 +10,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 lst = []
-lst.append("headphone.png")
-lst.append("phone.png")
-lst.append("lap top.png")
-lst.append("hard.png")
-lst.append("tv.png")
+lst.append("Versions/Interface/home page/headphone.png")
+lst.append("Versions/Interface/home page/phone.png")
+lst.append("Versions/Interface/home page/lap top.png")
+lst.append("Versions/Interface/home page/hard.png")
+lst.append("Versions/Interface/home page/tv.png")
 i = 0
 
 
