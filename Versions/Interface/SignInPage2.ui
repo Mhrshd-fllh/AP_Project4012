@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>846</width>
-    <height>748</height>
+    <width>933</width>
+    <height>774</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>10</y>
-      <width>131</width>
+      <y>80</y>
+      <width>121</width>
       <height>70</height>
      </rect>
     </property>
@@ -37,8 +37,8 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>80</y>
-      <width>131</width>
+      <y>10</y>
+      <width>121</width>
       <height>70</height>
      </rect>
     </property>
@@ -70,7 +70,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Sign In</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -79,10 +79,10 @@
    <widget class="QTextEdit" name="SearchBox">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>180</y>
-      <width>321</width>
-      <height>35</height>
+      <x>510</x>
+      <y>170</y>
+      <width>331</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="sizeAdjustPolicy">
@@ -98,11 +98,17 @@
    <widget class="QPushButton" name="SearchButton">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>180</y>
-      <width>70</width>
-      <height>35</height>
+      <x>839</x>
+      <y>170</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Search</string>
@@ -112,28 +118,28 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>320</y>
-      <width>231</width>
+      <y>240</y>
+      <width>210</width>
       <height>100</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Username or Email:</string>
+     <string>Username:</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="NameInput">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>310</y>
+      <x>270</x>
+      <y>240</y>
       <width>310</width>
       <height>100</height>
      </rect>
@@ -144,11 +150,11 @@
      </font>
     </property>
    </widget>
-   <widget class="QLabel" name="PasswordInputLabel">
+   <widget class="QLabel" name="EmailInputLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>400</y>
+      <y>330</y>
       <width>210</width>
       <height>100</height>
      </rect>
@@ -156,20 +162,20 @@
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>14</pointsize>
+      <pointsize>12</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Password:</string>
+     <string>Email:</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="PasswordInput">
+   <widget class="QTextEdit" name="EmailInput">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>410</y>
+      <x>270</x>
+      <y>340</y>
       <width>310</width>
       <height>100</height>
      </rect>
@@ -183,41 +189,43 @@
    <widget class="QPushButton" name="SubmitButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>520</y>
+      <x>60</x>
+      <y>560</y>
       <width>210</width>
       <height>100</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Cooper Black</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>Submit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="SignInButton">
+   <widget class="QPushButton" name="LogInButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>520</y>
+      <x>270</x>
+      <y>560</y>
       <width>210</width>
       <height>100</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Cooper Black</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Sign In</string>
+     <string>Login</string>
     </property>
     <property name="checkable">
      <bool>false</bool>
@@ -241,13 +249,49 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="PasswordInputLabel">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>440</y>
+      <width>210</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="PasswordInput">
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>-50</y>
-      <width>381</width>
-      <height>231</height>
+      <y>440</y>
+      <width>310</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>401</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="font">
@@ -263,16 +307,16 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>640</y>
-      <width>481</width>
+      <x>60</x>
+      <y>670</y>
+      <width>541</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -282,16 +326,16 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>670</y>
-      <width>411</width>
+      <x>60</x>
+      <y>700</y>
+      <width>481</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -304,7 +348,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>846</width>
+     <width>933</width>
      <height>26</height>
     </rect>
    </property>

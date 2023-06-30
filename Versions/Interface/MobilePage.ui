@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>846</width>
-    <height>748</height>
+    <width>988</width>
+    <height>888</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>10</y>
-      <width>131</width>
+      <y>20</y>
+      <width>91</width>
       <height>70</height>
      </rect>
     </property>
@@ -37,8 +37,8 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>80</y>
-      <width>131</width>
+      <y>90</y>
+      <width>91</width>
       <height>70</height>
      </rect>
     </property>
@@ -55,8 +55,8 @@
    <widget class="QLabel" name="PageTitle">
     <property name="geometry">
      <rect>
-      <x>-20</x>
-      <y>160</y>
+      <x>50</x>
+      <y>180</y>
       <width>315</width>
       <height>70</height>
      </rect>
@@ -70,7 +70,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Mobile</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -79,10 +79,10 @@
    <widget class="QTextEdit" name="SearchBox">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>180</y>
-      <width>321</width>
-      <height>35</height>
+      <x>470</x>
+      <y>190</y>
+      <width>391</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="sizeAdjustPolicy">
@@ -98,156 +98,71 @@
    <widget class="QPushButton" name="SearchButton">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>180</y>
-      <width>70</width>
-      <height>35</height>
+      <x>860</x>
+      <y>190</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Search</string>
     </property>
    </widget>
-   <widget class="QLabel" name="NameInputLabel">
+   <widget class="QPushButton" name="BackButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>320</y>
-      <width>231</width>
-      <height>100</height>
+      <x>840</x>
+      <y>30</y>
+      <width>91</width>
+      <height>70</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Username or Email:</string>
+     <string>Back</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="NameInput">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>310</y>
-      <width>310</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QLabel" name="PasswordInputLabel">
+   <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>400</y>
-      <width>210</width>
-      <height>100</height>
+      <y>270</y>
+      <width>871</width>
+      <height>501</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Cooper Black</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
+    <property name="widgetResizable">
+     <bool>true</bool>
     </property>
-    <property name="text">
-     <string>Password:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="PasswordInput">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>410</y>
-      <width>310</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="SubmitButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>520</y>
-      <width>210</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Submit</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="SignInButton">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>520</y>
-      <width>210</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sign In</string>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-    <property name="autoRepeat">
-     <bool>false</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-    <property name="Wrap" stdset="0">
-     <bool>false</bool>
-    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>869</width>
+       <height>499</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>-50</y>
-      <width>381</width>
-      <height>231</height>
+      <x>330</x>
+      <y>30</y>
+      <width>341</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="font">
@@ -263,16 +178,16 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>640</y>
-      <width>481</width>
-      <height>21</height>
+      <x>60</x>
+      <y>790</y>
+      <width>671</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -282,16 +197,16 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>670</y>
-      <width>411</width>
+      <x>60</x>
+      <y>810</y>
+      <width>791</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
@@ -304,7 +219,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>846</width>
+     <width>988</width>
      <height>26</height>
     </rect>
    </property>

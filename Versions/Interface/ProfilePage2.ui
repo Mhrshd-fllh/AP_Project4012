@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>846</width>
-    <height>748</height>
+    <width>947</width>
+    <height>850</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QPushButton" name="HomeButton">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>10</y>
-      <width>131</width>
+      <x>70</x>
+      <y>90</y>
+      <width>101</width>
       <height>70</height>
      </rect>
     </property>
@@ -36,9 +36,9 @@
    <widget class="QPushButton" name="ProfileButton">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>80</y>
-      <width>131</width>
+      <x>70</x>
+      <y>20</y>
+      <width>101</width>
       <height>70</height>
      </rect>
     </property>
@@ -55,8 +55,8 @@
    <widget class="QLabel" name="PageTitle">
     <property name="geometry">
      <rect>
-      <x>-20</x>
-      <y>160</y>
+      <x>0</x>
+      <y>180</y>
       <width>315</width>
       <height>70</height>
      </rect>
@@ -70,7 +70,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Login</string>
+     <string>Profile </string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -79,9 +79,9 @@
    <widget class="QTextEdit" name="SearchBox">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>180</y>
-      <width>321</width>
+      <x>540</x>
+      <y>200</y>
+      <width>331</width>
       <height>35</height>
      </rect>
     </property>
@@ -98,8 +98,8 @@
    <widget class="QPushButton" name="SearchButton">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>180</y>
+      <x>870</x>
+      <y>200</y>
       <width>70</width>
       <height>35</height>
      </rect>
@@ -108,146 +108,171 @@
      <string>Search</string>
     </property>
    </widget>
-   <widget class="QLabel" name="NameInputLabel">
+   <widget class="QLabel" name="NameLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
       <y>320</y>
-      <width>231</width>
-      <height>100</height>
+      <width>201</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Cooper Black</family>
-      <pointsize>14</pointsize>
+      <pointsize>22</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Username or Email:</string>
+     <string>Name:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QTextEdit" name="NameInput">
+   <widget class="QLabel" name="EmailLabel">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>80</x>
+      <y>390</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Email:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EntranceLabel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>450</y>
+      <width>321</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Entrance Date:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PasswordReset">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>580</y>
+      <width>331</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset Password?</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
       <y>310</y>
-      <width>310</width>
-      <height>100</height>
+      <width>371</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
     </property>
    </widget>
-   <widget class="QLabel" name="PasswordInputLabel">
+   <widget class="QTextEdit" name="textEdit_2">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>400</y>
-      <width>210</width>
-      <height>100</height>
+      <x>420</x>
+      <y>380</y>
+      <width>371</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Black</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Password:</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="PasswordInput">
+   <widget class="QTextEdit" name="textEdit_3">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>410</y>
-      <width>310</width>
-      <height>100</height>
+      <x>420</x>
+      <y>460</y>
+      <width>371</width>
+      <height>61</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="SubmitButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>520</y>
-      <width>210</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Submit</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="SignInButton">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>520</y>
-      <width>210</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sign In</string>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-    <property name="autoRepeat">
-     <bool>false</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-    <property name="Wrap" stdset="0">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>-50</y>
-      <width>381</width>
-      <height>231</height>
+      <x>70</x>
+      <y>720</y>
+      <width>571</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Contact us via : @comfortablynumb7 on Telegram or 09908611517</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>760</y>
+      <width>461</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cooper Black</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Company Address : Iran - Tehran - Narmak - IUST</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>40</y>
+      <width>451</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -260,51 +285,13 @@
      <string>Runnn!</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>640</y>
-      <width>481</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Black</family>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Contact us via : @comfortablynumb7 on Telegram or 09908611517</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>670</y>
-      <width>411</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Cooper Black</family>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Company Address : Iran - Tehran - Narmak - IUST</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>846</width>
+     <width>947</width>
      <height>26</height>
     </rect>
    </property>
