@@ -9,10 +9,19 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from functools import partial
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
+#setting up selenium
+
+driver = webdriver.Chrome()
 
 #Global Variables
 Mobiles_Name = []
 Mobiles_Prices = []
+Mobiles_Links = []
 
 
 class Ui_MainWindow(object):
@@ -25,9 +34,16 @@ class Ui_MainWindow(object):
                 input_list= line.split(': ')
                 Mobiles_Name.append(input_list[0])
                 Mobiles_Prices.append(input_list[1])
+                Mobiles_Links.append(input_list[2])
                 self.Mobiles[f'{input_list[0]}\n\n{input_list[1]}']= ''
-        
-
+        '''
+        with open('Digikala_Mobile_Prices.txt', 'r') as m2:
+            for line in m2.readlines():
+                input_list= line.split(': ')
+                Mobiles_Name.append(input_list[0])
+                Mobiles_Prices.append(input_list[1])
+                self.Mobiles[f'{input_list[0]}\n{input_list[1]}']= ''
+        '''
 
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1300, 873)
@@ -44,6 +60,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.index = 0
         for i in self.Mobiles:
             temp = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
             font = QtGui.QFont()
@@ -51,7 +68,9 @@ class Ui_MainWindow(object):
             temp.setFont(font)
             temp.setObjectName(f'product{i}')
             self.verticalLayout.addWidget(temp)
+            temp.clicked.connect(partial(self.Pressed, self.index))
             self.Mobiles[i] = temp
+            self.index += 1
 
         self.HomeButton = QtWidgets.QPushButton(self.centralwidget)
         self.HomeButton.setGeometry(QtCore.QRect(5, 5, 70, 70))
@@ -92,6 +111,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
+        
+
+            
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -104,6 +127,8 @@ class Ui_MainWindow(object):
         self.SearchButton.setText(_translate("MainWindow", "Search"))
         self.BackButton.setText(_translate("MainWindow", "Back"))
 
+    def Pressed(self, i):
+        driver.get(f'{Mobiles_Links[i]}')
 
 if __name__ == "__main__":
     import sys

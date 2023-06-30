@@ -22,8 +22,9 @@ while This_Page:
     try:
         name = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[{i}]/td[2]/a').text
         price = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[{i}]/td[3]/a').text
+        link = driver.find_element(By.XPATH, f'//*[@id="price_table"]/tbody/tr[{i}]/td[2]/a').get_attribute('href')
         #dictionary[name] = price
-        f.write(f'{name}: {price}\n')
+        f.write(f'{name}: {price}: {link} \n')
         i+=1
         if i % 50 == 0:
             page += 1
