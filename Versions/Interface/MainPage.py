@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 
 #setting up selenium
 
-driver = webdriver.Chrome()
+
 
 #Global Variables
 Mobiles_Name = []
@@ -126,8 +126,9 @@ class Ui_MainWindow(object):
         self.SearchBox.setPlaceholderText(_translate("MainWindow", "Search Here"))
         self.SearchButton.setText(_translate("MainWindow", "Search"))
         self.BackButton.setText(_translate("MainWindow", "Back"))
-
+    
     def Pressed(self, i):
+        driver = webdriver.Chrome()
         driver.get(f'{Mobiles_Links[i]}')
 
 if __name__ == "__main__":
