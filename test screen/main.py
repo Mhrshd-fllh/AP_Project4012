@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QDialog, QApplication
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi("screen1.ui", self)
+        loadUi("test screen/screen1.ui", self)
         self.Button1.clicked.connect(self.GoToScreen2)
         self.Button2.clicked.connect(self.GoToScreen3)
     
@@ -29,7 +29,7 @@ class MainWindow(QDialog):
 class Screen3(QDialog):
     def __init__(self):
         super(Screen3, self).__init__()
-        loadUi("screen3.ui", self)
+        loadUi("test screen/screen3.ui", self)
         self.Button1.clicked.connect(self.GoToScreen1)
         self.Button2.clicked.connect(self.GoToScreen2)    
     
@@ -47,7 +47,7 @@ class Screen3(QDialog):
 class Screen2(QDialog):
     def __init__(self):
         super(Screen2, self).__init__()
-        loadUi("screen2.ui", self)
+        loadUi("test screen/screen2.ui", self)
         self.Button1.clicked.connect(self.GoToScreen1)
         self.Button2.clicked.connect(self.GoToScreen3)
     
