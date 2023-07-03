@@ -367,7 +367,7 @@
     <property name="title">
      <string>Menu</string>
     </property>
-    <addaction name="actionCategories"/>
+    <addaction name="actionHome"/>
     <addaction name="actionProfile"/>
     <addaction name="actionLogin"/>
     <addaction name="actionFavorites"/>
@@ -375,9 +375,9 @@
    <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionCategories">
+  <action name="actionHome">
    <property name="text">
-    <string>Categories</string>
+    <string>Home</string>
    </property>
    <property name="font">
     <font>
