@@ -204,12 +204,12 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Size">
+  <widget class="QLabel" name="Storage">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>300</y>
-     <width>80</width>
+     <width>111</width>
      <height>40</height>
     </rect>
    </property>
@@ -222,10 +222,10 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>Size:</string>
+    <string>Storage:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Size_Label">
+  <widget class="QLabel" name="Storage_Label">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -244,7 +244,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Resolution">
+  <widget class="QLabel" name="Speed">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -262,10 +262,10 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>Resolution:</string>
+    <string>Speed:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Resolution_Label">
+  <widget class="QLabel" name="Speed_Label">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -284,7 +284,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Quality">
+  <widget class="QLabel" name="Connection">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -302,10 +302,10 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>Quality:</string>
+    <string>Connection:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Quality_Label">
+  <widget class="QLabel" name="Connection_Label">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -324,47 +324,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Quality_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>420</y>
-     <width>121</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>12</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Smart:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Smart_Label">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>420</y>
-     <width>200</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>9</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Image_TV">
+  <widget class="QLabel" name="Image_Hard">
    <property name="geometry">
     <rect>
      <x>440</x>
@@ -415,7 +375,7 @@ p, li { white-space: pre-wrap; }
     <string>Digikala.com</string>
    </property>
   </widget>
-  <widget class="QLabel" name="SalamBaba">
+  <widget class="QLabel" name="MeghdadIT">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -431,7 +391,7 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>SalamBaba.com</string>
+    <string>MeghdadIT.com</string>
    </property>
   </widget>
   <widget class="QLabel" name="TechnoLife">
@@ -472,7 +432,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="SalamBaba_Label">
+  <widget class="QLabel" name="MeghdadITLabel">
    <property name="geometry">
     <rect>
      <x>570</x>
