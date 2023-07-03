@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>Runnn</class>
+ <widget class="QDialog" name="Runnn">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>960</width>
-    <height>797</height>
+    <width>991</width>
+    <height>841</height>
    </rect>
   </property>
   <property name="font">
    <font>
-    <family>Cooper Black</family>
+    <family>Pristina</family>
+    <pointsize>14</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -22,7 +23,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>260</y>
+     <y>300</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -37,11 +38,11 @@
     <string>Headphones</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="PhonesButton">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>330</y>
+     <y>370</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -56,11 +57,11 @@
     <string>Phones</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="LaptopsButton">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>400</y>
+     <y>440</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -75,11 +76,11 @@
     <string>Laptops</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="TVButton">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>470</y>
+     <y>510</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -94,11 +95,11 @@
     <string>Televisions</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="HardButton">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>540</y>
+     <y>580</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -113,11 +114,11 @@
     <string>Hard Drive</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="USBButton">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>610</y>
+     <y>660</y>
      <width>411</width>
      <height>61</height>
     </rect>
@@ -135,10 +136,10 @@
   <widget class="QPushButton" name="HomeButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>40</y>
-     <width>93</width>
-     <height>41</height>
+     <x>40</x>
+     <y>70</y>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -151,33 +152,42 @@
     <string>Home</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_8">
+  <widget class="QPushButton" name="SearchButton">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>170</y>
-     <width>121</width>
+     <x>870</x>
+     <y>210</y>
+     <width>91</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Cooper Black</family>
-     <pointsize>12</pointsize>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="SearchBox">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>170</y>
-     <width>331</width>
+     <x>520</x>
+     <y>210</y>
+     <width>341</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Search Here</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -202,8 +212,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>100</y>
+     <x>30</x>
+     <y>190</y>
      <width>221</width>
      <height>91</height>
     </rect>
@@ -221,8 +231,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>710</y>
+     <x>30</x>
+     <y>770</y>
      <width>571</width>
      <height>16</height>
     </rect>
@@ -240,8 +250,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>740</y>
+     <x>30</x>
+     <y>800</y>
      <width>431</width>
      <height>16</height>
     </rect>
@@ -260,7 +270,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>260</y>
+     <y>300</y>
      <width>81</width>
      <height>61</height>
     </rect>
@@ -269,7 +279,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/headphone_icon.jpg</pixmap>
+    <pixmap>Images/headphone_icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -279,7 +289,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>330</y>
+     <y>370</y>
      <width>81</width>
      <height>51</height>
     </rect>
@@ -288,7 +298,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/mobile_icon.jpg</pixmap>
+    <pixmap>Images/mobile_icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -298,7 +308,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>400</y>
+     <y>440</y>
      <width>81</width>
      <height>61</height>
     </rect>
@@ -307,7 +317,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/laptop icon.jpg</pixmap>
+    <pixmap>Images/laptop icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -317,7 +327,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>470</y>
+     <y>510</y>
      <width>81</width>
      <height>61</height>
     </rect>
@@ -326,7 +336,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/tv_icon.jpg</pixmap>
+    <pixmap>Images/tv_icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -336,7 +346,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>540</y>
+     <y>580</y>
      <width>81</width>
      <height>61</height>
     </rect>
@@ -345,7 +355,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/hard_icon.jpg</pixmap>
+    <pixmap>Images/hard_icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -355,7 +365,7 @@
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>610</y>
+     <y>660</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -364,10 +374,67 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../AP/usb_icon.jpg</pixmap>
+    <pixmap>Images/usb_icon.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ProfileButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Profile</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="FavoritesButton">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>80</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Favorites</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LoginButton">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>130</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Login</string>
    </property>
   </widget>
  </widget>
