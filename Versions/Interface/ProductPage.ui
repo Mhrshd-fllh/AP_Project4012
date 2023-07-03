@@ -550,7 +550,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>590</x>
       <y>510</y>
-      <width>120</width>
+      <width>140</width>
       <height>50</height>
      </rect>
     </property>
@@ -571,7 +571,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>590</x>
       <y>570</y>
-      <width>120</width>
+      <width>140</width>
       <height>50</height>
      </rect>
     </property>
@@ -592,7 +592,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>590</x>
       <y>630</y>
-      <width>120</width>
+      <width>140</width>
       <height>50</height>
      </rect>
     </property>
@@ -611,7 +611,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="Digikala_Label">
     <property name="geometry">
      <rect>
-      <x>715</x>
+      <x>740</x>
       <y>510</y>
       <width>400</width>
       <height>50</height>
@@ -632,7 +632,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="Mobile_Label">
     <property name="geometry">
      <rect>
-      <x>715</x>
+      <x>740</x>
       <y>570</y>
       <width>400</width>
       <height>50</height>
@@ -653,7 +653,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="MeghdadIT_Label">
     <property name="geometry">
      <rect>
-      <x>715</x>
+      <x>740</x>
       <y>630</y>
       <width>400</width>
       <height>50</height>
