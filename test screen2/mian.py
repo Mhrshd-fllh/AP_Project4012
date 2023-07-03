@@ -3,11 +3,11 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication
 lst = []
-lst.append("headphone.png")
-lst.append("phone.png")
-lst.append("lap top.png")
-lst.append("hard.png")
-lst.append("tv.png")
+lst.append("test screen2/headphone.png")
+lst.append("test screen2/phone.png")
+lst.append("test screen2/lap top.png")
+lst.append("test screen2/hard.png")
+lst.append("test screen2/tv.png")
 i = 0
 
 
@@ -15,7 +15,7 @@ i = 0
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi("HomePage.ui", self)
+        loadUi("test screen2/HomePage.ui", self)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.next.clicked.connect(self.next_clicked)
         self.previous.clicked.connect(self.previous_clicked)
@@ -54,7 +54,7 @@ class MainWindow(QDialog):
 class Categories(QDialog):
     def __init__(self):
         super(Categories, self).__init__()
-        loadUi("category_page.ui", self)
+        loadUi("test screen2/category_page.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         
     
