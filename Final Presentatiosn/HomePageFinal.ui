@@ -162,7 +162,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../test screen2/tv.png</pixmap>
+    <pixmap>Images/tv.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

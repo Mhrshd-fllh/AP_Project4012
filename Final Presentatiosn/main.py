@@ -1,0 +1,527 @@
+import sys
+from PyQt5.uic import loadUi
+from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt5.QtWidgets import QDialog, QApplication
+
+# Home Page Pictures
+lst = []
+lst.append("Images/headphone.png")
+lst.append("Images/phone.png")
+lst.append("Images/lap top.png")
+lst.append("Images/hard.png")
+lst.append("Images/tv.png")
+i = 0
+
+# Each Category Page Title Logic
+EachCategoryPageTitle = "acnrhlqihf"
+
+
+
+# Home Page
+class MainWindow(QDialog):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        loadUi("HomePageFinal.ui", self)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.next.clicked.connect(self.next_clicked)
+        self.previous.clicked.connect(self.previous_clicked)
+        self.FavoritesButton.clicked.connect(self.GoToFavorites)
+        self.LoginButton.clicked.connect(self.GoToLogin)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        
+        
+    
+    
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToFavorites(self):
+        favorites = Favorites()
+        widget.addWidget(favorites)
+        widget.setCurrentIndex(widget.currentIndex()+2)
+    
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+3)
+        
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+4)
+        
+    def next_clicked(self):
+            global i
+            global lst
+            i = i + 1
+            if i > 4:
+                i = 0
+            self.photo1.setPixmap(QtGui.QPixmap(lst[i]))
+
+    def previous_clicked(self):
+            global i
+            global lst
+            i = i - 1
+            if i < 0:
+                i = 4
+            self.photo1.setPixmap(QtGui.QPixmap(lst[i]))
+        
+   
+        
+
+
+
+
+# Categories Page       
+        
+class Categories(QDialog):
+    
+    
+    def __init__(self):
+        super(Categories, self).__init__()
+        loadUi("CategoryPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.FavoritesButton.clicked.connect(self.GoToFavorites)
+        self.LoginButton.clicked.connect(self.GoToLogin)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.HeadphonesButton.clicked.connect(self.GoToHeadphonesPage)
+        self.PhonesButton.clicked.connect(self.GoToPhonesPage)
+        self.LaptopsButton.clicked.connect(self.GoToLaptopsPage)
+        self.TVButton.clicked.connect(self.GoToTVPage)
+        self.HardButton.clicked.connect(self.GoToHardPage)
+        self.USBButton.clicked.connect(self.GoToUSBPage)
+        
+    
+    
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToFavorites(self):
+        favorites = Favorites()
+        widget.addWidget(favorites)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToHeadphonesPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "Headphones"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+       
+        
+        
+    def GoToPhonesPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "Phones"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToLaptopsPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "Laptops"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToTVPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "TVs"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToHardPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "Hard Drives"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToUSBPage(self):
+        global EachCategoryPageTitle
+        EachCategoryPageTitle = "USB Drives"
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    
+        
+        
+        
+# Favorites Page       
+        
+class Favorites(QDialog):
+    def __init__(self):
+        super(Favorites, self).__init__()
+        loadUi("FavoritesPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.LoginButton.clicked.connect(self.GoToLogin)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+
+# Login Page         
+        
+class Login(QDialog):
+    def __init__(self):
+        super(Login, self).__init__()
+        loadUi("LoginPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.FavoritesButton.clicked.connect(self.GoToFavorites)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.SignInButton.clicked.connect(self.GoToSignIn)
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def GoToFavorites(self):
+        favorites = Favorites()
+        widget.addWidget(favorites)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+   
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToSignIn(self):
+        signin = SignIn()
+        widget.addWidget(signin)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+# Profile Page        
+        
+class Profile(QDialog):
+    def __init__(self):
+        super(Profile, self).__init__()
+        loadUi("ProfilePageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.FavoritesButton.clicked.connect(self.GoToFavorites)
+        self.LoginButton.clicked.connect(self.GoToLogin)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    
+    
+    def GoToFavorites(self):
+        favorites = Favorites()
+        widget.addWidget(favorites)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+   
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+# Sign In Page        
+        
+class SignIn(QDialog):
+    def __init__(self):
+        super(SignIn, self).__init__()
+        loadUi("SignInPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.FavoritesButton.clicked.connect(self.GoToFavorites)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def GoToFavorites(self):
+        favorites = Favorites()
+        widget.addWidget(favorites)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+   
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+#Each Category Page
+
+class EachCategoryPage(QDialog):
+    
+    
+    def __init__(self):
+        super(EachCategoryPage, self).__init__()
+        loadUi("EachCategoryPageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToCategories)
+        _translate = QtCore.QCoreApplication.translate
+        self.TitleLable.setText(_translate("Dialog", EachCategoryPageTitle))
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        
+        
+        
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+# Product Hard Page
+class ProductHardPage(QDialog):
+    def __init__(self):
+        super(ProductHardPage, self).__init__()
+        loadUi("ProductHardPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+
+
+# Product Headphones Page
+class ProductHeadphonesPage(QDialog):
+    def __init__(self):
+        super(ProductHeadphonesPage, self).__init__()
+        loadUi("ProductHeadPhonePageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+
+# Product Laptops Page
+class ProductLaptopsPage(QDialog):
+    def __init__(self):
+        super(ProductLaptopsPage, self).__init__()
+        loadUi("ProductLaptopPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+
+# Product Phones Page
+class ProductPhonesPage(QDialog):
+    def __init__(self):
+        super(ProductPhonesPage, self).__init__()
+        loadUi("ProductMobilePageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+# Product TV Page
+class ProductTVPage(QDialog):
+    def __init__(self):
+        super(ProductTVPage, self).__init__()
+        loadUi("ProductTVPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+# Product USB Page
+class ProductUSBPage(QDialog):
+    def __init__(self):
+        super(ProductUSBPage, self).__init__()
+        loadUi("ProductTVPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)  
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1) 
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)     
+    
+
+         
+   
+        
+        
+    
+        
+
+
+#main
+app = QApplication(sys.argv)
+widget = QtWidgets.QStackedWidget()
+mainwindow = MainWindow()
+widget.addWidget(mainwindow)
+widget.setFixedHeight(841)
+widget.setFixedWidth(991)
+categories = Categories()
+widget.addWidget(categories)
+widget.show()
+
+
+try:
+    sys.exit(app.exec_())
+except:
+    print("Exiting")
