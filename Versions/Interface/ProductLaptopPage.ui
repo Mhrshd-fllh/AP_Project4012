@@ -100,7 +100,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="Camera">
+  <widget class="QLabel" name="CPU">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -118,10 +118,10 @@
     </font>
    </property>
    <property name="text">
-    <string>Camera:</string>
+    <string>CPU:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="SimCard">
+  <widget class="QLabel" name="USBPort">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -139,7 +139,7 @@
     </font>
    </property>
    <property name="text">
-    <string>SimCard:</string>
+    <string>USB Port:</string>
    </property>
   </widget>
   <widget class="QLabel" name="RAM_Label">
@@ -248,6 +248,9 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Cooper Black'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="placeholderText">
+    <string>Search Here</string>
+   </property>
   </widget>
   <widget class="QLabel" name="Battery_Label">
    <property name="geometry">
@@ -291,7 +294,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Mobile_Label">
+  <widget class="QLabel" name="TechonLife_Label">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -353,7 +356,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="SimCard_Label">
+  <widget class="QLabel" name="USBPort_Label">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -523,7 +526,7 @@ p, li { white-space: pre-wrap; }
     <string>DigiKala.com</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Mobile">
+  <widget class="QLabel" name="TechnoLife">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -541,7 +544,7 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>Mobile.ir</string>
+    <string>TechnoLife.com</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -625,7 +628,7 @@ p, li { white-space: pre-wrap; }
     <string>RAM:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Camera_Label">
+  <widget class="QLabel" name="CPU_Label">
    <property name="geometry">
     <rect>
      <x>140</x>
