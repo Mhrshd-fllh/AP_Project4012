@@ -11,7 +11,6 @@ from selenium.webdriver.common.keys import Keys
 
 
 
-
 # Home Page(Qt designer)
 lst = []
 lst.append("Versions/Interface/home page/headphone.png")
@@ -185,6 +184,7 @@ class Ui_MainWindow(object):
             if i < 0:
                 i = 4
             self.photo1.setPixmap(QtGui.QPixmap(lst[i]))
+
 
 
 
