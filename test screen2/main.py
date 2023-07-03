@@ -5,11 +5,11 @@ from PyQt5.QtWidgets import QDialog, QApplication
 
 # Home Page Pictures
 lst = []
-lst.append("Images/headphone.png")
-lst.append("Images/phone.png")
-lst.append("Images/lap top.png")
-lst.append("Images/hard.png")
-lst.append("Images/tv.png")
+lst.append("test screen2/Images/headphone.png")
+lst.append("test screen2/Images/phone.png")
+lst.append("test screen2/Images/lap top.png")
+lst.append("test screen2/Images/hard.png")
+lst.append("test screen2/Images/tv.png")
 i = 0
 
 
@@ -17,7 +17,7 @@ i = 0
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi("HomePageFinal.ui", self)
+        loadUi("test screen2/HomePageFinal.ui", self)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.next.clicked.connect(self.next_clicked)
         self.previous.clicked.connect(self.previous_clicked)
@@ -75,7 +75,7 @@ class MainWindow(QDialog):
 class Categories(QDialog):
     def __init__(self):
         super(Categories, self).__init__()
-        loadUi("CategoryPageFinal.ui", self)
+        loadUi("test screen2/CategoryPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.LoginButton.clicked.connect(self.GoToLogin)
@@ -108,7 +108,7 @@ class Categories(QDialog):
 class Favorites(QDialog):
     def __init__(self):
         super(Favorites, self).__init__()
-        loadUi("FavoritesPageFinal.ui", self)
+        loadUi("test screen2/FavoritesPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.LoginButton.clicked.connect(self.GoToLogin)
@@ -140,7 +140,7 @@ class Favorites(QDialog):
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
-        loadUi("LoginPageFinal.ui", self)
+        loadUi("test screen2/LoginPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
@@ -178,7 +178,7 @@ class Login(QDialog):
 class Profile(QDialog):
     def __init__(self):
         super(Profile, self).__init__()
-        loadUi("ProfilePageFinal.ui", self)
+        loadUi("test screen2/ProfilePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
@@ -214,7 +214,7 @@ class Profile(QDialog):
 class SignIn(QDialog):
     def __init__(self):
         super(SignIn, self).__init__()
-        loadUi("SignInPageFinal.ui", self)
+        loadUi("test screen2/SignInPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
