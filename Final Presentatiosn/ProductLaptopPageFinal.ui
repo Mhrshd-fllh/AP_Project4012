@@ -16,7 +16,7 @@
   <widget class="QLabel" name="Battery">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>560</y>
      <width>90</width>
      <height>40</height>
@@ -37,7 +37,7 @@
   <widget class="QLabel" name="Size">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>610</y>
      <width>90</width>
      <height>40</height>
@@ -103,7 +103,7 @@
   <widget class="QLabel" name="CPU">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>460</y>
      <width>90</width>
      <height>40</height>
@@ -124,7 +124,7 @@
   <widget class="QLabel" name="USBPort">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>510</y>
      <width>101</width>
      <height>40</height>
@@ -145,7 +145,7 @@
   <widget class="QLabel" name="RAM_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>360</y>
      <width>221</width>
      <height>40</height>
@@ -187,7 +187,7 @@
   <widget class="QLabel" name="Storage_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>410</y>
      <width>211</width>
      <height>40</height>
@@ -208,7 +208,7 @@
   <widget class="QLabel" name="Storage">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>410</y>
      <width>91</width>
      <height>40</height>
@@ -255,7 +255,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Battery_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>560</y>
      <width>211</width>
      <height>40</height>
@@ -276,7 +276,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Weight_Label">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>120</x>
      <y>660</y>
      <width>231</width>
      <height>40</height>
@@ -360,7 +360,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="USBPort_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>510</y>
      <width>201</width>
      <height>40</height>
@@ -402,7 +402,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Name">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>310</y>
      <width>80</width>
      <height>40</height>
@@ -468,7 +468,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Weight">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>660</y>
      <width>90</width>
      <height>40</height>
@@ -489,7 +489,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Name_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>310</y>
      <width>221</width>
      <height>40</height>
@@ -589,19 +589,19 @@ p, li { white-space: pre-wrap; }
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Update_Button">
+  <widget class="QPushButton" name="UpdateButton">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>360</x>
      <y>650</y>
-     <width>191</width>
-     <height>71</height>
+     <width>221</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Cooper Black</family>
-     <pointsize>16</pointsize>
+     <pointsize>11</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -613,7 +613,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="RAM">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>360</y>
      <width>80</width>
      <height>40</height>
@@ -634,7 +634,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="CPU_Label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>130</x>
      <y>460</y>
      <width>211</width>
      <height>40</height>
@@ -655,7 +655,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Size_Label">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>120</x>
      <y>610</y>
      <width>241</width>
      <height>40</height>
@@ -728,6 +728,25 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AddFavoritesButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>560</y>
+     <width>221</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add/Remove Favorites</string>
    </property>
   </widget>
  </widget>
