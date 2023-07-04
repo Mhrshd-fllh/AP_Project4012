@@ -162,6 +162,9 @@
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Digikala_Label">
    <property name="geometry">
@@ -203,6 +206,9 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Storage">
@@ -272,6 +278,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Weight_Label">
    <property name="geometry">
@@ -292,6 +301,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Mobile_Label">
@@ -330,7 +342,13 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>MOBILE PAGE</string>
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="MeghdadIT_Label">
@@ -373,6 +391,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="MeghdadIT">
@@ -503,6 +524,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Digikala">
    <property name="geometry">
@@ -627,6 +651,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Size_Label">
    <property name="geometry">
@@ -647,6 +674,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="BackButton">

@@ -184,6 +184,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Size">
    <property name="geometry">
@@ -223,6 +226,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Resolution">
@@ -264,6 +270,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Quality">
    <property name="geometry">
@@ -303,6 +312,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Quality_2">
@@ -344,6 +356,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string/>
    </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="Image_TV">
    <property name="geometry">
@@ -360,7 +375,13 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>TV IMAGE</string>
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Prices">

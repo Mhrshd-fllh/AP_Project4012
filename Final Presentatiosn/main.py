@@ -1,3 +1,6 @@
+#RUNNN! Version 1.
+
+# Here is what we need to import for Application
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
@@ -5,6 +8,14 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from functools import partial
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import requests
+import csv
+from unidecode import unidecode
+from googletrans import Translator, constants
+import pandas as pd
+translator = Translator()
+
+
 # Home Page Pictures
 lst = []
 lst.append("Final Presentatiosn/Images/headphone.png")
@@ -16,12 +27,19 @@ i = 0
 
 # Each Category Page Title Logic
 EachCategoryPageTitle = "Phones"
+
 #products name that we want to go through it for seeing details
 CurrentProduct = ''
+
 #Sites that we want to scrape for products
 Site1 = ''
 Site2 = ''
 Site3 = ''
+
+#Current User Id that is be gotten from Users.db
+Current_User_ID = 0
+
+
 # Home Page
 class MainWindow(QDialog):
     def __init__(self):
@@ -367,24 +385,26 @@ class EachCategoryPage(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def Pressed_For_Details(self, i):
-        CurrentProduct = i
+        global CurrentProduct
+        global Site1
+        global Site2
+        global Site3
+        CurrentProduct = i.strip()
         if EachCategoryPageTitle == 'TV':
-            f = open('Final Presentatiosn/Product_Links/Link_of_TVs.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
-                if temp_list[0] == CurrentProduct:
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_TVs.csv'))
+            for temp_list in lines_list:
+                temp_list = list(temp_list)
+                if temp_list[0] == i:
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
                     Site3 = temp_list[3]
-                else:
-                    continue
             productTVpage = ProductTVPage()
             widget.addWidget(productTVpage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'Phone':
-            f = open('Final Presentatiosn/Product_Links/Links_of_Mobiles.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Links_of_Mobiles.csv'))
+            for temp_list in lines_list:
+                temp_list= list(temp_list)
                 if temp_list[0] == CurrentProduct:
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
@@ -395,9 +415,9 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productPhonespage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'USB':
-            f = open('Final Presentatiosn/Product_Links/Link_of_USBs.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
+            temp_list = list(temp_list)
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_USBs.csv'))
+            for temp_list in lines_list:
                 if temp_list[0] == CurrentProduct:
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
@@ -408,9 +428,9 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productUSBpage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'Laptop':
-            f = open('Final Presentatiosn/Product_Links/Link_of_Laptops.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_Laptops.csv'))
+            for temp_list in lines_list:
+                temp_list = list(temp_list)
                 if temp_list[0] == CurrentProduct:
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
@@ -421,22 +441,22 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productLaptopspage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'Headphone':
-            f = open('Final Presentatiosn/Product_Links/Link_of_Headphones.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
-                if temp_list[0] == CurrentProduct:
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_Headphones.csv'))
+            for temp_list in lines_list:
+                temp_list = list(temp_list)
+                if str(temp_list[0]) == str(CurrentProduct):
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
                     Site3 = temp_list[3]
+                    break
                 else:
                     continue
             productHeadphonespage = ProductHeadphonesPage()
             widget.addWidget(productHeadphonespage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'Hard':
-            f = open('Final Presentatiosn/Product_Links/Link_of_Hards.txt', 'r')
-            for line in f.readlines():
-                temp_list = line.split(',')
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_Hards.csv'))
+            for temp_list in lines_list:
                 if temp_list[0] == CurrentProduct:
                     Site1 = temp_list[1]
                     Site2 = temp_list[2]
@@ -456,7 +476,12 @@ class ProductHardPage(QDialog):
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
         self.UpdateButton.clicked.connect(self.Update)
-    
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        except:
+            self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -474,7 +499,27 @@ class ProductHardPage(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
+
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+
+        self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too
+        driver.close()
+
 
 
 # Product Headphones Page
@@ -485,7 +530,12 @@ class ProductHeadphonesPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        self.Update_Button.clicked.connect(self.Update)
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        except:
+            self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -503,8 +553,35 @@ class ProductHeadphonesPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
-        
+    def Update(self):
+        details_list = []
+        details_list.append(CurrentProduct)
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
 
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+        self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        
+        price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div/div[1]/span').text)
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too
+        with open('final Presentatiosn/Product_Details/Hard_Details.csv', 'w') as f:
+            for i in range(0,7):
+                f.write(details_list[i])
+                if i != 6:
+                    f.write(',')
+            f.write('\n')
+            
 # Product Laptops Page
 class ProductLaptopsPage(QDialog):
     def __init__(self):
@@ -513,7 +590,12 @@ class ProductLaptopsPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        self.UpdateButton.clicked.connect(self.Update)
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        except:
+            self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -530,7 +612,26 @@ class ProductLaptopsPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+    def Update(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
+
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/LaptopImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+        self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too    
         
 
 # Product Phones Page
@@ -541,7 +642,12 @@ class ProductPhonesPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        self.UpdateButton.clicked.connect(self.Update)
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png'))
+        except:
+            self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -558,6 +664,26 @@ class ProductPhonesPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Update(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
+
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+        self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png'))
+
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too
 
 # Product TV Page
 class ProductTVPage(QDialog):
@@ -567,7 +693,12 @@ class ProductTVPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        self.UpdateButton.clicked.connect(self.Update)
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        except:
+            self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -586,6 +717,26 @@ class ProductTVPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+    def Update(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
+
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+        self.Image_TV.setPixmap(QtCore.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
+
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too
+
 # Product USB Page
 class ProductUSBPage(QDialog):
     def __init__(self):
@@ -594,6 +745,13 @@ class ProductUSBPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)  
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        self.UpdateButton.clicked.connect(self.Update)
+        _translate = QtCore.QCoreApplication.translate
+        try:
+            self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        except:
+            self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        
         
         
     def GoToEachCategoryPage(self):
@@ -612,14 +770,34 @@ class ProductUSBPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)     
     
+    def Update(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        driver = webdriver.Chrome()
+        driver.get(Site1)
+        Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
+        Image_Source = Image.get_property('src')
+        respond = requests.get(Image_Source)
 
+        if respond.status_code:
+                filepic = open(f'Final Presentatiosn/Images/USBImage{CurrentProduct}.png', 'wb')
+                filepic.write(respond.content)
+                filepic.close()
+        self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+
+        driver.get(Site2)
+        # Some work here
+        driver.get(Site3)
+        #Some work here too
          
    
         
         
     
-        
-
+def csv_reader(path):
+    with open(path) as csv:
+        for row in csv.readlines():
+            yield row.rstrip().split(',')
 
 #main
 app = QApplication(sys.argv)
