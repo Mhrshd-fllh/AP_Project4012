@@ -240,7 +240,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="TechonLife_Label">
+  <widget class="QLabel" name="TechnoLife_Label">
    <property name="geometry">
     <rect>
      <x>640</x>
