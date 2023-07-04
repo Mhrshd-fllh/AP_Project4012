@@ -14,7 +14,8 @@ i = 0
 
 # Each Category Page Title Logic
 EachCategoryPageTitle = "Phones"
-
+#products name that we want to go through it for seeing details
+CurrentProduct = ''
 
 # Home Page
 class MainWindow(QDialog):
