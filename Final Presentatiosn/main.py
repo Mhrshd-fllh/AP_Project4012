@@ -2,7 +2,7 @@ import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication
-
+from functools import partial
 # Home Page Pictures
 lst = []
 lst.append("Final Presentatiosn/Images/headphone.png")
@@ -13,8 +13,7 @@ lst.append("Final Presentatiosn/Images/tv.png")
 i = 0
 
 # Each Category Page Title Logic
-EachCategoryPageTitle = "acnrhlqihf"
-
+EachCategoryPageTitle = "Phones"
 
 
 # Home Page
@@ -117,7 +116,7 @@ class Categories(QDialog):
         
     def GoToHeadphonesPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "Headphones"
+        EachCategoryPageTitle = "Headphone"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -127,35 +126,38 @@ class Categories(QDialog):
         
     def GoToPhonesPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "Phones"
+        EachCategoryPageTitle = "Phone"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+    
     def GoToLaptopsPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "Laptops"
+        EachCategoryPageTitle = "Laptop"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+
     def GoToTVPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "TVs"
+        EachCategoryPageTitle = "TV"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+
     def GoToHardPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "Hard Drives"
+        EachCategoryPageTitle = "Hard"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
     def GoToUSBPage(self):
         global EachCategoryPageTitle
-        EachCategoryPageTitle = "USB Drives"
+        EachCategoryPageTitle = "USB"
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -175,7 +177,8 @@ class Favorites(QDialog):
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.LoginButton.clicked.connect(self.GoToLogin)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout.setObjectName("verticalLayout")        
         
     def GoToHomePage(self):
         mainwindow = MainWindow()
@@ -302,8 +305,7 @@ class SignIn(QDialog):
     def GoToCategories(self):
         categories = Categories()
         widget.addWidget(categories)
-        widget.setCurrentIndex(widget.currentIndex()+1)
-        
+        widget.setCurrentIndex(widget.currentIndex()+1)      
         
 #Each Category Page
 
@@ -313,14 +315,35 @@ class EachCategoryPage(QDialog):
     def __init__(self):
         super(EachCategoryPage, self).__init__()
         loadUi("Final Presentatiosn/EachCategoryPageFinal.ui", self)
+        self.Category_Dict = {}
+        f = open(f'Final Presentatiosn/Product_Names/{EachCategoryPageTitle}s_Name.txt', 'r')
+        for m in f.readlines():
+            self.Category_Dict[m] = ''
         self.BackButton.clicked.connect(self.GoToCategories)
         _translate = QtCore.QCoreApplication.translate
         self.TitleLable.setText(_translate("Dialog", EachCategoryPageTitle))
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        
-        
-        
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout.setObjectName("verticalLayout")
+        for i in self.Category_Dict:
+            temp = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+            font = QtGui.QFont()
+            font.setFamily("Cooper Black")
+            font.setPointSize(14)
+            temp.setFont(font)
+            self.verticalLayout.addWidget(temp)
+            temp.clicked.connect(partial(self.Pressed_For_Details,i))
+            self.Category_Dict[i] = temp
+        _translate = QtCore.QCoreApplication.translate
+        for i in self.Category_Dict:
+            self.Category_Dict[i].setText(_translate('Dialog', i))
+    '''
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        for i in self.Category_Dict:
+            self.Category_Dict[i].setText(_translate('Dialog', i))
+    '''        
     def GoToCategories(self):
         categories = Categories()
         widget.addWidget(categories)
@@ -336,7 +359,9 @@ class EachCategoryPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+    
+    def Pressed_For_Details(self, i):
+        pass
         
 # Product Hard Page
 class ProductHardPage(QDialog):
