@@ -5,11 +5,11 @@ from PyQt5.QtWidgets import QDialog, QApplication
 
 # Home Page Pictures
 lst = []
-lst.append("Images/headphone.png")
-lst.append("Images/phone.png")
-lst.append("Images/lap top.png")
-lst.append("Images/hard.png")
-lst.append("Images/tv.png")
+lst.append("Final Presentatiosn/Images/headphone.png")
+lst.append("Final Presentatiosn/Images/phone.png")
+lst.append("Final Presentatiosn/Images/lap top.png")
+lst.append("Final Presentatiosn/Images/hard.png")
+lst.append("Final Presentatiosn/Images/tv.png")
 i = 0
 
 # Each Category Page Title Logic
@@ -21,7 +21,7 @@ EachCategoryPageTitle = "acnrhlqihf"
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi("HomePageFinal.ui", self)
+        loadUi("Final Presentatiosn/HomePageFinal.ui", self)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.next.clicked.connect(self.next_clicked)
         self.previous.clicked.connect(self.previous_clicked)
@@ -81,7 +81,7 @@ class Categories(QDialog):
     
     def __init__(self):
         super(Categories, self).__init__()
-        loadUi("CategoryPageFinal.ui", self)
+        loadUi("Final Presentatiosn/CategoryPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.LoginButton.clicked.connect(self.GoToLogin)
@@ -170,7 +170,7 @@ class Categories(QDialog):
 class Favorites(QDialog):
     def __init__(self):
         super(Favorites, self).__init__()
-        loadUi("FavoritesPageFinal.ui", self)
+        loadUi("Final Presentatiosn/FavoritesPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.LoginButton.clicked.connect(self.GoToLogin)
@@ -203,7 +203,7 @@ class Favorites(QDialog):
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
-        loadUi("LoginPageFinal.ui", self)
+        loadUi("Final Presentatiosn/LoginPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
@@ -241,7 +241,7 @@ class Login(QDialog):
 class Profile(QDialog):
     def __init__(self):
         super(Profile, self).__init__()
-        loadUi("ProfilePageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProfilePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
@@ -277,7 +277,7 @@ class Profile(QDialog):
 class SignIn(QDialog):
     def __init__(self):
         super(SignIn, self).__init__()
-        loadUi("SignInPageFinal.ui", self)
+        loadUi("Final Presentatiosn/SignInPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
@@ -312,7 +312,7 @@ class EachCategoryPage(QDialog):
     
     def __init__(self):
         super(EachCategoryPage, self).__init__()
-        loadUi("EachCategoryPageFinal.ui", self)
+        loadUi("Final Presentatiosn/EachCategoryPageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToCategories)
         _translate = QtCore.QCoreApplication.translate
         self.TitleLable.setText(_translate("Dialog", EachCategoryPageTitle))
@@ -342,7 +342,7 @@ class EachCategoryPage(QDialog):
 class ProductHardPage(QDialog):
     def __init__(self):
         super(ProductHardPage, self).__init__()
-        loadUi("ProductHardPageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductHardPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
@@ -369,7 +369,7 @@ class ProductHardPage(QDialog):
 class ProductHeadphonesPage(QDialog):
     def __init__(self):
         super(ProductHeadphonesPage, self).__init__()
-        loadUi("ProductHeadPhonePageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductHeadPhonePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
@@ -397,7 +397,7 @@ class ProductHeadphonesPage(QDialog):
 class ProductLaptopsPage(QDialog):
     def __init__(self):
         super(ProductLaptopsPage, self).__init__()
-        loadUi("ProductLaptopPageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductLaptopPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
@@ -425,7 +425,7 @@ class ProductLaptopsPage(QDialog):
 class ProductPhonesPage(QDialog):
     def __init__(self):
         super(ProductPhonesPage, self).__init__()
-        loadUi("ProductMobilePageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductMobilePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
@@ -451,7 +451,7 @@ class ProductPhonesPage(QDialog):
 class ProductTVPage(QDialog):
     def __init__(self):
         super(ProductTVPage, self).__init__()
-        loadUi("ProductTVPageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductTVPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
@@ -478,7 +478,7 @@ class ProductTVPage(QDialog):
 class ProductUSBPage(QDialog):
     def __init__(self):
         super(ProductUSBPage, self).__init__()
-        loadUi("ProductTVPageFinal.ui", self)
+        loadUi("Final Presentatiosn/ProductTVPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)  
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)

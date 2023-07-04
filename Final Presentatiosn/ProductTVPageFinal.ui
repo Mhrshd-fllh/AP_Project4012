@@ -422,7 +422,7 @@ p, li { white-space: pre-wrap; }
     <string>Digikala.com</string>
    </property>
   </widget>
-  <widget class="QLabel" name="SalamBaba">
+  <widget class="QLabel" name="HyperKhanegi">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -438,7 +438,7 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>SalamBaba.com</string>
+    <string>hyperkhanegi</string>
    </property>
   </widget>
   <widget class="QLabel" name="TechnoLife">
@@ -463,7 +463,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="DigiKala_Label">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>620</x>
      <y>290</y>
      <width>200</width>
      <height>40</height>
@@ -479,10 +479,10 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="SalamBaba_Label">
+  <widget class="QLabel" name="HyperKhanegi_Label">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>620</x>
      <y>330</y>
      <width>200</width>
      <height>40</height>
@@ -501,7 +501,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="TechnoLife_Label">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>620</x>
      <y>370</y>
      <width>200</width>
      <height>40</height>
