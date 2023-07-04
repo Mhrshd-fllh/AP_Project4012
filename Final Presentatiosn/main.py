@@ -3,6 +3,8 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication
 from functools import partial
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 # Home Page Pictures
 lst = []
 lst.append("Final Presentatiosn/Images/headphone.png")
@@ -16,7 +18,10 @@ i = 0
 EachCategoryPageTitle = "Phones"
 #products name that we want to go through it for seeing details
 CurrentProduct = ''
-
+#Sites that we want to scrape for products
+Site1 = ''
+Site2 = ''
+Site3 = ''
 # Home Page
 class MainWindow(QDialog):
     def __init__(self):
@@ -362,7 +367,85 @@ class EachCategoryPage(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def Pressed_For_Details(self, i):
-        pass
+        CurrentProduct = i
+        if EachCategoryPageTitle == 'TV':
+            f = open('Final Presentatiosn/Product_Links/Link_of_TVs.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productTVpage = ProductTVPage()
+            widget.addWidget(productTVpage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Phone':
+            f = open('Final Presentatiosn/Product_Links/Links_of_Mobiles.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productPhonespage = ProductPhonesPage()
+            widget.addWidget(productPhonespage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'USB':
+            f = open('Final Presentatiosn/Product_Links/Link_of_USBs.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productUSBpage = ProductUSBPage()
+            widget.addWidget(productUSBpage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Laptop':
+            f = open('Final Presentatiosn/Product_Links/Link_of_Laptops.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productLaptopspage = ProductLaptopsPage()
+            widget.addWidget(productLaptopspage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Headphone':
+            f = open('Final Presentatiosn/Product_Links/Link_of_Headphones.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productHeadphonespage = ProductHeadphonesPage()
+            widget.addWidget(productHeadphonespage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Hard':
+            f = open('Final Presentatiosn/Product_Links/Link_of_Hards.txt', 'r')
+            for line in f.readlines():
+                temp_list = line.split(',')
+                if temp_list[0] == CurrentProduct:
+                    Site1 = temp_list[1]
+                    Site2 = temp_list[2]
+                    Site3 = temp_list[3]
+                else:
+                    continue
+            productHardpage = ProductHardPage()
+            widget.addWidget(productHardpage)
+            widget.setCurrentIndex(widget.currentIndex()+1)
         
 # Product Hard Page
 class ProductHardPage(QDialog):
@@ -372,7 +455,8 @@ class ProductHardPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        self.UpdateButton.clicked.connect(self.Update)
+    
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -388,7 +472,9 @@ class ProductHardPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+    def Update(self):
+        driver = webdriver.Chrome()
 
 
 # Product Headphones Page
