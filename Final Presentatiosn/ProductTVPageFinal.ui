@@ -58,27 +58,6 @@
     <string>Name:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Update_Button">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>580</y>
-     <width>191</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>16</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Update</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="SearchButton">
    <property name="geometry">
     <rect>
@@ -369,7 +348,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="Image_TV">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>490</x>
      <y>440</y>
      <width>491</width>
      <height>291</height>
@@ -572,6 +551,46 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="UpdateButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>560</y>
+     <width>241</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AddFavoritesButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>560</y>
+     <width>221</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add/Remove Favorites</string>
    </property>
   </widget>
  </widget>

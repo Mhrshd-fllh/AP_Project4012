@@ -529,16 +529,16 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="Update_Button">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>670</y>
-     <width>181</width>
-     <height>71</height>
+     <x>40</x>
+     <y>660</y>
+     <width>241</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Cooper Black</family>
-     <pointsize>16</pointsize>
+     <pointsize>11</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -644,6 +644,25 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AddFavoritesButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>660</y>
+     <width>221</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add/Remove Favorites</string>
    </property>
   </widget>
  </widget>
