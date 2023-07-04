@@ -25,6 +25,7 @@ for i in range(1, 50):
         continue
     else:
         temp_name = translator.translate(driver.find_element(By.XPATH, f'//*[@id="ProductListPagesWrapper"]/section[1]/div[2]/div[{i}]/a/div/article/div[2]/div[2]/div[2]/h3').text)
+        print(temp_name)
         f.write(f'{temp_name.text}: {temp}\n')
     if i % 4 == 0:
         screen.send_keys(Keys.SPACE)

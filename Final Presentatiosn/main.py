@@ -13,7 +13,12 @@ import csv
 from unidecode import unidecode
 from googletrans import Translator, constants
 import pandas as pd
+import time
 translator = Translator()
+
+
+
+
 
 
 # Home Page Pictures
@@ -335,7 +340,6 @@ class SignIn(QDialog):
 
 class EachCategoryPage(QDialog):
     
-    
     def __init__(self):
         super(EachCategoryPage, self).__init__()
         loadUi("Final Presentatiosn/EachCategoryPageFinal.ui", self)
@@ -482,6 +486,7 @@ class ProductHardPage(QDialog):
         except:
             self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         
+        
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -503,6 +508,7 @@ class ProductHardPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
+        time.sleep(10)
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
@@ -513,13 +519,42 @@ class ProductHardPage(QDialog):
                 filepic.close()
 
         self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
-        
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+            except:
+                Price1 = 'Not Available'
+        self.DigiKala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
-        # Some work here
-        driver.get(Site3)
-        #Some work here too
-        driver.close()
+        time.sleep(15)
+        try:
+            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
+        except:
+            try:
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+            except:
+                Price2 = 'Not Available'
+        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
+        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
 
+        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+        self.Storage_Label.setText(_translate('Dialog',Storage.text))
+        Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[4]/div[2]').text)
+        self.Speed_Label.setText(_translate('Dialog',Speed.text))
+        Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
+        self.Connection_Label.setText(_translate('Dialog',Connection.text))
+        driver.get(Site3)
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+        
+        driver.close()
 
 
 # Product Headphones Page
@@ -570,17 +605,35 @@ class ProductHeadphonesPage(QDialog):
                 filepic.close()
         self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
         
-        price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div/div[1]/span').text)
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+            except:
+                Price1 = 'Not Available'
+        self.DigiKala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
-        # Some work here
+        time.sleep(15)
+        try:
+            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
+        except:
+            try:
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+            except:
+                Price2 = 'Not Available'
+        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
+        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
         driver.get(Site3)
-        #Some work here too
-        with open('final Presentatiosn/Product_Details/Hard_Details.csv', 'w') as f:
-            for i in range(0,7):
-                f.write(details_list[i])
-                if i != 6:
-                    f.write(',')
-            f.write('\n')
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+        
+        driver.close()
             
 # Product Laptops Page
 class ProductLaptopsPage(QDialog):
@@ -628,10 +681,35 @@ class ProductLaptopsPage(QDialog):
                 filepic.close()
         self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
 
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+            except:
+                Price1 = 'Not Available'
+        self.DigiKala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
-        # Some work here
+        time.sleep(15)
+        try:
+            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
+        except:
+            try:
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+            except:
+                Price2 = 'Not Available'
+        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
+        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
         driver.get(Site3)
-        #Some work here too    
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+        
+        driver.close()    
         
 
 # Product Phones Page
@@ -679,11 +757,11 @@ class ProductPhonesPage(QDialog):
                 filepic.write(respond.content)
                 filepic.close()
         self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png'))
-
+        
         driver.get(Site2)
         # Some work here
         driver.get(Site3)
-        #Some work here too
+        #Some work here too 
 
 # Product TV Page
 class ProductTVPage(QDialog):
@@ -784,11 +862,36 @@ class ProductUSBPage(QDialog):
                 filepic.write(respond.content)
                 filepic.close()
         self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
-
+        
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+            except:
+                Price1 = 'Not Available'
+        self.DigiKala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
-        # Some work here
+        time.sleep(15)
+        try:
+            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
+        except:
+            try:
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+            except:
+                Price2 = 'Not Available'
+        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
+        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
         driver.get(Site3)
-        #Some work here too
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+        
+        driver.close()
          
    
         
