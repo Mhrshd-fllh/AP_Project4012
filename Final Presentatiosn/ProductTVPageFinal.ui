@@ -317,12 +317,12 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="Quality_2">
+  <widget class="QLabel" name="ScreenTech">
    <property name="geometry">
     <rect>
      <x>60</x>
      <y>460</y>
-     <width>121</width>
+     <width>131</width>
      <height>40</height>
     </rect>
    </property>
@@ -335,15 +335,15 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="text">
-    <string>Smart:</string>
+    <string>Screen Tech:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Smart_Label">
+  <widget class="QLabel" name="ScreenTech_Label">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>199</x>
      <y>460</y>
-     <width>200</width>
+     <width>221</width>
      <height>40</height>
     </rect>
    </property>

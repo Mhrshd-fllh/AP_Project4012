@@ -317,7 +317,7 @@ class SignIn(QDialog):
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        
+        self.submitButton.clicked.connect(self.Register)
     def GoToHomePage(self):
         mainwindow = MainWindow()
         widget.addWidget(mainwindow)
@@ -338,7 +338,14 @@ class SignIn(QDialog):
         categories = Categories()
         widget.addWidget(categories)
         widget.setCurrentIndex(widget.currentIndex()+1)      
+    
+    def Register(self, Current_User_Id):
+        self.NameInput.RichT = 9
         
+        pass
+
+
+
 #Each Category Page
 
 class EachCategoryPage(QDialog):
@@ -398,13 +405,13 @@ class EachCategoryPage(QDialog):
         global Site3
         CurrentProduct = i.strip()
         if EachCategoryPageTitle == 'TV':
-            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_TVs.csv'))
+            lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Links_of_TVs.csv'))
             for temp_list in lines_list:
                 temp_list = list(temp_list)
-                if temp_list[0] == i:
+                if temp_list[0] == CurrentProduct:
                     Site1 = temp_list[1]
-                    Site2 = temp_list[2]
-                    Site3 = temp_list[3]
+                    Site3 = temp_list[2]
+                    Site2 = temp_list[3]
             productTVpage = ProductTVPage()
             widget.addWidget(productTVpage)
             widget.setCurrentIndex(widget.currentIndex()+1)
@@ -422,7 +429,6 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productPhonespage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         elif EachCategoryPageTitle == 'USB':
-            temp_list = list(temp_list)
             lines_list = list(csv_reader('Final Presentatiosn/Product_Links/Link_of_USBs.csv'))
             for temp_list in lines_list:
                 if temp_list[0] == CurrentProduct:
@@ -478,17 +484,18 @@ class EachCategoryPage(QDialog):
 class ProductHardPage(QDialog):
     def __init__(self):
         super(ProductHardPage, self).__init__()
+        self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductHardPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.UpdateButton.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
             self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
             self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        
+        self.UpdateButton.clicked.connect(self.Update)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -524,9 +531,11 @@ class ProductHardPage(QDialog):
         self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
         try:
             Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
-        except:
+        except:                                          
+            Price1 = 'Not Available'
+        if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[2]/div/div[1]/span').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))
@@ -534,13 +543,15 @@ class ProductHardPage(QDialog):
         time.sleep(15)
         try:
             Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
-        except:
+        except:                                             
+            Price2 = 'Not Available'
+        if Price2 == 'Not Available':
             try:
-                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/').text)
+                Price2 = Price2.split(' ')[0]
             except:
                 Price2 = 'Not Available'
         self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
 
         Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
         self.Storage_Label.setText(_translate('Dialog',Storage.text))
@@ -564,16 +575,18 @@ class ProductHardPage(QDialog):
 class ProductHeadphonesPage(QDialog):
     def __init__(self):
         super(ProductHeadphonesPage, self).__init__()
+        self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductHeadPhonePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.Update_Button.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
             self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
             self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        self.Update_Button.clicked.connect(self.Update)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -598,7 +611,7 @@ class ProductHeadphonesPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
-        time.sleep(10)
+        time.sleep(10)  
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
@@ -611,26 +624,27 @@ class ProductHeadphonesPage(QDialog):
         
         try:
             Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
-        except:
+        except:                                          
+            Price1 = 'Not Available'
+        if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[2]/div/div[1]/span').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
         time.sleep(15)
         try:
-            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
-        except:
+            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]').text)
+            Price2 = Price2.split(' ')[0]
+        except:                                             
+            Price2 = 'Not Available'
+        if Price2 == 'Not Available':
             try:
-                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]').text)
             except:
-                Price2 = 'Not Available'
+                pass
         self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-        try:
-            _ = driver.find_element(By.XPATH, '//*[@id="__next"]/main/div[2]/div[3]/div[2]/div/div/header/ul/li[2]/a').click()
-        except:
-            _ = driver.find_element(By.XPATH, '//*[@id="__next"]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[1]/a').click()
         Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[3]/div[2]').text)
         self.Version_Label.setText(_translate('Dialog', Version.text))
         Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[2]/div[2]').text)    
@@ -640,8 +654,11 @@ class ProductHeadphonesPage(QDialog):
         except:
             USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[4]/div[2]').text)
         self.USBPort_Label.setText(_translate('Dialog', USBPort.text))
-        Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[3]/div[2]').text)
-        self.Battery_Label.setText(_translate('Dialog', Battery.text))
+        try:
+            Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[3]/div[2]').text)
+        except:
+            Battery = 'No Battery'
+        self.Battery_Label.setText(_translate('Dialog', Battery.text)) if type(Battery) != str else self.Battery_Label.setText(_translate('Dialog', Battery))
         Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[1]/div[2]').text)
         self.Weight_Label.setText(_translate('Dialog', Weight.text))
         driver.get(Site3)
@@ -659,17 +676,19 @@ class ProductHeadphonesPage(QDialog):
 class ProductLaptopsPage(QDialog):
     def __init__(self):
         super(ProductLaptopsPage, self).__init__()
+        self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductLaptopPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.UpdateButton.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
-            self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+            self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/LaptopImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        
+        self.UpdateButton.clicked.connect(self.Update)
+
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -691,35 +710,56 @@ class ProductLaptopsPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
+        time.sleep(10)
+        
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
-
         if respond.status_code:
                 filepic = open(f'Final Presentatiosn/Images/LaptopImage{CurrentProduct}.png', 'wb')
                 filepic.write(respond.content)
                 filepic.close()
-        self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/LaptopImage{CurrentProduct}.png'))
 
         try:
             Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
-        except:
+        except:                                          
+            Price1 = 'Not Available'
+        if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
             except:
                 Price1 = 'Not Available'
-        self.DigiKala_Label.setText(_translate('Dialog',Price1))
+        self.Digikala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site2)
         time.sleep(15)
         try:
             Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
-        except:
+        except:                                             
+            Price2 = 'Not Available'
+        if Price2 == 'Not Available':
             try:
-                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
+                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div').text)
+                Price2 = Price2.split(' ')[0]
             except:
-                Price2 = 'Not Available'
-        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
+                pass
+        self.TechonLife_Label.setText(_translate('Dialog',Price2))
+        Ram = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[1]/div[2]').text)
+        self.RAM_Label.setText(_translate('Dialog',Ram.text))
+        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[1]/div/ul/li[1]/h3/span').text)
+        Storage = Storage.text
+        Storage = Storage.split(": ")[1]
+        self.Storage_Label.setText(_translate('Dialog',Storage))
+        Cpu = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-3"]/li[1]/div[2]').text)
+        self.CPU_Label.setText(_translate('Dialog',Cpu.text))
+        USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-7"]/li[6]/div[2]').text)
+        self.USBPort_Label.setText(_translate('Dialog',USBPort.text))
+        Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-9"]/li[1]/div[2]').text)
+        self.Battery_Label.setText(_translate('Dialog', Battery.text))
+        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[1]/div[2]').text)
+        self.Size_Label.setText(_translate('Dialog', Size.text))
+        Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+        self.Weight_Label.setText(_translate('Dialog', Weight.text))
         driver.get(Site3)
         time.sleep(10)
         try: 
@@ -727,7 +767,7 @@ class ProductLaptopsPage(QDialog):
             Price3 = Price3_tmp.split(' ')[0]
         except:
             Price3 = 'Not Available'
-        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
         
         driver.close()    
         
@@ -737,16 +777,17 @@ class ProductPhonesPage(QDialog):
     def __init__(self):
         super(ProductPhonesPage, self).__init__()
         loadUi("Final Presentatiosn/ProductMobilePageFinal.ui", self)
+        self.PictureFlag = 0
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.UpdateButton.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
             self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
-        
+        self.UpdateButton.clicked.connect(self.Update)
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -768,6 +809,8 @@ class ProductPhonesPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
+        time.sleep(10)
+        
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
@@ -778,26 +821,64 @@ class ProductPhonesPage(QDialog):
                 filepic.close()
         self.Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{CurrentProduct}.png'))
         
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:                                          
+            Price1 = 'Not Available'
+        if Price1 == 'Not Available':
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+            except:
+                Price1 = 'Not Available'
+        self.Digikala_Label.setText(_translate('Dialog',Price1))
+
         driver.get(Site2)
-        # Some work here
+        Price2 = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[1]/div[1]/div[1]/ul/li[2]/a').text)
+        self.Mobile_Label.setText(_translate('Dialog',Price2.text))
+        Storage_and_RAM = driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[5]/div/ul/li[2]/strong/span').text
+        Storage_and_RAM = Storage_and_RAM.split(', ')[0]
+        Storage , Ram = Storage_and_RAM.split(' ')[0] , Storage_and_RAM.split(' ')[1]
+        self.RAM_Label.setText(_translate('Dialog',Ram))
+        self.Storage_Label.setText(_translate('Dialog',Storage))
+        Camera = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[6]/div/ul/li[1]/strong/span').text)
+        Camera = Camera.text
+        Camera = Camera.split(',')[0]
+        self.Camera_Label.setText(_translate('Dialog',Camera))
+        SimCard = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[4]/strong/span').text)
+        self.SimCard_Label.setText(_translate('Dialog',SimCard.text))
+        Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[10]/div/ul/li[1]/strong/span').text)
+        self.Battery_Label.setText(_translate('Dialog',Battery.text))
+        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[1]/strong/span').text)
+        self.Size_Label.setText(_translate('Dialog',Size.text))
+        Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[2]/strong/span').text)
+        self.Weight_Label.setText(_translate('Dialog',Weight.text))
         driver.get(Site3)
-        #Some work here too 
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
+        
+        driver.close()
 
 # Product TV Page
 class ProductTVPage(QDialog):
     def __init__(self):
         super(ProductTVPage, self).__init__()
+        self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductTVPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.UpdateButton.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
-            self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+            self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
             self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
-        
+        self.UpdateButton.clicked.connect(self.Update)
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -820,6 +901,7 @@ class ProductTVPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
+        time.sleep(10)
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
@@ -828,28 +910,62 @@ class ProductTVPage(QDialog):
                 filepic = open(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png', 'wb')
                 filepic.write(respond.content)
                 filepic.close()
-        self.Image_TV.setPixmap(QtCore.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
-
+        self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
+        try:
+            Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+        except:                                          
+            Price1 = 'Not Available'
+        if Price1 == 'Not Available':
+            try:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+            except:
+                Price1 = 'Not Available'
+        self.DigiKala_Label.setText(_translate('Dialog',Price1))
+        
         driver.get(Site2)
-        # Some work here
+        time.sleep(7)
+        Price2 = driver.find_element(By.XPATH, '//*[@id="main"]/div[1]/div/div/div[3]/div[2]/div[1]/div[1]/div/span').text
+        Price2 = Price2.split(' ')[0]
+        self.HyperKhanegi_Label.setText(_translate('Dialog', Price2))
         driver.get(Site3)
-        #Some work here too
+        try:
+            Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
+        except:                                             
+            Price3 = 'Not Available'
+        if Price3 == 'Not Available':
+            try:
+                Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div').text)
+                Price3 = Price3.split(' ')[0]
+            except:                                              
+                pass
+        self.TechnoLife_Label.setText(_translate('Dialog', Price3))
+        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[2]/div[2]').text)
+        self.Size_Label.setText(_translate('Dialog', Size.text))
+        Resolution = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+        self.Resolution_Label.setText(_translate('Dialog',Resolution.text))
+        Quality = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
+        self.Quality_Label.setText(_translate('Dialog',Quality.text))
+        ScreenTech = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[3]/div[2]').text)
+        self.ScreenTech_Label.setText(_translate('Dialog',ScreenTech.text))
+        driver.close()
+        
 
 # Product USB Page
 class ProductUSBPage(QDialog):
     def __init__(self):
         super(ProductUSBPage, self).__init__()
-        loadUi("Final Presentatiosn/ProductTVPageFinal.ui", self)
+        self.PictureFlag = 0
+        loadUi("Final Presentatiosn/ProductUSBPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)  
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        self.UpdateButton.clicked.connect(self.Update)
         _translate = QtCore.QCoreApplication.translate
         try:
-            self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+            self.USB_Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/USBImage{CurrentProduct}.png'))
+            self.PictureFlag = 1
         except:
-            self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        
+            self.USB_Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        self.UpdateButton.clicked.connect(self.Update)
         
         
     def GoToEachCategoryPage(self):
@@ -873,6 +989,8 @@ class ProductUSBPage(QDialog):
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
         driver.get(Site1)
+        time.sleep(10)
+        
         Image = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/img')
         Image_Source = Image.get_property('src')
         respond = requests.get(Image_Source)
@@ -881,7 +999,7 @@ class ProductUSBPage(QDialog):
                 filepic = open(f'Final Presentatiosn/Images/USBImage{CurrentProduct}.png', 'wb')
                 filepic.write(respond.content)
                 filepic.close()
-        self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
+        self.USB_Image.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/USBImage{CurrentProduct}.png'))
         
         try:
             Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
@@ -891,32 +1009,34 @@ class ProductUSBPage(QDialog):
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))
-        driver.get(Site2)
-        time.sleep(15)
-        try:
-            Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
-        except:
-            try:
-                Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[2]/div/h6/span[1]'))
-            except:
-                Price2 = 'Not Available'
-        self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-        _ = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[3]/div[1]/div/div[1]/header/ul/li[2]/a').click()
         driver.get(Site3)
-        time.sleep(10)
+        time.sleep(15)
         try: 
-            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
-            Price3 = Price3_tmp.split(' ')[0]
+            Price2_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price2 = Price2_tmp.split(' ')[0]
         except:
-            Price3 = 'Not Available'
-        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+            Price2 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price2))
+        driver.get(Site2)
+        Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').text)
+        self.TechnoSun_Label.setText(_translate('Dialog',Price3))
+        _ = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[1]/button[2]').click()
+        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[5]/div/span[2]').text)
+        Storage = Storage.text
+        Storage = Storage.split(' - ')[0]
+        self.Storage_Label.setText(_translate('Dialog', Storage))
+        Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[4]/div/span[2]').text)
+        self.Speed_Label.setText(_translate('Dialog', Speed.text))
+        Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
+        self.Version_Label.setText(_translate('Dialog', Version.text))
+        time.sleep(10)
+        
         
         driver.close()
          
    
         
-        
-    
+# a function for reading csv files   
 def csv_reader(path):
     with open(path) as csv:
         for row in csv.readlines():

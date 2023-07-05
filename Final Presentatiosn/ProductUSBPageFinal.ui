@@ -320,7 +320,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="Image_Hard">
+  <widget class="QLabel" name="USB_Image">
    <property name="geometry">
     <rect>
      <x>440</x>
