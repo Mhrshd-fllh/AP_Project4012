@@ -204,38 +204,6 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QTextEdit" name="PasswordInput">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>500</y>
-     <width>310</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="NameInput">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>360</y>
-     <width>310</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-  </widget>
   <widget class="QTextEdit" name="SearchBox">
    <property name="geometry">
     <rect>
@@ -285,7 +253,7 @@
     <rect>
      <x>20</x>
      <y>770</y>
-     <width>481</width>
+     <width>611</width>
      <height>21</height>
     </rect>
    </property>
@@ -304,7 +272,7 @@
     <rect>
      <x>20</x>
      <y>800</y>
-     <width>411</width>
+     <width>461</width>
      <height>16</height>
     </rect>
    </property>
@@ -354,6 +322,32 @@
    </property>
    <property name="text">
     <string>Categories</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="NameInput">
+   <property name="geometry">
+    <rect>
+     <x>445</x>
+     <y>385</y>
+     <width>300</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PasswordInput">
+   <property name="geometry">
+    <rect>
+     <x>445</x>
+     <y>515</y>
+     <width>300</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
    </property>
   </widget>
  </widget>
