@@ -5,15 +5,22 @@ conn = sqlite3.connect('USB.db')
 #Create a cursor
 cursor = conn.cursor()
 
-def Check_For_Product(Product_Name):
+def Check_For_Product(Product_Name , search_bool):
     Products_Name = []
-    cursor.execute("SELECT * FROM Details")
-    for m in cursor.fetchall():
-        Products_Name.append(m[0])
-    if Product_Name in Products_Name:
-        return 1
+    if search_bool == False:    
+        cursor.execute("SELECT * FROM Details")
+        for m in cursor.fetchall():
+            Products_Name.append(m[0])
+        if Product_Name in Products_Name:
+            return True
+        else:
+            return False
     else:
-        return 0
+        cursor.execute('SELECT Name FROM Details')
+        Products_Name = cursor.fetchall()
+        List_Of_Products = [i[0] for i in Products_Name]
+        Match = [name for name in List_Of_Products if Product_Name.lower() in name.lower()]
+        return Match
 def Show_Details(Product_Name):
     cursor.execute("SELECT * FROM Details WHERE Name = '{}'".format(Product_Name))
     Details = cursor.fetchall()[0]

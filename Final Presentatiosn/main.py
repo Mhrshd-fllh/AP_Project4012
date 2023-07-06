@@ -545,7 +545,7 @@ class ProductHardPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        Done = Hard.Check_For_Product(CurrentProduct)
+        Done = Hard.Check_For_Product(CurrentProduct, False)
         if Done == 1:
             Details = Hard.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate("Dialog", Details[0]))
@@ -648,7 +648,7 @@ class ProductHeadphonesPage(QDialog):
         else:
             self.ProfileButton.clicked.connect(self.GoToLogin)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        Done = Headphone.Check_For_Product(CurrentProduct)
+        Done = Headphone.Check_For_Product(CurrentProduct,False)
         _translate = QtCore.QCoreApplication.translate
         if Done:
             Details = Headphone.Show_Details(CurrentProduct)
@@ -778,7 +778,7 @@ class ProductLaptopsPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        Done = Laptop.Check_For_Product(CurrentProduct)
+        Done = Laptop.Check_For_Product(CurrentProduct, False)
         if Done == 1:
             Details = Laptop.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate("Dialog",Details[0]))
@@ -899,7 +899,7 @@ class ProductPhonesPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
-        Done = Phone.Check_For_Product(CurrentProduct)
+        Done = Phone.Check_For_Product(CurrentProduct, False)
         if Done == 1:
             Details = Phone.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate('Dialog',Details[0]))
@@ -1007,7 +1007,7 @@ class ProductTVPage(QDialog):
         _translate = QtCore.QCoreApplication.translate
         Done = TV.Check_For_Product(CurrentProduct)
         if Done == 1:
-            Details = TV.Show_Details(CurrentProduct)
+            Details = TV.Show_Details(CurrentProduct, False)
             self.Name_Label.setText(_translate('Dialog', Details[0]))
             self.Size_Label.setText(_translate('Dialog', Details[1]))
             self.Resolution_Label.setText(_translate('Dialog', Details[2]))
@@ -1114,7 +1114,7 @@ class ProductUSBPage(QDialog):
             self.PictureFlag = 1
         except:
             self.USB_Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        Done = USB.Check_For_Product(CurrentProduct)
+        Done = USB.Check_For_Product(CurrentProduct, False)
         if Done == 1:
             Details = USB.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate('Dialog', Details[0]))
@@ -1198,7 +1198,28 @@ class ProductUSBPage(QDialog):
         
         driver.close()
          
-   
+
+def Search(text):
+    Tv_check_Match = TV.Check_For_Product(text, True)
+    Headphone_check_Match = Headphone.Check_For_Product(text, True)
+    Hard_check_Match = Hard.Check_For_Product(text, True)
+    USB_check_Match = USB.Check_For_Product(text,True)
+    Phone_check_Match = Phone.Check_For_Product(text,True)
+    Laptop_check_Match = Laptop.Check_For_Product(text,True)
+    Matching_List = []
+    for m in Tv_check_Match:
+        Matching_List.append(m)
+    for m in Headphone_check_Match:
+        Matching_List.append(m)
+    for m in Hard_check_Match:
+        Matching_List.append(m)
+    for m in USB_check_Match:
+        Matching_List.append(m)
+    for m in Phone_check_Match:
+        Matching_List.append(m)
+    for m in Laptop_check_Match:
+        Matching_List.append(m)
+
         
 # a function for reading csv files   
 def csv_reader(path):
