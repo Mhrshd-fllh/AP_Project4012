@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication
 from functools import partial
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By     
 import requests
 import csv
 from unidecode import unidecode
@@ -317,7 +317,9 @@ class SignIn(QDialog):
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        self.submitButton.clicked.connect(self.Register)
+        self.SubmitButton.clicked.connect(self.Register)
+        
+        
     def GoToHomePage(self):
         mainwindow = MainWindow()
         widget.addWidget(mainwindow)
