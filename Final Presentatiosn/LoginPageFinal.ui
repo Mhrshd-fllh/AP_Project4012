@@ -204,31 +204,6 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QTextEdit" name="SearchBox">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>240</y>
-     <width>321</width>
-     <height>35</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="sizeAdjustPolicy">
-    <enum>QAbstractScrollArea::AdjustToContents</enum>
-   </property>
-   <property name="tabChangesFocus">
-    <bool>false</bool>
-   </property>
-   <property name="placeholderText">
-    <string>Search Here</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="SearchButton">
    <property name="geometry">
     <rect>
@@ -348,6 +323,19 @@
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SearchBox">
+   <property name="geometry">
+    <rect>
+     <x>632</x>
+     <y>240</y>
+     <width>281</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Search Here</string>
    </property>
   </widget>
  </widget>

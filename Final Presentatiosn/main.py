@@ -55,6 +55,7 @@ Site3 = ''
 Current_User_ID = 0
 
 
+Matching_List = []
 # Home Page
 class MainWindow(QDialog):
     def __init__(self):
@@ -73,6 +74,7 @@ class MainWindow(QDialog):
         else:
             self.ProfileButton.clicked.connect(self.GoToLogin)
         
+        self.SearchButton.clicked.connect(partial(Search,self.SearchBox.text()))
         
     
     
@@ -130,6 +132,7 @@ class Categories(QDialog):
         self.TVButton.clicked.connect(self.GoToTVPage)
         self.HardButton.clicked.connect(self.GoToHardPage)
         self.USBButton.clicked.connect(self.GoToUSBPage)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         
     
     
@@ -212,7 +215,8 @@ class Favorites(QDialog):
         self.LoginButton.clicked.connect(self.GoToLogin)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout.setObjectName("verticalLayout")        
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))        
         
     def GoToHomePage(self):
         mainwindow = MainWindow()
@@ -246,6 +250,7 @@ class Login(QDialog):
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.SignInButton.clicked.connect(self.GoToSignIn)
         self.SubmitButton.clicked.connect(self.LogIn)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         
     def GoToHomePage(self):
         mainwindow = MainWindow()
@@ -306,6 +311,7 @@ class Profile(QDialog):
         self.PasswordReset.clicked.connect(self.ChangePassword)
         self.Logout_Button.clicked.connect(self.GoToLogin)
         self.Logout_Button.clicked.connect(self.Logout)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         
         
     def GoToHomePage(self):
@@ -352,6 +358,7 @@ class SignIn(QDialog):
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.LogInButton.clicked.connect(self.GoToLogin)
         self.SubmitButton.clicked.connect(self.Register)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
 
     def GoToHomePage(self):
         mainwindow = MainWindow()
@@ -412,6 +419,7 @@ class EachCategoryPage(QDialog):
         self.TitleLable.setText(_translate("Dialog", EachCategoryPageTitle))
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
         for i in self.Category_Dict:
@@ -540,6 +548,7 @@ class ProductHardPage(QDialog):
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         _translate = QtCore.QCoreApplication.translate
         try:
             self.Image_Hard.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{CurrentProduct}.png'))
@@ -667,7 +676,7 @@ class ProductHeadphonesPage(QDialog):
             self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png'))
         except:
             self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.Update_Button.clicked.connect(self.Update, Done)
         
     def GoToEachCategoryPage(self):
@@ -793,7 +802,7 @@ class ProductLaptopsPage(QDialog):
             self.Digikala_Label.setText(_translate("Dialog",Details[8]))
             self.TechonLife_Label.setText(_translate("Dialog",Details[9]))
             self.MeghdadIT_Label.setText(_translate("Dialog",Details[10]))
-            widget.update()
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))    
         self.UpdateButton.clicked.connect(self.Update, Done)
 
     def GoToEachCategoryPage(self):
@@ -915,7 +924,7 @@ class ProductPhonesPage(QDialog):
             self.Mobile_Label.setText(_translate('Dialog', Details[9]))
             self.MeghdadIT_Label.setText(_translate('Dialog', Details[10]))
             widget.update()
-
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -1022,7 +1031,8 @@ class ProductTVPage(QDialog):
             self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
             self.PictureFlag = 1
         except:
-            self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
+            self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text())) 
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -1123,9 +1133,9 @@ class ProductUSBPage(QDialog):
             self.Speed_Label.setText(_translate('Dialog',Details[2]))
             self.Version_Label.setText(_translate('Dialog', Details[3]))
             self.DigiKala_Label.setText(_translate('Dialog', Details[4]))
-            self.MeghdadIT_Label.setText(_translate('Dialog', Details[5]))
+            self.MeghdadITLabel.setText(_translate('Dialog', Details[5]))
             self.TechnoSun_Label.setText(_translate('Dialog', Details[6]))
-            widget.update()
+        self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
         
         
@@ -1191,7 +1201,7 @@ class ProductUSBPage(QDialog):
             self.Speed_Label.setText(_translate('Dialog', Speed.text))
             Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
             self.Version_Label.setText(_translate('Dialog', Version.text))
-            USB.Get_Product(CurrentProduct,Storage, Speed, Version, Price1,Price2,Price3,EachCategoryPageTitle)
+            USB.Get_Product(CurrentProduct,Storage, Speed.text, Version.text, Price1,Price2,Price3,EachCategoryPageTitle)
         else:
             USB.Update_Price(CurrentProduct,Price1,Price2,Price3)    
         time.sleep(10)
@@ -1202,14 +1212,28 @@ class ProductUSBPage(QDialog):
 #Search Result Page       
 class SearchResult(QDialog):
     def __init__(self):
+        global Search_Matching_list
         super(SearchResult, self).__init__()
         loadUi("Final Presentatiosn/SearchResultPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.LoginButton.clicked.connect(self.GoToLogin)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Search_Dict = {}
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout.setObjectName("verticalLayout")
+        for i in self.Search_Dict:
+            temp = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+            font = QtGui.QFont()
+            font.setFamily("Cooper Black")
+            font.setPointSize(20)
+            temp.setFont(font)
+            self.verticalLayout.addWidget(temp)
+            temp.clicked.connect(partial(self.Pressed_For_Details,i))
+            self.Search_Dict[i] = temp
+        for i in self.Search_Dict:
+            self.search_Dict[i].setText(_translate("Dialog", i))
     def GoToHomePage(self):
         mainwindow = MainWindow()
         widget.addWidget(mainwindow)
@@ -1229,16 +1253,17 @@ class SearchResult(QDialog):
         categories = Categories()
         widget.addWidget(categories)
         widget.setCurrentIndex(widget.currentIndex()+1)
+        
          
 
 def Search(text):
+    global Matching_list
     Tv_check_Match = TV.Check_For_Product(text, True)
     Headphone_check_Match = Headphone.Check_For_Product(text, True)
     Hard_check_Match = Hard.Check_For_Product(text, True)
     USB_check_Match = USB.Check_For_Product(text,True)
     Phone_check_Match = Phone.Check_For_Product(text,True)
     Laptop_check_Match = Laptop.Check_For_Product(text,True)
-    Matching_List = []
     for m in Tv_check_Match:
         Matching_List.append(m)
     for m in Headphone_check_Match:
@@ -1251,6 +1276,11 @@ def Search(text):
         Matching_List.append(m)
     for m in Laptop_check_Match:
         Matching_List.append(m)
+    
+    search = SearchResult()
+    widget.addWidget(search)
+    widget.setCurrentIndex(widget.currentIndex() + 1)
+
 
         
 # a function for reading csv files   

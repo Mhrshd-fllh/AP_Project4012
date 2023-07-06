@@ -5,7 +5,6 @@ conn = sqlite3.connect('Hard.db')
 #Create a cursor
 cursor = conn.cursor()
 
-
 def Check_For_Product(Product_Name , search_bool):
     Products_Name = []
     if search_bool == False:    
@@ -39,9 +38,9 @@ def Get_Product(Product_Name,Product_Storage, Product_Speed, Product_Connection 
     Details.append(Product_Page)
     Details.append(1)
     cursor.execute("INSERT INTO Details VALUES (?,?,?,?,?,?,?,?,?)" , Details)
-    conn.commmit()
+    conn.commit()
 def Update_Price(Product_Name,Product_Digikala, Product_TechnoLife, Product_MeghdadIT):
     cursor.execute("UPDATE Details SET Digikala ='{}' WHERE Name = '{}'".format(Product_Digikala, Product_Name))
     cursor.execute("UPDATE Details SET TechnoLife ='{}' WHERE Name = '{}'".format(Product_TechnoLife, Product_Name))
     cursor.execute("UPDATE Details SET MeghdadIT ='{}' WHERE Name = '{}'".format(Product_MeghdadIT, Product_Name))
-    conn.commmit()
+    conn.commit()

@@ -171,25 +171,6 @@
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="SearchBox">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>210</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>Search Here</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -435,6 +416,19 @@
    </property>
    <property name="text">
     <string>Login</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SearchBox">
+   <property name="geometry">
+    <rect>
+     <x>582</x>
+     <y>210</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Search Here</string>
    </property>
   </widget>
  </widget>

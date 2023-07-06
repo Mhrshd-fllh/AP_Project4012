@@ -39,7 +39,7 @@ def Get_Product(Product_Name, Product_Size, Product_Resolution, Product_Quality,
     Details.append(Product_Page)
     Details.append(1)
     cursor.execute("INSERT INTO Details VALUES (?,?,?,?,?,?,?,?,?,?)" , Details)
-    conn.commmit()
+    conn.commit()
 def Update_Price(Product_Name,Product_Digikala, Product_Hyperkhanegi, Product_TechnoLife):
     cursor.execute("UPDATE Details SET Digikala ='{}' WHERE Name = '{}'".format(Product_Digikala, Product_Name))
     cursor.execute("UPDATE Details SET Hyperkhanegi ='{}' WHERE Name = '{}'".format(Product_Hyperkhanegi,Product_Name))

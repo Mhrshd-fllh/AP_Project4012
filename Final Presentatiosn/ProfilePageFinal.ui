@@ -124,31 +124,6 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QTextEdit" name="SearchBox">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>180</y>
-     <width>331</width>
-     <height>35</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="sizeAdjustPolicy">
-    <enum>QAbstractScrollArea::AdjustToContents</enum>
-   </property>
-   <property name="tabChangesFocus">
-    <bool>false</bool>
-   </property>
-   <property name="placeholderText">
-    <string>Search Here</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="SearchButton">
    <property name="geometry">
     <rect>
@@ -408,6 +383,19 @@
    </property>
    <property name="text">
     <string>Logout</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SearchBox">
+   <property name="geometry">
+    <rect>
+     <x>612</x>
+     <y>180</y>
+     <width>281</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Search Here</string>
    </property>
   </widget>
  </widget>

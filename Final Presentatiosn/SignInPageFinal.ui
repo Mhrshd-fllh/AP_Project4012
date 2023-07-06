@@ -205,25 +205,6 @@
     <string>Password:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="SearchBox">
-   <property name="geometry">
-    <rect>
-     <x>550</x>
-     <y>170</y>
-     <width>331</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="sizeAdjustPolicy">
-    <enum>QAbstractScrollArea::AdjustToContents</enum>
-   </property>
-   <property name="tabChangesFocus">
-    <bool>false</bool>
-   </property>
-   <property name="placeholderText">
-    <string>Search Here</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="NameInputLabel">
    <property name="geometry">
     <rect>
@@ -374,6 +355,16 @@
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SearchBox">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>170</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
    </property>
   </widget>
  </widget>
