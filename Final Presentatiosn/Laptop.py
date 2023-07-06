@@ -7,9 +7,9 @@ cursor = conn.cursor()
 
 def Check_For_Product(Product_Name):
     Products_Name = []
-    cursor.execute("SELECT rowid, * FROM Details")
+    cursor.execute("SELECT * FROM Details")
     for m in cursor.fetchall():
-        Products_Name.append(m)
+        Products_Name.append(m[0])
     if Product_Name in Products_Name:
         return 1
     else:

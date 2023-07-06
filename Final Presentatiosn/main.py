@@ -555,6 +555,7 @@ class ProductHardPage(QDialog):
             self.DigiKala_Label.setText(_translate("Dialog", Details[4]))
             self.MeghdadITLabel.setText(_translate("Dialog", Details[5]))
             self.TechnoLife_Label.setText(_translate('Dialog',Details[6]))
+            widget.update()
         self.UpdateButton.clicked.connect(self.Update, Done)
         
     def GoToEachCategoryPage(self):
@@ -642,16 +643,14 @@ class ProductHeadphonesPage(QDialog):
         self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductHeadPhonePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
-        self.ProfileButton.clicked.connect(self.GoToProfile)
+        if Current_User_ID != 0:
+            self.ProfileButton.clicked.connect(self.GoToProfile)
+        else:
+            self.ProfileButton.clicked.connect(self.GoToLogin)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        _translate = QtCore.QCoreApplication.translate
-        try:
-            self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png'))
-            self.PictureFlag = 1
-        except:
-            self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         Done = Headphone.Check_For_Product(CurrentProduct)
-        if Done == 1:
+        _translate = QtCore.QCoreApplication.translate
+        if Done:
             Details = Headphone.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate("Dialog",Details[0]))
             self.Version_Label.setText(_translate("Dialog",Details[1]))
@@ -662,6 +661,12 @@ class ProductHeadphonesPage(QDialog):
             self.Digikala_Label.setText(_translate('Dialog', Details[6]))
             self.TechnoLife_Label.setText(_translate('Dialog', Details[7]))
             self.MeghdadIT_Label.setText(_translate('Dialog', Details[8]))
+        widget.update()
+        try:
+            self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png'))
+        except:
+            self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
+        
         self.Update_Button.clicked.connect(self.Update, Done)
         
     def GoToEachCategoryPage(self):
@@ -679,7 +684,12 @@ class ProductHeadphonesPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+    
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
     def Update(self,Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
@@ -702,7 +712,8 @@ class ProductHeadphonesPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="base_layout_mobile_footer"]/div/div/div[2]/div[2]/div[2]').text)
+                Price1 = Price1.split(' ')[0]
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
@@ -781,6 +792,7 @@ class ProductLaptopsPage(QDialog):
             self.Digikala_Label.setText(_translate("Dialog",Details[8]))
             self.TechonLife_Label.setText(_translate("Dialog",Details[9]))
             self.MeghdadIT_Label.setText(_translate("Dialog",Details[10]))
+            widget.update()
         self.UpdateButton.clicked.connect(self.Update, Done)
 
     def GoToEachCategoryPage(self):
@@ -901,6 +913,7 @@ class ProductPhonesPage(QDialog):
             self.Digikala_Label.setText(_translate('Dialog',Details[8]))
             self.Mobile_Label.setText(_translate('Dialog', Details[9]))
             self.MeghdadIT_Label.setText(_translate('Dialog', Details[10]))
+            widget.update()
 
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
     def GoToEachCategoryPage(self):
@@ -1003,6 +1016,7 @@ class ProductTVPage(QDialog):
             self.DigiKala_Label.setText(_translate('Dialog', Details[5]))
             self.HyperKhanegi_Label.setText(_translate('Dialog', Details[6]))
             self.TechnoLife_Label.setText(_translate('Dialog', Details[7]))
+            widget.update()
         try:
             self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
             self.PictureFlag = 1
@@ -1110,6 +1124,7 @@ class ProductUSBPage(QDialog):
             self.DigiKala_Label.setText(_translate('Dialog', Details[4]))
             self.MeghdadIT_Label.setText(_translate('Dialog', Details[5]))
             self.TechnoSun_Label.setText(_translate('Dialog', Details[6]))
+            widget.update()
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
         
         
