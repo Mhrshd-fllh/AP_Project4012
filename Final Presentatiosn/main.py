@@ -357,14 +357,9 @@ class SignIn(QDialog):
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-<<<<<<< HEAD
-        self.SubmitButton.clicked.connect(self.Register)
-        
-        
-=======
         self.LogInButton.clicked.connect(self.GoToLogin)
         self.SubmitButton.clicked.connect(self.Register)
->>>>>>> 4d197d06c71e35ec401b9916fee07de79da880a1
+
     def GoToHomePage(self):
         mainwindow = MainWindow()
         widget.addWidget(mainwindow)
@@ -1097,6 +1092,37 @@ class ProductUSBPage(QDialog):
         
         
         driver.close()
+        
+#Search Result Page       
+class SearchResult(QDialog):
+    def __init__(self):
+        super(SearchResult, self).__init__()
+        loadUi("Final Presentatiosn/SearchResultPageFinal.ui", self)
+        self.HomeButton.clicked.connect(self.GoToHomePage)
+        self.CategoriesButton.clicked.connect(self.GoToCategories)
+        self.LoginButton.clicked.connect(self.GoToLogin)
+        self.ProfileButton.clicked.connect(self.GoToProfile)
+        
+        
+    def GoToHomePage(self):
+        mainwindow = MainWindow()
+        widget.addWidget(mainwindow)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToProfile(self):
+        profile = Profile()
+        widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def GoToCategories(self):
+        categories = Categories()
+        widget.addWidget(categories)
+        widget.setCurrentIndex(widget.currentIndex()+1)
          
    
         
