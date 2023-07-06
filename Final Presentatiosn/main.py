@@ -1,6 +1,7 @@
 #RUNNN! Version 1.
 
 # Here is what we need to import for Application
+import Database
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
@@ -57,8 +58,14 @@ class MainWindow(QDialog):
         self.next.clicked.connect(self.next_clicked)
         self.previous.clicked.connect(self.previous_clicked)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
-        self.LoginButton.clicked.connect(self.GoToLogin)
-        self.ProfileButton.clicked.connect(self.GoToProfile)
+        if Current_User_ID == 0:
+            self.LoginButton.clicked.connect(self.GoToLogin)
+        else:
+            self.LoginButton.clicked.connect(self.GoToProfile)
+        if Current_User_ID != 0:
+            self.ProfileButton.clicked.connect(self.GoToProfile)
+        else:
+            self.ProfileButton.clicked.connect(self.GoToLogin)
         
         
     
@@ -244,6 +251,7 @@ class Login(QDialog):
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.SignInButton.clicked.connect(self.GoToSignIn)
+        self.SubmitButton.clicked.connect(self.LogIn)
         
     def GoToHomePage(self):
         mainwindow = MainWindow()
@@ -270,17 +278,41 @@ class Login(QDialog):
         signin = SignIn()
         widget.addWidget(signin)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+    def LogIn(self, Current):
+        global Current_User_ID
+        Done_Flag = 0
+        User_Name = self.NameInput.text()
+        User_Password = self.PasswordInput.text()
+        Done_Flag , Current_User_ID = Database.Login(User_Name, User_Password)
+        if Done_Flag == 0:
+            Exit_text = QtWidgets.QInputDialog.getText(self,'Error' , Current_User_ID + 'Type Exit')
+            self.NameInput.clear()
+            self.PasswordInput.clear()
+            Current_User_ID = 0
+        else:
+            self.GoToProfile()
+
+
 # Profile Page        
         
 class Profile(QDialog):
+    global Current_User_ID
     def __init__(self):
         super(Profile, self).__init__()
         loadUi("Final Presentatiosn/ProfilePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
-        self.LoginButton.clicked.connect(self.GoToLogin)
+        if Current_User_ID == 0:
+            self.LoginButton.clicked.connect(self.GoToLogin)
+        _translate =QtCore.QCoreApplication.translate
+        User_Name, User_Email = Database.Show_User_Info(Current_User_ID)
+        self.NameLabel_Output.setText(_translate('Dialog', User_Name))
+        self.EmailLabel_Output.setText(_translate('Dialog', User_Email))
+        self.PasswordReset.clicked.connect(self.ChangePassword)
+        self.Logout_Button.clicked.connect(self.GoToLogin)
+        self.Logout_Button.clicked.connect(self.Logout)
         
         
     def GoToHomePage(self):
@@ -305,7 +337,15 @@ class Profile(QDialog):
         categories = Categories()
         widget.addWidget(categories)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
+    def ChangePassword(self):
+        Old, state = QtWidgets.QInputDialog.getText(self, "Change Password", "Old Password: ")
+        New, state = QtWidgets.QInputDialog.getText(self, "Change Password", "New Password: ")
+        Database.Change_Password(Current_User_ID, Old, New)
+
+    def Logout(self):
+        global Current_User_ID
+        Current_User_ID = 0
         
 # Sign In Page        
         
@@ -317,7 +357,8 @@ class SignIn(QDialog):
         self.CategoriesButton.clicked.connect(self.GoToCategories)
         self.FavoritesButton.clicked.connect(self.GoToFavorites)
         self.ProfileButton.clicked.connect(self.GoToProfile)
-        self.submitButton.clicked.connect(self.Register)
+        self.LogInButton.clicked.connect(self.GoToLogin)
+        self.SubmitButton.clicked.connect(self.Register)
     def GoToHomePage(self):
         mainwindow = MainWindow()
         widget.addWidget(mainwindow)
@@ -339,10 +380,27 @@ class SignIn(QDialog):
         widget.addWidget(categories)
         widget.setCurrentIndex(widget.currentIndex()+1)      
     
-    def Register(self, Current_User_Id):
-        self.NameInput.RichT = 9
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Register(self):
+        global Current_User_ID
+        Done_Flag = 0
+        User_Name = self.NameInput.text()
+        Email = self.EmailInput.text()
+        Password = self.PaasswordInput.text()
         
-        pass
+        Done_Flag , Current_User_ID = Database.Register(User_Name, Email, Password)
+        if Done_Flag == 0:
+            Exit_text, state = QtWidgets.QInputDialog.getText(self,'Error' ,  Current_User_ID + 'Incorrect Password')
+            self.NameInput.clear()
+            self.EmailInput.clear()
+            self.PasswordInput.clear()
+            Current_User_ID = 0
+        else:
+            self.GoToProfile()
 
 
 

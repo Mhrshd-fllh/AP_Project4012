@@ -80,22 +80,6 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QTextEdit" name="NameInput">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>280</y>
-     <width>310</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-  </widget>
   <widget class="QLabel" name="PageTitle">
    <property name="geometry">
     <rect>
@@ -137,22 +121,6 @@
    </property>
    <property name="text">
     <string>Contact us via : @comfortablynumb7 on Telegram or 09908611517</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="EmailInput">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>380</y>
-     <width>310</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>14</pointsize>
-    </font>
    </property>
   </widget>
   <widget class="QPushButton" name="SubmitButton">
@@ -235,22 +203,6 @@
    </property>
    <property name="text">
     <string>Password:</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="PasswordInput">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>480</y>
-     <width>310</width>
-     <height>100</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>14</pointsize>
-    </font>
    </property>
   </widget>
   <widget class="QTextEdit" name="SearchBox">
@@ -386,6 +338,42 @@
    </property>
    <property name="text">
     <string>Favorites</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="NameInput">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>325</y>
+     <width>300</width>
+     <height>50</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="EmailInput">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>415</y>
+     <width>300</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhEmailCharactersOnly</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PaasswordInput">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>515</y>
+     <width>300</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
    </property>
   </widget>
  </widget>

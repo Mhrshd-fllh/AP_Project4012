@@ -20,10 +20,10 @@ TEXT
 BLOB
 '''
 #Query the database
-cursor.execute('SELECT rowid, * FROM  customers WHERE last_name = "Brown"')
-print(cursor.fetchall())
-cursor.execute('SELECT rowid, * FROM customers WHERE rowid = 1')
-print(cursor.fetchall()[0][0])
+cursor.execute('SELECT rowid, * FROM  customers')
+for m in cursor.fetchall():
+    print(m[1])
+
 #cursor.execute("UPDATE customers SET first_name ='John' WHERE rowid = 1 ")
 
 

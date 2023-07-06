@@ -100,75 +100,13 @@
     <string>Contact us via : @comfortablynumb7 on Telegram or 09908611517</string>
    </property>
   </widget>
-  <widget class="QLabel" name="EntranceLabel">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>420</y>
-     <width>321</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="palette">
-    <palette>
-     <active>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>13</red>
-         <green>13</green>
-         <blue>13</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </active>
-     <inactive>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>13</red>
-         <green>13</green>
-         <blue>13</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </inactive>
-     <disabled>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>120</red>
-         <green>120</green>
-         <blue>120</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </disabled>
-    </palette>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>22</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Entrance Date:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="wordWrap">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="NameLabel">
    <property name="geometry">
     <rect>
      <x>160</x>
      <y>290</y>
      <width>201</width>
-     <height>61</height>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -274,7 +212,7 @@
      <x>190</x>
      <y>360</y>
      <width>151</width>
-     <height>61</height>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -290,13 +228,13 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="NameLabel_2">
+  <widget class="QLabel" name="NameLabel_Output">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>300</y>
-     <width>421</width>
-     <height>41</height>
+     <x>361</x>
+     <y>290</y>
+     <width>450</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="palette">
@@ -346,13 +284,13 @@
     <string>User's Name</string>
    </property>
   </widget>
-  <widget class="QLabel" name="EmailLabel_2">
+  <widget class="QLabel" name="EmailLabel_Output">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>370</y>
-     <width>341</width>
-     <height>31</height>
+     <x>361</x>
+     <y>360</y>
+     <width>450</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="palette">
@@ -400,62 +338,6 @@
    </property>
    <property name="text">
     <string>User's Email</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="EntranceLabel_2">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>440</y>
-     <width>351</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="palette">
-    <palette>
-     <active>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>13</red>
-         <green>13</green>
-         <blue>13</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </active>
-     <inactive>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>13</red>
-         <green>13</green>
-         <blue>13</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </inactive>
-     <disabled>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>120</red>
-         <green>120</green>
-         <blue>120</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </disabled>
-    </palette>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>User's Entrance Date</string>
    </property>
   </widget>
   <widget class="QPushButton" name="CategoriesButton">
@@ -515,7 +397,7 @@
     <string>Login</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Logout_Button">
    <property name="geometry">
     <rect>
      <x>570</x>
