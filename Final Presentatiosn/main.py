@@ -606,7 +606,7 @@ class ProductHardPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))
@@ -722,7 +722,7 @@ class ProductHeadphonesPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="base_layout_mobile_footer"]/div/div/div[2]/div[2]/div[2]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
                 Price1 = Price1.split(' ')[0]
             except:
                 Price1 = 'Not Available'
@@ -843,7 +843,7 @@ class ProductLaptopsPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
@@ -882,15 +882,18 @@ class ProductLaptopsPage(QDialog):
             self.CPU_Label.setText(_translate('Dialog',Cpu.text))
             USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-7"]/li[6]/div[2]').text)
             self.USBPort_Label.setText(_translate('Dialog',USBPort.text))
-            Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-9"]/li[1]/div[2]').text)
+            try:    
+                Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-9"]/li[1]/div[2]').text)
+            except:
+                Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-8"]/li[1]/div[2]').text)
             self.Battery_Label.setText(_translate('Dialog', Battery.text))
             Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[1]/div[2]').text)
             self.Size_Label.setText(_translate('Dialog', Size.text))
             Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
             self.Weight_Label.setText(_translate('Dialog', Weight.text))
-            Phone.Get_Product(CurrentProduct, Ram, Storage,Cpu,USBPort, Battery, Size,Weight,Price1,Price2,Price3,EachCategoryPageTitle)
+            Laptop.Get_Product(CurrentProduct, Ram.text, Storage,Cpu.text,USBPort.text, Battery.text, Size.text,Weight.text,Price1,Price2,Price3,EachCategoryPageTitle)
         else:
-            Phone.Update_Price(CurrentProduct, Price1,Price2,Price3)
+            Laptop.Update_Price(CurrentProduct, Price1,Price2,Price3)
         driver.close()    
         
 
@@ -916,8 +919,8 @@ class ProductPhonesPage(QDialog):
             self.RAM_Label.setText(_translate('Dialog',Details[1]))
             self.Storage_Label.setText(_translate('Dialog',Details[2]))
             self.Camera_Label.setText(_translate('Dialog',Details[3]))
-            self.SimCardLabel.setText(_translate('Dialog',Details[4]))
-            self.BatteryLabel.setText(_translate('Dialog',Details[5]))
+            self.SimCard_Label.setText(_translate('Dialog',Details[4]))
+            self.Battery_Label.setText(_translate('Dialog',Details[5]))
             self.Size_Label.setText(_translate('Dialog',Details[6]))
             self.Weight_Label.setText(_translate('Dialog', Details[7]))
             self.Digikala_Label.setText(_translate('Dialog',Details[8]))
@@ -965,8 +968,8 @@ class ProductPhonesPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
-            except:
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
+            except:                                             
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
         driver.get(Site3)
@@ -992,7 +995,10 @@ class ProductPhonesPage(QDialog):
             Camera = Camera.text
             Camera = Camera.split(',')[0]
             self.Camera_Label.setText(_translate('Dialog',Camera))
-            SimCard = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[4]/strong/span').text)
+            try:
+                SimCard = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[4]/strong/span').text)
+            except:
+                SimCard = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[11]/strong/span').text)
             self.SimCard_Label.setText(_translate('Dialog',SimCard.text))
             Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[10]/div/ul/li[1]/strong/span').text)
             self.Battery_Label.setText(_translate('Dialog',Battery.text))
@@ -1000,7 +1006,7 @@ class ProductPhonesPage(QDialog):
             self.Size_Label.setText(_translate('Dialog',Size.text))
             Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[2]/strong/span').text)
             self.Weight_Label.setText(_translate('Dialog',Weight.text))
-            Phone.Get_Product(CurrentProduct, Ram, Storage, Camera, SimCard.text, Battery.text, Size.text, Weight.text, Price1, Price2, Price3, EachCategoryPageTitle)
+            Phone.Get_Product(CurrentProduct, Ram, Storage, Camera, SimCard.text, Battery.text, Size.text, Weight.text, Price1, Price2.text, Price3, EachCategoryPageTitle)
         else:
             Phone.Update_Price(CurrentProduct, Price1,Price2,Price3)
         driver.close()
@@ -1015,9 +1021,9 @@ class ProductTVPage(QDialog):
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
         _translate = QtCore.QCoreApplication.translate
-        Done = TV.Check_For_Product(CurrentProduct)
+        Done = TV.Check_For_Product(CurrentProduct,False)
         if Done == 1:
-            Details = TV.Show_Details(CurrentProduct, False)
+            Details = TV.Show_Details(CurrentProduct)
             self.Name_Label.setText(_translate('Dialog', Details[0]))
             self.Size_Label.setText(_translate('Dialog', Details[1]))
             self.Resolution_Label.setText(_translate('Dialog', Details[2]))
@@ -1072,7 +1078,7 @@ class ProductTVPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))
@@ -1176,7 +1182,7 @@ class ProductUSBPage(QDialog):
             Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
         except:
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[2]/span').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="sellerSection"]/div/div[2]/div[1]/div[2]/div[1]/div/div/span').text)
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))

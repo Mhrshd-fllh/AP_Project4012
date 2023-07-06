@@ -13,11 +13,11 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="Battery">
+  <widget class="QLabel" name="Weight">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>560</y>
+     <y>600</y>
      <width>90</width>
      <height>40</height>
     </rect>
@@ -190,11 +190,11 @@
     <string>Connection:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Battery_Label">
+  <widget class="QLabel" name="Weight_Label">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>560</y>
+     <y>600</y>
      <width>211</width>
      <height>40</height>
     </rect>
@@ -629,6 +629,51 @@
    </property>
    <property name="placeholderText">
     <string>Search Here</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Battery">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>550</y>
+     <width>90</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Battery:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Battery_Label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>550</y>
+     <width>211</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Cooper Black</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
