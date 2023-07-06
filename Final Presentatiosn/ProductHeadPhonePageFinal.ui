@@ -187,7 +187,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Connection</string>
+    <string>Connection:</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="Search_Box">

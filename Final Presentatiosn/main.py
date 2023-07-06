@@ -2,6 +2,12 @@
 
 # Here is what we need to import for Application
 import Database
+import TV
+import Phone
+import Headphone
+import Hard
+import Laptop
+import USB
 import sys
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets, QtGui, QtCore
@@ -107,13 +113,7 @@ class MainWindow(QDialog):
             self.photo1.setPixmap(QtGui.QPixmap(lst[i]))
         
    
-        
-
-
-
-
 # Categories Page       
-        
 class Categories(QDialog):
     
     
@@ -200,14 +200,9 @@ class Categories(QDialog):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
-        
-    
-        
-        
-        
-# Favorites Page       
-        
+
+
+# Favorites Page        
 class Favorites(QDialog):
     def __init__(self):
         super(Favorites, self).__init__()
@@ -241,7 +236,6 @@ class Favorites(QDialog):
         
 
 # Login Page         
-        
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
@@ -295,7 +289,6 @@ class Login(QDialog):
 
 
 # Profile Page        
-        
 class Profile(QDialog):
     global Current_User_ID
     def __init__(self):
@@ -347,8 +340,8 @@ class Profile(QDialog):
         global Current_User_ID
         Current_User_ID = 0
         
+
 # Sign In Page        
-        
 class SignIn(QDialog):
     def __init__(self):
         super(SignIn, self).__init__()
@@ -404,9 +397,7 @@ class SignIn(QDialog):
             self.GoToProfile()
 
 
-
 #Each Category Page
-
 class EachCategoryPage(QDialog):
     
     def __init__(self):
@@ -539,6 +530,7 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productHardpage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         
+
 # Product Hard Page
 class ProductHardPage(QDialog):
     def __init__(self):
@@ -554,7 +546,18 @@ class ProductHardPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image_Hard.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        self.UpdateButton.clicked.connect(self.Update)
+        Done = Hard.Check_For_Product(CurrentProduct, False)
+        if Done == 1:
+            Details = Hard.Show_Details(CurrentProduct)
+            self.Name_Label.setText(_translate("Dialog", Details[0]))
+            self.Storage_Label.setText(_translate("Dialog", Details[1]))
+            self.Speed_Label.setText(_translate("Dialog", Details[2]))
+            self.Connection_Label.setText(_translate("Dialog", Details[3]))
+            self.DigiKala_Label.setText(_translate("Dialog", Details[4]))
+            self.MeghdadITLabel.setText(_translate("Dialog", Details[5]))
+            self.TechnoLife_Label.setText(_translate('Dialog',Details[6]))
+            widget.update()
+        self.UpdateButton.clicked.connect(self.Update, Done)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -572,7 +575,7 @@ class ProductHardPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def Update(self):
+    def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
@@ -598,6 +601,16 @@ class ProductHardPage(QDialog):
             except:
                 Price1 = 'Not Available'
         self.DigiKala_Label.setText(_translate('Dialog',Price1))
+        
+        driver.get(Site3)
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
+
         driver.get(Site2)
         time.sleep(15)
         try:
@@ -611,22 +624,16 @@ class ProductHardPage(QDialog):
             except:
                 Price2 = 'Not Available'
         self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-
-        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
-        self.Storage_Label.setText(_translate('Dialog',Storage.text))
-        Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[4]/div[2]').text)
-        self.Speed_Label.setText(_translate('Dialog',Speed.text))
-        Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
-        self.Connection_Label.setText(_translate('Dialog',Connection.text))
-        driver.get(Site3)
-        time.sleep(10)
-        try: 
-            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
-            Price3 = Price3_tmp.split(' ')[0]
-        except:
-            Price3 = 'Not Available'
-        self.MeghdadITLabel.setText(_translate('Dialog',Price3))
-        
+        if Done ==0:
+            Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+            self.Storage_Label.setText(_translate('Dialog',Storage.text))
+            Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[4]/div[2]').text)
+            self.Speed_Label.setText(_translate('Dialog',Speed.text))
+            Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
+            self.Connection_Label.setText(_translate('Dialog',Connection.text))
+            Hard.Get_Product(CurrentProduct, Storage.text, Speed.text, Connection.text, Price1,Price2,Price3,EachCategoryPageTitle)
+        else:
+            Hard.Update_Price(CurrentProduct,Price1,Price2,Price3)
         driver.close()
 
 
@@ -637,15 +644,31 @@ class ProductHeadphonesPage(QDialog):
         self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductHeadPhonePageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
-        self.ProfileButton.clicked.connect(self.GoToProfile)
+        if Current_User_ID != 0:
+            self.ProfileButton.clicked.connect(self.GoToProfile)
+        else:
+            self.ProfileButton.clicked.connect(self.GoToLogin)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        Done = Headphone.Check_For_Product(CurrentProduct,False)
         _translate = QtCore.QCoreApplication.translate
+        if Done:
+            Details = Headphone.Show_Details(CurrentProduct)
+            self.Name_Label.setText(_translate("Dialog",Details[0]))
+            self.Version_Label.setText(_translate("Dialog",Details[1]))
+            self.Connection_Label.setText(_translate("Dialog",Details[2]))
+            self.USBPort_Label.setText(_translate("Dialog",Details[3]))
+            self.Battery_Label.setText(_translate("Dialog",Details[4]))
+            self.Weight_Label.setText(_translate("Dialog",Details[5]))
+            self.Digikala_Label.setText(_translate('Dialog', Details[6]))
+            self.TechnoLife_Label.setText(_translate('Dialog', Details[7]))
+            self.MeghdadIT_Label.setText(_translate('Dialog', Details[8]))
+        widget.update()
         try:
             self.Image_Headphone.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{CurrentProduct}.png'))
-            self.PictureFlag = 1
         except:
             self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        self.Update_Button.clicked.connect(self.Update)
+        
+        self.Update_Button.clicked.connect(self.Update, Done)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -662,10 +685,13 @@ class ProductHeadphonesPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
-    def Update(self):
-        details_list = []
-        details_list.append(CurrentProduct)
+    
+    def GoToLogin(self):
+        login = Login()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Update(self,Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
@@ -687,10 +713,20 @@ class ProductHeadphonesPage(QDialog):
             Price1 = 'Not Available'
         if Price1 == 'Not Available':
             try:
-                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div/div[1]/div[2]/div[1]').text)
+                Price1 = unidecode(driver.find_element(By.XPATH, '//*[@id="base_layout_mobile_footer"]/div/div/div[2]/div[2]/div[2]').text)
+                Price1 = Price1.split(' ')[0]
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
+        
+        driver.get(Site3)
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
         driver.get(Site2)
         time.sleep(15)
         try:
@@ -704,33 +740,30 @@ class ProductHeadphonesPage(QDialog):
             except:
                 pass
         self.TechnoLife_Label.setText(_translate('Dialog',Price2))
-        Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[3]/div[2]').text)
-        self.Version_Label.setText(_translate('Dialog', Version.text))
-        Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[2]/div[2]').text)    
-        self.Connection_Label.setText(_translate('Dialog', Connection.text))
-        try:
-            USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[4]/div[2]').text)
-        except:
-            USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[4]/div[2]').text)
-        self.USBPort_Label.setText(_translate('Dialog', USBPort.text))
-        try:
-            Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[3]/div[2]').text)
-        except:
-            Battery = 'No Battery'
-        self.Battery_Label.setText(_translate('Dialog', Battery.text)) if type(Battery) != str else self.Battery_Label.setText(_translate('Dialog', Battery))
-        Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[1]/div[2]').text)
-        self.Weight_Label.setText(_translate('Dialog', Weight.text))
-        driver.get(Site3)
-        time.sleep(10)
-        try: 
-            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
-            Price3 = Price3_tmp.split(' ')[0]
-        except:
-            Price3 = 'Not Available'
-        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
-        
+        if Done == 0:
+            self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+            Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[3]/div[2]').text)
+            self.Version_Label.setText(_translate('Dialog', Version.text))
+            Connection = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[2]/div[2]').text)    
+            self.Connection_Label.setText(_translate('Dialog', Connection.text))
+            try:
+                USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[4]/div[2]').text)
+            except:
+                USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[4]/div[2]').text)
+            self.USBPort_Label.setText(_translate('Dialog', USBPort.text))
+            try:
+                Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[3]/div[2]').text)
+            except:
+                Battery = 'No Battery'
+            self.Battery_Label.setText(_translate('Dialog', Battery.text)) if type(Battery) != str else self.Battery_Label.setText(_translate('Dialog', Battery))
+            Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[1]/div[2]').text)
+            self.Weight_Label.setText(_translate('Dialog', Weight.text))
+            Headphone.Get_Product(CurrentProduct, Version.text, Connection.text, USBPort.text if type(USBPort) != str else USBPort, Battery.text if type(Battery) != str else Battery, Weight.text, Price1,Price2,Price3,EachCategoryPageTitle)
+        else:
+            Headphone.Update_Price(CurrentProduct,Price1,Price2,Price3)
         driver.close()
-            
+
+
 # Product Laptops Page
 class ProductLaptopsPage(QDialog):
     def __init__(self):
@@ -746,7 +779,22 @@ class ProductLaptopsPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        self.UpdateButton.clicked.connect(self.Update)
+        Done = Laptop.Check_For_Product(CurrentProduct, False)
+        if Done == 1:
+            Details = Laptop.Show_Details(CurrentProduct)
+            self.Name_Label.setText(_translate("Dialog",Details[0]))
+            self.RAM_Label.setText(_translate("Dialog",Details[1]))
+            self.Storage_Label.setText(_translate("Dialog",Details[2]))
+            self.CPU_Label.setText(_translate("Dialog",Details[3]))
+            self.USBPort_Label.setText(_translate("Dialog",Details[4]))
+            self.Battery_Label.setText(_translate("Dialog",Details[5]))
+            self.Size_Label.setText(_translate("Dialog",Details[6]))
+            self.Weight_Label.setText(_translate("Dialog",Details[7]))
+            self.Digikala_Label.setText(_translate("Dialog",Details[8]))
+            self.TechonLife_Label.setText(_translate("Dialog",Details[9]))
+            self.MeghdadIT_Label.setText(_translate("Dialog",Details[10]))
+            widget.update()
+        self.UpdateButton.clicked.connect(self.Update, Done)
 
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -764,9 +812,9 @@ class ProductLaptopsPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def Update(self):
+    def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
-        self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+        
         driver = webdriver.Chrome()
         driver.get(Site1)
         time.sleep(10)
@@ -790,8 +838,18 @@ class ProductLaptopsPage(QDialog):
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
+        
+        driver.get(Site3)
+        time.sleep(10)
+        try: 
+            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
+            Price3 = Price3_tmp.split(' ')[0]
+        except:
+            Price3 = 'Not Available'
+        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
+
         driver.get(Site2)
-        time.sleep(15)
+        time.sleep(10)
         try:
             Price2 = unidecode(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[3]/div[3]/div[2]/h6/span[1]').text)
         except:                                             
@@ -803,31 +861,27 @@ class ProductLaptopsPage(QDialog):
             except:
                 pass
         self.TechonLife_Label.setText(_translate('Dialog',Price2))
-        Ram = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[1]/div[2]').text)
-        self.RAM_Label.setText(_translate('Dialog',Ram.text))
-        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[1]/div/ul/li[1]/h3/span').text)
-        Storage = Storage.text
-        Storage = Storage.split(": ")[1]
-        self.Storage_Label.setText(_translate('Dialog',Storage))
-        Cpu = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-3"]/li[1]/div[2]').text)
-        self.CPU_Label.setText(_translate('Dialog',Cpu.text))
-        USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-7"]/li[6]/div[2]').text)
-        self.USBPort_Label.setText(_translate('Dialog',USBPort.text))
-        Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-9"]/li[1]/div[2]').text)
-        self.Battery_Label.setText(_translate('Dialog', Battery.text))
-        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[1]/div[2]').text)
-        self.Size_Label.setText(_translate('Dialog', Size.text))
-        Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
-        self.Weight_Label.setText(_translate('Dialog', Weight.text))
-        driver.get(Site3)
-        time.sleep(10)
-        try: 
-            Price3_tmp = driver.find_element(By.XPATH, '//*[@id="lblPrice"]').text
-            Price3 = Price3_tmp.split(' ')[0]
-        except:
-            Price3 = 'Not Available'
-        self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
-        
+        if Done == 0:
+            self.Name_Label.setText(_translate('Dialog', CurrentProduct))
+            Ram = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-4"]/li[1]/div[2]').text)
+            self.RAM_Label.setText(_translate('Dialog',Ram.text))
+            Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="productP1"]/div[1]/div/ul/li[1]/h3/span').text)
+            Storage = Storage.text
+            Storage = Storage.split(": ")[1]
+            self.Storage_Label.setText(_translate('Dialog',Storage))
+            Cpu = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-3"]/li[1]/div[2]').text)
+            self.CPU_Label.setText(_translate('Dialog',Cpu.text))
+            USBPort = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-7"]/li[6]/div[2]').text)
+            self.USBPort_Label.setText(_translate('Dialog',USBPort.text))
+            Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-9"]/li[1]/div[2]').text)
+            self.Battery_Label.setText(_translate('Dialog', Battery.text))
+            Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-2"]/li[1]/div[2]').text)
+            self.Size_Label.setText(_translate('Dialog', Size.text))
+            Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+            self.Weight_Label.setText(_translate('Dialog', Weight.text))
+            Phone.Get_Product(CurrentProduct, Ram, Storage,Cpu,USBPort, Battery, Size,Weight,Price1,Price2,Price3,EachCategoryPageTitle)
+        else:
+            Phone.Update_Price(CurrentProduct, Price1,Price2,Price3)
         driver.close()    
         
 
@@ -846,7 +900,23 @@ class ProductPhonesPage(QDialog):
             self.PictureFlag = 1
         except:
             self.Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
-        self.UpdateButton.clicked.connect(self.Update)
+        Done = Phone.Check_For_Product(CurrentProduct, False)
+        if Done == 1:
+            Details = Phone.Show_Details(CurrentProduct)
+            self.Name_Label.setText(_translate('Dialog',Details[0]))
+            self.RAM_Label.setText(_translate('Dialog',Details[1]))
+            self.Storage_Label.setText(_translate('Dialog',Details[2]))
+            self.Camera_Label.setText(_translate('Dialog',Details[3]))
+            self.SimCardLabel.setText(_translate('Dialog',Details[4]))
+            self.BatteryLabel.setText(_translate('Dialog',Details[5]))
+            self.Size_Label.setText(_translate('Dialog',Details[6]))
+            self.Weight_Label.setText(_translate('Dialog', Details[7]))
+            self.Digikala_Label.setText(_translate('Dialog',Details[8]))
+            self.Mobile_Label.setText(_translate('Dialog', Details[9]))
+            self.MeghdadIT_Label.setText(_translate('Dialog', Details[10]))
+            widget.update()
+
+        self.UpdateButton.clicked.connect(partial(self.Update, Done))
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -863,7 +933,7 @@ class ProductPhonesPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def Update(self):
+    def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
@@ -890,27 +960,6 @@ class ProductPhonesPage(QDialog):
             except:
                 Price1 = 'Not Available'
         self.Digikala_Label.setText(_translate('Dialog',Price1))
-
-        driver.get(Site2)
-        Price2 = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[1]/div[1]/div[1]/ul/li[2]/a').text)
-        self.Mobile_Label.setText(_translate('Dialog',Price2.text))
-        Storage_and_RAM = driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[5]/div/ul/li[2]/strong/span').text
-        Storage_and_RAM = Storage_and_RAM.split(', ')[0]
-        Storage , Ram = Storage_and_RAM.split(' ')[0] , Storage_and_RAM.split(' ')[1]
-        self.RAM_Label.setText(_translate('Dialog',Ram))
-        self.Storage_Label.setText(_translate('Dialog',Storage))
-        Camera = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[6]/div/ul/li[1]/strong/span').text)
-        Camera = Camera.text
-        Camera = Camera.split(',')[0]
-        self.Camera_Label.setText(_translate('Dialog',Camera))
-        SimCard = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[4]/strong/span').text)
-        self.SimCard_Label.setText(_translate('Dialog',SimCard.text))
-        Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[10]/div/ul/li[1]/strong/span').text)
-        self.Battery_Label.setText(_translate('Dialog',Battery.text))
-        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[1]/strong/span').text)
-        self.Size_Label.setText(_translate('Dialog',Size.text))
-        Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[2]/strong/span').text)
-        self.Weight_Label.setText(_translate('Dialog',Weight.text))
         driver.get(Site3)
         time.sleep(10)
         try: 
@@ -919,25 +968,62 @@ class ProductPhonesPage(QDialog):
         except:
             Price3 = 'Not Available'
         self.MeghdadIT_Label.setText(_translate('Dialog',Price3))
-        
+
+
+        driver.get(Site2)
+        Price2 = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[1]/div[1]/div[1]/ul/li[2]/a').text)
+        self.Mobile_Label.setText(_translate('Dialog',Price2.text))
+        if Done == 0:
+            Storage_and_RAM = driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[5]/div/ul/li[2]/strong/span').text
+            Storage_and_RAM = Storage_and_RAM.split(', ')[0]
+            Storage , Ram = Storage_and_RAM.split(' ')[0] , Storage_and_RAM.split(' ')[1]
+            self.RAM_Label.setText(_translate('Dialog',Ram))
+            self.Storage_Label.setText(_translate('Dialog',Storage))
+            Camera = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[6]/div/ul/li[1]/strong/span').text)
+            Camera = Camera.text
+            Camera = Camera.split(',')[0]
+            self.Camera_Label.setText(_translate('Dialog',Camera))
+            SimCard = translator.translate(driver.find_element(By.XPATH,'//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[1]/div/ul/li[4]/strong/span').text)
+            self.SimCard_Label.setText(_translate('Dialog',SimCard.text))
+            Battery = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[10]/div/ul/li[1]/strong/span').text)
+            self.Battery_Label.setText(_translate('Dialog',Battery.text))
+            Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[1]/strong/span').text)
+            self.Size_Label.setText(_translate('Dialog',Size.text))
+            Weight = translator.translate(driver.find_element(By.XPATH, '//*[@id="maincolumn"]/div[3]/div[2]/div[2]/div[2]/div[2]/div/ul/li[2]/strong/span').text)
+            self.Weight_Label.setText(_translate('Dialog',Weight.text))
+            Phone.Get_Product(CurrentProduct, Ram, Storage, Camera, SimCard.text, Battery.text, Size.text, Weight.text, Price1, Price2, Price3, EachCategoryPageTitle)
+        else:
+            Phone.Update_Price(CurrentProduct, Price1,Price2,Price3)
         driver.close()
+
 
 # Product TV Page
 class ProductTVPage(QDialog):
     def __init__(self):
         super(ProductTVPage, self).__init__()
-        self.PictureFlag = 0
         loadUi("Final Presentatiosn/ProductTVPageFinal.ui", self)
         self.HomeButton.clicked.connect(self.GoToHomePage)
         self.ProfileButton.clicked.connect(self.GoToProfile)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
         _translate = QtCore.QCoreApplication.translate
+        Done = TV.Check_For_Product(CurrentProduct)
+        if Done == 1:
+            Details = TV.Show_Details(CurrentProduct, False)
+            self.Name_Label.setText(_translate('Dialog', Details[0]))
+            self.Size_Label.setText(_translate('Dialog', Details[1]))
+            self.Resolution_Label.setText(_translate('Dialog', Details[2]))
+            self.Quality_Label.setText(_translate('Dialog', Details[3]))
+            self.ScreenTech_Label.setText(_translate('Dialog', Details[4]))
+            self.DigiKala_Label.setText(_translate('Dialog', Details[5]))
+            self.HyperKhanegi_Label.setText(_translate('Dialog', Details[6]))
+            self.TechnoLife_Label.setText(_translate('Dialog', Details[7]))
+            widget.update()
         try:
             self.Image_TV.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{CurrentProduct}.png'))
             self.PictureFlag = 1
         except:
             self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.')) 
-        self.UpdateButton.clicked.connect(self.Update)
+        self.UpdateButton.clicked.connect(partial(self.Update, Done))
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -955,7 +1041,7 @@ class ProductTVPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def Update(self):
+    def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
@@ -997,15 +1083,20 @@ class ProductTVPage(QDialog):
                 Price3 = Price3.split(' ')[0]
             except:                                              
                 pass
-        self.TechnoLife_Label.setText(_translate('Dialog', Price3))
-        Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[2]/div[2]').text)
-        self.Size_Label.setText(_translate('Dialog', Size.text))
-        Resolution = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
-        self.Resolution_Label.setText(_translate('Dialog',Resolution.text))
-        Quality = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
-        self.Quality_Label.setText(_translate('Dialog',Quality.text))
-        ScreenTech = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[3]/div[2]').text)
-        self.ScreenTech_Label.setText(_translate('Dialog',ScreenTech.text))
+            self.TechnoLife_Label.setText(_translate('Dialog', Price3))
+        if Done == 0:
+            Size = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[2]/div[2]').text)
+            self.Size_Label.setText(_translate('Dialog', Size.text))
+            Resolution = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[2]/div[2]').text)
+            self.Resolution_Label.setText(_translate('Dialog',Resolution.text))
+            Quality = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-1"]/li[1]/div[2]').text)
+            self.Quality_Label.setText(_translate('Dialog',Quality.text))
+            ScreenTech = translator.translate(driver.find_element(By.XPATH, '//*[@id="accordion__panel-0"]/li[3]/div[2]').text)
+            self.ScreenTech_Label.setText(_translate('Dialog',ScreenTech.text))
+            TV.Get_Product(CurrentProduct,Size.text, Resolution.text, Quality.text,ScreenTech.text, Price1, Price2, Price3, EachCategoryPageTitle)
+        else:
+            TV.Update_Price(CurrentProduct, Price1, Price2, Price3)
+
         driver.close()
         
 
@@ -1024,7 +1115,18 @@ class ProductUSBPage(QDialog):
             self.PictureFlag = 1
         except:
             self.USB_Image.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
-        self.UpdateButton.clicked.connect(self.Update)
+        Done = USB.Check_For_Product(CurrentProduct, False)
+        if Done == 1:
+            Details = USB.Show_Details(CurrentProduct)
+            self.Name_Label.setText(_translate('Dialog', Details[0]))
+            self.Storage_Label.setText(_translate('Dialog', Details[1]))
+            self.Speed_Label.setText(_translate('Dialog',Details[2]))
+            self.Version_Label.setText(_translate('Dialog', Details[3]))
+            self.DigiKala_Label.setText(_translate('Dialog', Details[4]))
+            self.MeghdadIT_Label.setText(_translate('Dialog', Details[5]))
+            self.TechnoSun_Label.setText(_translate('Dialog', Details[6]))
+            widget.update()
+        self.UpdateButton.clicked.connect(partial(self.Update, Done))
         
         
     def GoToEachCategoryPage(self):
@@ -1043,7 +1145,7 @@ class ProductUSBPage(QDialog):
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)     
     
-    def Update(self):
+    def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
         self.Name_Label.setText(_translate('Dialog', CurrentProduct))
         driver = webdriver.Chrome()
@@ -1079,15 +1181,19 @@ class ProductUSBPage(QDialog):
         driver.get(Site2)
         Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').text)
         self.TechnoSun_Label.setText(_translate('Dialog',Price3))
-        _ = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[1]/button[2]').click()
-        Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[5]/div/span[2]').text)
-        Storage = Storage.text
-        Storage = Storage.split(' - ')[0]
-        self.Storage_Label.setText(_translate('Dialog', Storage))
-        Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[4]/div/span[2]').text)
-        self.Speed_Label.setText(_translate('Dialog', Speed.text))
-        Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
-        self.Version_Label.setText(_translate('Dialog', Version.text))
+        if Done == 0:
+            _ = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[1]/button[2]').click()
+            Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[5]/div/span[2]').text)
+            Storage = Storage.text
+            Storage = Storage.split(' - ')[0]
+            self.Storage_Label.setText(_translate('Dialog', Storage))
+            Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[4]/div/span[2]').text)
+            self.Speed_Label.setText(_translate('Dialog', Speed.text))
+            Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
+            self.Version_Label.setText(_translate('Dialog', Version.text))
+            USB.Get_Product(CurrentProduct,Storage, Speed, Version, Price1,Price2,Price3,EachCategoryPageTitle)
+        else:
+            USB.Update_Price(CurrentProduct,Price1,Price2,Price3)    
         time.sleep(10)
         
         
@@ -1124,7 +1230,28 @@ class SearchResult(QDialog):
         widget.addWidget(categories)
         widget.setCurrentIndex(widget.currentIndex()+1)
          
-   
+
+def Search(text):
+    Tv_check_Match = TV.Check_For_Product(text, True)
+    Headphone_check_Match = Headphone.Check_For_Product(text, True)
+    Hard_check_Match = Hard.Check_For_Product(text, True)
+    USB_check_Match = USB.Check_For_Product(text,True)
+    Phone_check_Match = Phone.Check_For_Product(text,True)
+    Laptop_check_Match = Laptop.Check_For_Product(text,True)
+    Matching_List = []
+    for m in Tv_check_Match:
+        Matching_List.append(m)
+    for m in Headphone_check_Match:
+        Matching_List.append(m)
+    for m in Hard_check_Match:
+        Matching_List.append(m)
+    for m in USB_check_Match:
+        Matching_List.append(m)
+    for m in Phone_check_Match:
+        Matching_List.append(m)
+    for m in Laptop_check_Match:
+        Matching_List.append(m)
+
         
 # a function for reading csv files   
 def csv_reader(path):
