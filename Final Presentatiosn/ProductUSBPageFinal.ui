@@ -526,7 +526,7 @@
     <string>Update</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="AddFavoritesButton">
+  <widget class="QPushButton" name="CompareButton">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -542,7 +542,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Add/Remove Favorites</string>
+    <string>Compare</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="SearchBox">

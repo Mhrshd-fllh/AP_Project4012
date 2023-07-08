@@ -29,7 +29,8 @@ translator = Translator()
 
 
 
-
+#A list that will be used for comparing products and its maximum length will be 2
+Compare_List = []
 
 # Home Page Pictures
 lst = []
@@ -429,17 +430,15 @@ class EachCategoryPage(QDialog):
             font.setPointSize(14)
             temp.setFont(font)
             self.verticalLayout.addWidget(temp)
-            temp.clicked.connect(partial(self.Pressed_For_Details,i))
+            if Compare_List != 1:
+                temp.clicked.connect(partial(self.Pressed_For_Details,i))
+            else:
+                temp.clicked.connect(partial(self.Pressed_For_Comapre,i))
             self.Category_Dict[i] = temp
         _translate = QtCore.QCoreApplication.translate
         for i in self.Category_Dict:
             self.Category_Dict[i].setText(_translate('Dialog', i))
-    '''
-    def retranslateUi(self, Dialog):
-        _translate = QtCore.QCoreApplication.translate
-        for i in self.Category_Dict:
-            self.Category_Dict[i].setText(_translate('Dialog', i))
-    '''        
+       
     def GoToCategories(self):
         categories = Categories()
         widget.addWidget(categories)
@@ -538,6 +537,10 @@ class EachCategoryPage(QDialog):
             widget.addWidget(productHardpage)
             widget.setCurrentIndex(widget.currentIndex()+1)
         
+    def Pressed_For_Compare(self, i):
+        global Compare_List
+        Compare_List.append(i.strip())
+
 
 # Product Hard Page
 class ProductHardPage(QDialog):
@@ -566,7 +569,8 @@ class ProductHardPage(QDialog):
             self.MeghdadITLabel.setText(_translate("Dialog", Details[5]))
             self.TechnoLife_Label.setText(_translate('Dialog',Details[6]))
             widget.update()
-        self.UpdateButton.clicked.connect(self.Update, Done)
+        self.UpdateButton.clicked.connect(partial(self.Update, Done))
+        self.CompareButton.clicked.connect(self.Compare)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -582,6 +586,13 @@ class ProductHardPage(QDialog):
     def GoToProfile(self):
         profile = Profile()
         widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self, Done):
@@ -677,7 +688,8 @@ class ProductHeadphonesPage(QDialog):
         except:
             self.Image_Headphone.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
-        self.Update_Button.clicked.connect(self.Update, Done)
+        self.Update_Button.clicked.connect(partial(self.Update, Done))
+        self.CompareButton.clicked.connect(self.Compare)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -698,6 +710,13 @@ class ProductHeadphonesPage(QDialog):
     def GoToLogin(self):
         login = Login()
         widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self,Done):
@@ -803,7 +822,8 @@ class ProductLaptopsPage(QDialog):
             self.TechonLife_Label.setText(_translate("Dialog",Details[9]))
             self.MeghdadIT_Label.setText(_translate("Dialog",Details[10]))
         self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))    
-        self.UpdateButton.clicked.connect(self.Update, Done)
+        self.UpdateButton.clicked.connect(partial(self.Update, Done))
+        self.CompareButton.clicked.connect(partial(self.Compare))
 
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -819,6 +839,13 @@ class ProductLaptopsPage(QDialog):
     def GoToProfile(self):
         profile = Profile()
         widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self, Done):
@@ -929,6 +956,8 @@ class ProductPhonesPage(QDialog):
             widget.update()
         self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
+        self.CompareButton.clicked.connect(self.Compare)
+
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -943,6 +972,13 @@ class ProductPhonesPage(QDialog):
     def GoToProfile(self):
         profile = Profile()
         widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self, Done):
@@ -1040,6 +1076,7 @@ class ProductTVPage(QDialog):
             self.Image_TV.setText(_translate("Dialog", 'Image Have Not been downloaded yet.'))
         self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text())) 
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
+        self.CompareButton.clicked.connect(self.Compare)
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
@@ -1055,6 +1092,13 @@ class ProductTVPage(QDialog):
     def GoToProfile(self):
         profile = Profile()
         widget.addWidget(profile)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Update(self, Done):
@@ -1143,7 +1187,7 @@ class ProductUSBPage(QDialog):
             self.TechnoSun_Label.setText(_translate('Dialog', Details[6]))
         self.SearchButton.clicked.connect(partial(Search, self.SearchBox.text()))
         self.UpdateButton.clicked.connect(partial(self.Update, Done))
-        
+        self.CompareButton.clicked.connect(self.Compare)
         
     def GoToEachCategoryPage(self):
         each_category_page = EachCategoryPage()
@@ -1160,6 +1204,13 @@ class ProductUSBPage(QDialog):
         profile = Profile()
         widget.addWidget(profile)
         widget.setCurrentIndex(widget.currentIndex()+1)     
+
+    def Compare(self):
+        global Compare_List
+        Compare_List.append(CurrentProduct)
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     
     def Update(self, Done):
         _translate = QtCore.QCoreApplication.translate
@@ -1195,19 +1246,34 @@ class ProductUSBPage(QDialog):
             Price2 = 'Not Available'
         self.MeghdadITLabel.setText(_translate('Dialog',Price2))
         driver.get(Site2)
-        Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').text)
+        try:
+            Price3 = unidecode(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').text)
+        except:
+            Price3 = 'Not Available'
         self.TechnoSun_Label.setText(_translate('Dialog',Price3))
         if Done == 0:
             _ = driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[1]/button[2]').click()
-            Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[5]/div/span[2]').text)
-            Storage = Storage.text
-            Storage = Storage.split(' - ')[0]
+            try:
+                Storage = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[5]/div/span[2]').text)
+                Storage = Storage.text
+                Storage = Storage.split(' - ')[0]
+            except:
+                Storage = CurrentProduct.split(' ')[-2]
             self.Storage_Label.setText(_translate('Dialog', Storage))
-            Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[4]/div/span[2]').text)
-            self.Speed_Label.setText(_translate('Dialog', Speed.text))
-            Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
-            self.Version_Label.setText(_translate('Dialog', Version.text))
-            USB.Get_Product(CurrentProduct,Storage, Speed.text, Version.text, Price1,Price2,Price3,EachCategoryPageTitle)
+            try:
+                Speed = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[4]/div/span[2]').text)
+                Speed = Speed.text
+            except:
+                Speed = 'Not Available'
+            
+            self.Speed_Label.setText(_translate('Dialog', Speed)) 
+            try:
+                Version = translator.translate(driver.find_element(By.XPATH, '//*[@id="__next"]/div[1]/main/div[3]/div/div/div[1]/div[3]/div/div[2]/div[2]/div/span[2]').text)
+                Version = Version.text
+            except:
+                Version = 'Not Available'
+            self.Version_Label.setText(_translate('Dialog', Version))
+            USB.Get_Product(CurrentProduct,Storage, Speed, Version, Price1,Price2,Price3,EachCategoryPageTitle)
         else:
             USB.Update_Price(CurrentProduct,Price1,Price2,Price3)    
         time.sleep(10)
