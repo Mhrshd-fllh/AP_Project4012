@@ -1352,6 +1352,98 @@ def Search(text):
     search = SearchResult()
     widget.addWidget(search)
     widget.setCurrentIndex(widget.currentIndex() + 1)
+    
+    
+    
+# Headphone Compare Page
+class HeadphonesComparePage(QDialog):
+    def __init__(self):
+        super(HeadphonesComparePage, self).__init__()
+        loadUi("Final Presentatiosn/HeadphoneComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+        
+# phone Compare Page
+class phoneComparePage(QDialog):
+    def __init__(self):
+        super(phoneComparePage, self).__init__()
+        loadUi("Final Presentatiosn/phoneComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+        
+        
+# Hard Compare Page
+class HardComparePage(QDialog):
+    def __init__(self):
+        super(HardComparePage, self).__init__()
+        loadUi("Final Presentatiosn/HardComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+# Laptop Compare Page
+class LaptopComparePage(QDialog):
+    def __init__(self):
+        super(LaptopComparePage, self).__init__()
+        loadUi("Final Presentatiosn/LaptopComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+        
+# TV Compare Page
+class TVComparePage(QDialog):
+    def __init__(self):
+        super(TVComparePage, self).__init__()
+        loadUi("Final Presentatiosn/TVComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        
+        
+# USB Compare Page
+class USBComparePage(QDialog):
+    def __init__(self):
+        super(USBComparePage, self).__init__()
+        loadUi("Final Presentatiosn/USBComparePageFinal.ui", self)
+        self.BackButton.clicked.connect(self.GoToEachCategoryPage)
+        
+        
+    def GoToEachCategoryPage(self):
+        each_category_page = EachCategoryPage()
+        widget.addWidget(each_category_page)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
+    
+    
 
 
         
