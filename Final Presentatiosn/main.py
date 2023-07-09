@@ -430,10 +430,10 @@ class EachCategoryPage(QDialog):
             font.setPointSize(14)
             temp.setFont(font)
             self.verticalLayout.addWidget(temp)
-            if Compare_List != 1:
+            if len(Compare_List) != 2:
                 temp.clicked.connect(partial(self.Pressed_For_Details,i))
             else:
-                temp.clicked.connect(partial(self.Pressed_For_Comapre,i))
+                temp.clicked.connect(partial(self.Pressed_For_Compare,i))
             self.Category_Dict[i] = temp
         _translate = QtCore.QCoreApplication.translate
         for i in self.Category_Dict:
@@ -540,6 +540,33 @@ class EachCategoryPage(QDialog):
     def Pressed_For_Compare(self, i):
         global Compare_List
         Compare_List.append(i.strip())
+        if EachCategoryPageTitle == 'TV':
+            tvcompare = TVComparePage()
+            widget.addWidget(tvcompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Phone':
+            phonecompare = PhoneComparePage()
+            widget.addWidget(phonecompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Headphone':
+            headphonecompare = HeadphonesComparePage()
+            widget.addWidget(headphonecompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'USB':
+            usbcompare = USBComparePage()
+            widget.addWidget(usbcompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Laptop':
+            laptopcompare = LaptopComparePage()
+            widget.addWidget(laptopcompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        elif EachCategoryPageTitle == 'Hard':
+            hardcompare = HardComparePage()
+            widget.addWidget(hardcompare)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+
+
+
 
 
 # Product Hard Page
@@ -1096,7 +1123,7 @@ class ProductTVPage(QDialog):
 
     def Compare(self):
         global Compare_List
-        Compare_List.append(CurrentProduct)
+        Compare_List.add(CurrentProduct)
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1361,24 +1388,68 @@ class HeadphonesComparePage(QDialog):
         super(HeadphonesComparePage, self).__init__()
         loadUi("Final Presentatiosn/HeadphoneComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HeadPhoneImage{Compare_List[2]}.png'))
+        Details1 = Headphone.Show_Details(Compare_List[0])
+        Details2 = Headphone.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.Version_Label.setText(_translate('Dialog', Details1[1]))
+        self.Connection_Label.setText(_translate('Dialog', Details1[2]))
+        self.USBPort_Label.setText(_translate('Dialog', Details1[3]))
+        self.Battery_Label.setText(_translate('Dialog', Details1[4]))
+        self.Digikala_Label.setText(_translate('Dialog',Details1[6]))
+        self.TechnoLife_Label.setText(_translate('Dialog', Details1[7]))
+        self.MeghdadIT_Label.setText(_translate('Dialog', Details1[8]))
+        self.Name_Label_2.setText(_translate('Dialog', Details2[0]))
+        self.Version_Label_2.setText(_translate('Dialog', Details2[1]))
+        self.Connection_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.USBPort_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.Battery_Label_2.setText(_translate('Dialog', Details2[4]))
+        self.Digikala_Label_2.setText(_translate('Dialog',Details2[6]))
+        self.TechnoLife_Label_2.setText(_translate('Dialog', Details2[7]))
+        self.MeghdadIT_Label_2.setText(_translate('Dialog', Details2[8]))
+
     def GoToEachCategoryPage(self):
+        global Compare_List
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
+        Compare_List = []
         
         
         
 # phone Compare Page
-class phoneComparePage(QDialog):
+class PhoneComparePage(QDialog):
     def __init__(self):
-        super(phoneComparePage, self).__init__()
+        super(PhoneComparePage, self).__init__()
         loadUi("Final Presentatiosn/phoneComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/PhoneImage{Compare_List[2]}.png'))
+        Details1 = Phone.Show_Details(Compare_List[0])
+        Details2 = Phone.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.RAM_Label.setText(_translate('Dialog', Details1[1]))
+        self.Storage_Label.setText(_translate('Dialog', Details1[2]))
+        self.Camera_Label.setText(_translate('Dialog', Details1[3]))
+        self.SimCard_Label.setText(_translate('Dialog', Details1[4]))
+        self.Digikala_Label.setText(_translate('Dialog', Details1[8]))
+        self.Mobile_Label.setText(_translate('Dialog', Details1[9]))
+        self.MeghdadIT_Label.setText(_translate('Dialog', Details1[10]))
+        self.Name_Label_2.setText(_translate('Dialog', Details2[0]))
+        self.RAM_Label_2.setText(_translate('Dialog', Details2[1]))
+        self.Storage_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.Camera_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.SimCard_Label_2.setText(_translate('Dialog', Details2[4]))
+        self.Digikala_Label_2.setText(_translate('Dialog', Details2[8]))
+        self.Mobile_Label_2.setText(_translate('Dialog', Details2[9]))
+        self.MeghdadIT_Label_2.setText(_translate('Dialog', Details2[10]))
         
     def GoToEachCategoryPage(self):
+        global Compare_List
+        Compare_List = [] 
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1392,9 +1463,29 @@ class HardComparePage(QDialog):
         super(HardComparePage, self).__init__()
         loadUi("Final Presentatiosn/HardComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/HardImage{Compare_List[2]}.png'))
+        Details1 = Hard.Show_Details(Compare_List[0])
+        Details2 = Hard.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.Storage_Label.setText(_translate('Dialog', Details1[1]))
+        self.Speed_Label.setText(_translate('Dialog', Details1[2]))
+        self.Connection_Label.setText(_translate('Dialog', Details1[3]))
+        self.DigiKala_Label.setText(_translate('Dialog', Details1[4]))
+        self.MeghdadITLabel.setText(_translate('Dialog', Details1[5]))
+        self.TechnoLife_Label.setText(_translate('Dialog', Details1[6]))
+        self.Name_Label_2.setText(_translate('Dialog', Details2[0]))
+        self.Storage_Label_2.setText(_translate('Dialog', Details2[1]))
+        self.Speed_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.Connection_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.DigiKala_Label_2.setText(_translate('Dialog', Details2[4]))
+        self.MeghdadITLabel_2.setText(_translate('Dialog', Details2[5]))
+        self.TechnoLife_Label_2.setText(_translate('Dialog', Details2[6]))
         
     def GoToEachCategoryPage(self):
+        global Compare_List
+        Compare_List = []
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1406,9 +1497,29 @@ class LaptopComparePage(QDialog):
         super(LaptopComparePage, self).__init__()
         loadUi("Final Presentatiosn/LaptopComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/LaptopImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/LaptopImage{Compare_List[2]}.png'))
+        Details1 = Laptop.Show_Details(Compare_List[0])
+        Details2 = Laptop.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.RAM_Label.setText(_translate('Dialog', Details1[1]))
+        self.Storage_Label.setText(_translate('Dialog', Details1[2]))
+        self.CPU_Label.setText(_translate('Dialog', Details1[3]))
+        self.Digikala_Label.setText(_translate('Dialog', Details1[8]))
+        self.Techon_Life.setText(_translate('Dialog', Details1[9]))
+        self.MeghdadIT_Label.setText(_translate('Dialog', Details1[10]))
+        self.Name_Label_2.setText(_translate('Dialog', Details2[0]))
+        self.RAM_Label_2.setText(_translate('Dialog', Details2[1]))
+        self.Storage_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.CPU_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.Digikala_Label_2.setText(_translate('Dialog', Details2[8]))
+        self.Techon_Life_2.setText(_translate('Dialog', Details2[9]))
+        self.MeghdadIT_Label_2.setText(_translate('Dialog', Details2[10]))
         
     def GoToEachCategoryPage(self):
+        global Compare_List
+        Compare_list = []
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1421,9 +1532,31 @@ class TVComparePage(QDialog):
         super(TVComparePage, self).__init__()
         loadUi("Final Presentatiosn/TVComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/TVImage{Compare_List[2]}.png'))
+        Details1 = TV.Show_Details(Compare_List[0])
+        Details2 = TV.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.Size_Label.setText(_translate('Dialog', Details1[1]))
+        self.Resolution_Label.setText(_translate('Dialog', Details1[2]))
+        self.Quality_Label.setText(_translate('Dialog', Details1[3]))
+        self.ScreenTech_Label.setText(_translate('Dialog', Details1[4]))
+        self.DigiKala_Label.setText(_translate('Dialog', Details1[5]))
+        self.HyperKhanegi_Label.setText(_translate('Dialog', Details1[6]))
+        self.TechnoLife_Label.setText(_translate('Dialog', Details1[7]))
+        self.Name_Label1_2.setText(_translate('Dialog', Details2[0]))
+        self.Size_Label_2.setText(_translate('Dialog', Details2[1]))
+        self.Resolution_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.Quality_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.ScreenTech_Label_2.setText(_translate('Dialog', Details2[4]))
+        self.DigiKala_Label_2.setText(_translate('Dialog', Details2[5]))
+        self.HyperKhanegi_Label_2.setText(_translate('Dialog', Details2[6]))
+        self.TechnoLife_Label_2.setText(_translate('Dialog', Details2[7]))
         
     def GoToEachCategoryPage(self):
+        global Compare_List
+        Compare_List = []
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -1436,9 +1569,29 @@ class USBComparePage(QDialog):
         super(USBComparePage, self).__init__()
         loadUi("Final Presentatiosn/USBComparePageFinal.ui", self)
         self.BackButton.clicked.connect(self.GoToEachCategoryPage)
-        
-        
+        _translate = QtCore.QCoreApplication.translate
+        self.Image1.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/USBImage{Compare_List[0]}.png'))
+        self.Image2.setPixmap(QtGui.QPixmap(f'Final Presentatiosn/Images/USBImage{Compare_List[2]}.png'))
+        Details1 = USB.Show_Details(Compare_List[0])
+        Details2 = USB.Show_Details(Compare_List[2])
+        self.Name_Label.setText(_translate('Dialog', Details1[0]))
+        self.Storage_label.setText(_translate('Dialog', Details1[1]))
+        self.Speed_Label.setText(_translate('Dialog', Details1[2]))
+        self.Weight_Label.setText(_translate('Dialog', Details1[3]))
+        self.DigiKala_Label.setText(_translate('Dialog', Details1[4]))
+        self.MeghdadITLabel.setText(_translate('Dialog', Details1[5]))
+        self.TechnoSun_Label.setText(_translate('Dialog', Details1[6]))
+        self.Name_Label_2.setText(_translate('Dialog', Details2[0]))
+        self.Storage_label_2.setText(_translate('Dialog', Details2[1]))
+        self.Speed_Label_2.setText(_translate('Dialog', Details2[2]))
+        self.Weight_Label_2.setText(_translate('Dialog', Details2[3]))
+        self.DigiKala_Label_2.setText(_translate('Dialog', Details2[4]))
+        self.MeghdadITLabel_2.setText(_translate('Dialog', Details2[5]))
+        self.TechnoSun_Label_2.setText(_translate('Dialog', Details2[6]))
+    
     def GoToEachCategoryPage(self):
+        global Compare_List
+        Compare_List = []
         each_category_page = EachCategoryPage()
         widget.addWidget(each_category_page)
         widget.setCurrentIndex(widget.currentIndex()+1)    

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>995</width>
-    <height>1006</height>
+    <width>991</width>
+    <height>841</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="Image1">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>175</y>
-     <width>441</width>
-     <height>211</height>
+     <x>190</x>
+     <y>150</y>
+     <width>100</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
@@ -28,16 +28,19 @@
     </font>
    </property>
    <property name="text">
-    <string>IMAGE 1</string>
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Image2">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>170</y>
-     <width>441</width>
-     <height>211</height>
+     <x>660</x>
+     <y>140</y>
+     <width>100</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
@@ -46,26 +49,10 @@
     </font>
    </property>
    <property name="text">
-    <string>IMAGE2</string>
+    <string/>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>890</y>
-     <width>741</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Company Address : Iran - Tehran - Narmak - IUST </string>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="BackButton">
@@ -85,25 +72,6 @@
    </property>
    <property name="text">
     <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>880</y>
-     <width>761</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Cooper Black</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Contact us via : @comfortablynumb7 on Telegram or 09908611517                                                                                          </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -171,7 +139,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>120</y>
+     <y>100</y>
      <width>471</width>
      <height>71</height>
     </rect>
@@ -194,8 +162,8 @@
   <widget class="QColumnView" name="columnView_2">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>390</y>
+     <x>480</x>
+     <y>260</y>
      <width>461</width>
      <height>501</height>
     </rect>
@@ -204,8 +172,8 @@
   <widget class="QColumnView" name="columnView1">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>390</y>
+     <x>40</x>
+     <y>260</y>
      <width>441</width>
      <height>501</height>
     </rect>
@@ -214,8 +182,8 @@
   <widget class="QLabel" name="Details">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>400</y>
+     <x>50</x>
+     <y>270</y>
      <width>131</width>
      <height>61</height>
     </rect>
@@ -238,8 +206,8 @@
   <widget class="QLabel" name="Quality_Label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>590</y>
+     <x>180</x>
+     <y>460</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -260,8 +228,8 @@
   <widget class="QLabel" name="Name_Label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>470</y>
+     <x>180</x>
+     <y>340</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -282,8 +250,8 @@
   <widget class="QLabel" name="Quality">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>590</y>
+     <x>60</x>
+     <y>460</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -303,8 +271,8 @@
   <widget class="QLabel" name="ScreenTech">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>630</y>
+     <x>60</x>
+     <y>500</y>
      <width>131</width>
      <height>40</height>
     </rect>
@@ -324,8 +292,8 @@
   <widget class="QLabel" name="Size_Label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>510</y>
+     <x>180</x>
+     <y>380</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -346,8 +314,8 @@
   <widget class="QLabel" name="Name">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>470</y>
+     <x>60</x>
+     <y>340</y>
      <width>80</width>
      <height>40</height>
     </rect>
@@ -367,8 +335,8 @@
   <widget class="QLabel" name="Size">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>510</y>
+     <x>60</x>
+     <y>380</y>
      <width>80</width>
      <height>40</height>
     </rect>
@@ -388,8 +356,8 @@
   <widget class="QLabel" name="Resolution_Label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>550</y>
+     <x>180</x>
+     <y>420</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -410,8 +378,8 @@
   <widget class="QLabel" name="ScreenTech_Label">
    <property name="geometry">
     <rect>
-     <x>179</x>
-     <y>630</y>
+     <x>199</x>
+     <y>500</y>
      <width>221</width>
      <height>40</height>
     </rect>
@@ -432,8 +400,8 @@
   <widget class="QLabel" name="Resolution">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>550</y>
+     <x>60</x>
+     <y>420</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -453,8 +421,8 @@
   <widget class="QLabel" name="DigiKala_Label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>730</y>
+     <x>230</x>
+     <y>600</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -472,8 +440,8 @@
   <widget class="QLabel" name="TechnoLife_Label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>810</y>
+     <x>230</x>
+     <y>680</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -491,8 +459,8 @@
   <widget class="QLabel" name="Prices">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>680</y>
+     <x>60</x>
+     <y>550</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -510,8 +478,8 @@
   <widget class="QLabel" name="TechnoLife">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>810</y>
+     <x>60</x>
+     <y>680</y>
      <width>170</width>
      <height>40</height>
     </rect>
@@ -529,8 +497,8 @@
   <widget class="QLabel" name="DigiKala">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>730</y>
+     <x>60</x>
+     <y>600</y>
      <width>170</width>
      <height>40</height>
     </rect>
@@ -548,8 +516,8 @@
   <widget class="QLabel" name="HyperKhanegi_Label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>770</y>
+     <x>230</x>
+     <y>640</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -567,8 +535,8 @@
   <widget class="QLabel" name="HyperKhanegi">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>770</y>
+     <x>60</x>
+     <y>640</y>
      <width>170</width>
      <height>40</height>
     </rect>
@@ -586,8 +554,8 @@
   <widget class="QLabel" name="Quality_Label_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>590</y>
+     <x>630</x>
+     <y>460</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -608,8 +576,8 @@
   <widget class="QLabel" name="Size_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>510</y>
+     <x>510</x>
+     <y>380</y>
      <width>80</width>
      <height>40</height>
     </rect>
@@ -629,8 +597,8 @@
   <widget class="QLabel" name="ScreenTech_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>630</y>
+     <x>510</x>
+     <y>500</y>
      <width>131</width>
      <height>40</height>
     </rect>
@@ -650,8 +618,8 @@
   <widget class="QLabel" name="HyperKhanegi_Label_2">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>770</y>
+     <x>680</x>
+     <y>640</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -669,8 +637,8 @@
   <widget class="QLabel" name="DigiKala_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>730</y>
+     <x>510</x>
+     <y>600</y>
      <width>170</width>
      <height>40</height>
     </rect>
@@ -688,8 +656,8 @@
   <widget class="QLabel" name="Resolution_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>550</y>
+     <x>510</x>
+     <y>420</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -709,8 +677,8 @@
   <widget class="QLabel" name="Resolution_Label_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>550</y>
+     <x>630</x>
+     <y>420</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -731,8 +699,8 @@
   <widget class="QLabel" name="Name_Label_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>470</y>
+     <x>630</x>
+     <y>340</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -753,8 +721,8 @@
   <widget class="QLabel" name="Quality_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>590</y>
+     <x>510</x>
+     <y>460</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -774,8 +742,8 @@
   <widget class="QLabel" name="Name_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>470</y>
+     <x>510</x>
+     <y>340</y>
      <width>80</width>
      <height>40</height>
     </rect>
@@ -795,8 +763,8 @@
   <widget class="QLabel" name="Details_3">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>400</y>
+     <x>500</x>
+     <y>270</y>
      <width>131</width>
      <height>61</height>
     </rect>
@@ -819,8 +787,8 @@
   <widget class="QLabel" name="Size_Label_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>510</y>
+     <x>630</x>
+     <y>380</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -841,8 +809,8 @@
   <widget class="QLabel" name="ScreenTech_Label_2">
    <property name="geometry">
     <rect>
-     <x>629</x>
-     <y>630</y>
+     <x>649</x>
+     <y>500</y>
      <width>221</width>
      <height>40</height>
     </rect>
@@ -863,8 +831,8 @@
   <widget class="QLabel" name="TechnoLife_Label_2">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>810</y>
+     <x>680</x>
+     <y>680</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -882,8 +850,8 @@
   <widget class="QLabel" name="HyperKhanegi_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>770</y>
+     <x>510</x>
+     <y>640</y>
      <width>170</width>
      <height>40</height>
     </rect>
@@ -901,8 +869,8 @@
   <widget class="QLabel" name="Prices_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>680</y>
+     <x>510</x>
+     <y>550</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -920,8 +888,8 @@
   <widget class="QLabel" name="DigiKala_Label_2">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>730</y>
+     <x>680</x>
+     <y>600</y>
      <width>200</width>
      <height>40</height>
     </rect>
@@ -939,8 +907,8 @@
   <widget class="QLabel" name="TechnoLife_2">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>810</y>
+     <x>510</x>
+     <y>680</y>
      <width>170</width>
      <height>40</height>
     </rect>
